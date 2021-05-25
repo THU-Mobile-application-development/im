@@ -1,0 +1,498 @@
+2021-05-07 12:54:28.239 -INFO 49138 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 49138 (/Users/wujun/Desktop/course/target/classes started by wujun in /Users/wujun/Desktop/course)
+2021-05-07 12:54:28.241 -DEBUG 49138 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-07 12:54:28.241 -INFO 49138 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-05-07 12:54:28.855 -INFO 49138 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 12:54:28.856 -INFO 49138 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-07 12:54:28.868 -INFO 49138 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2021-05-07 12:54:28.878 -INFO 49138 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 12:54:28.879 -INFO 49138 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-07 12:54:28.891 -INFO 49138 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-05-07 12:54:29.277 -INFO 49138 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-05-07 12:54:29.282 -INFO 49138 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-07 12:54:29.282 -INFO 49138 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-05-07 12:54:29.283 -INFO 49138 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-07 12:54:29.330 -INFO 49138 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-05-07 12:54:29.331 -INFO 49138 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1052 ms
+2021-05-07 12:54:29.430 -INFO 49138 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-07 12:54:29.460 -INFO 49138 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-07 12:54:29.805 -INFO 49138 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-05-07 12:54:29.812 -INFO 49138 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-07 12:54:29.812 -INFO 49138 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-05-07 12:54:29.812 -INFO 49138 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-05-07 12:54:29.812 -INFO 49138 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-07 12:54:29.812 -INFO 49138 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-05-07 12:54:29.812 -INFO 49138 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-05-07 12:54:29.813 -INFO 49138 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@377dfb8d
+2021-05-07 12:54:29.957 -INFO 49138 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-07 12:54:30.121 -INFO 49138 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-05-07 12:54:30.137 -INFO 49138 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-07 12:54:30.137 -INFO 49138 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-05-07 12:54:30.137 -INFO 49138 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-05-07 12:54:30.148 -INFO 49138 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.292 seconds (JVM running for 3.049)
+2021-05-07 12:54:35.837 -WARN 49138 [ntLoopGroup-6-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-07 12:54:35.946 -WARN 49138 [ntLoopGroup-6-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/favicon.ico"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-07 12:55:35.536 -WARN 49138 [ntLoopGroup-4-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-05-07 13:10:10.703 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tsinghua.course.CourseApplicationTests], using SpringBootContextLoader
+2021-05-07 13:10:10.706 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AbstractContextLoader : Could not detect default resource locations for test class [com.tsinghua.course.CourseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-05-07 13:10:10.707 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.tsinghua.course.CourseApplicationTests]: CourseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-05-07 13:10:10.786 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.tsinghua.course.CourseApplication for test class com.tsinghua.course.CourseApplicationTests
+2021-05-07 13:10:10.854 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-05-07 13:10:10.872 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@b1712f3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6986bbaf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4879dfad, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4758820d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74eb909f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28ec166e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2eee3069, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2da59753, org.springframework.test.context.event.EventPublishingTestExecutionListener@5629510, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4df5bcb4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@12c7a01b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13d9b21f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2826f61, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@62727399, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4d9ac0b4]
+2021-05-07 13:10:11.096 -INFO 49195 [           main] com.tsinghua.course.CourseApplicationTests : Starting CourseApplicationTests using Java 15.0.1 on wujun-MacBookPro.local with PID 49195 (started by wujun in /Users/wujun/Desktop/course)
+2021-05-07 13:10:11.097 -DEBUG 49195 [           main] com.tsinghua.course.CourseApplicationTests : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-07 13:10:11.098 -INFO 49195 [           main] com.tsinghua.course.CourseApplicationTests : No active profile set, falling back to default profiles: default
+2021-05-07 13:10:11.596 -INFO 49195 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 13:10:11.597 -INFO 49195 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-07 13:10:11.611 -INFO 49195 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+2021-05-07 13:10:11.622 -INFO 49195 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 13:10:11.623 -INFO 49195 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-07 13:10:11.638 -INFO 49195 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2021-05-07 13:10:12.080 -INFO 49195 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-07 13:10:12.126 -INFO 49195 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-07 13:10:12.652 -INFO 49195 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-05-07 13:10:12.663 -INFO 49195 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-07 13:10:12.663 -INFO 49195 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-05-07 13:10:12.663 -INFO 49195 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-05-07 13:10:12.664 -INFO 49195 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-07 13:10:12.664 -INFO 49195 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-05-07 13:10:12.664 -INFO 49195 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-05-07 13:10:12.664 -INFO 49195 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7b8aebd0
+2021-05-07 13:10:12.971 -INFO 49195 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-07 13:10:13.204 -INFO 49195 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-05-07 13:10:13.205 -INFO 49195 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-05-07 13:10:13.211 -INFO 49195 [           main] com.tsinghua.course.CourseApplicationTests : Started CourseApplicationTests in 2.305 seconds (JVM running for 3.163)
+2021-05-07 13:10:13.558 -INFO 49195 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 13:10:13.559 -INFO 49195 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-07 13:10:13.559 -INFO 49195 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-05-07 13:10:13.559 -INFO 49195 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-05-07 13:10:13.559 -INFO 49195 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 13:10:13.559 -INFO 49195 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-05-07 13:10:34.774 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tsinghua.course.CourseApplicationTests], using SpringBootContextLoader
+2021-05-07 13:10:34.781 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AbstractContextLoader : Could not detect default resource locations for test class [com.tsinghua.course.CourseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-05-07 13:10:34.784 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.tsinghua.course.CourseApplicationTests]: CourseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-05-07 13:10:34.852 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.tsinghua.course.CourseApplication for test class com.tsinghua.course.CourseApplicationTests
+2021-05-07 13:10:34.918 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-05-07 13:10:34.929 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d3c5255, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@b1712f3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6986bbaf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4879dfad, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4758820d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74eb909f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@28ec166e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2eee3069, org.springframework.test.context.event.EventPublishingTestExecutionListener@2da59753, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5629510, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4df5bcb4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@12c7a01b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@13d9b21f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2826f61, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@62727399]
+2021-05-07 13:10:35.212 -INFO 49205 [           main] com.tsinghua.course.CourseApplicationTests : Starting CourseApplicationTests using Java 15.0.1 on wujun-MacBookPro.local with PID 49205 (started by wujun in /Users/wujun/Desktop/course)
+2021-05-07 13:10:35.212 -DEBUG 49205 [           main] com.tsinghua.course.CourseApplicationTests : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-07 13:10:35.213 -INFO 49205 [           main] com.tsinghua.course.CourseApplicationTests : No active profile set, falling back to default profiles: default
+2021-05-07 13:10:35.660 -INFO 49205 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 13:10:35.661 -INFO 49205 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-07 13:10:35.675 -INFO 49205 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+2021-05-07 13:10:35.684 -INFO 49205 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 13:10:35.685 -INFO 49205 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-07 13:10:35.696 -INFO 49205 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-05-07 13:10:36.101 -INFO 49205 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-07 13:10:36.153 -INFO 49205 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-07 13:10:36.676 -INFO 49205 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-05-07 13:10:36.689 -INFO 49205 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-07 13:10:36.690 -INFO 49205 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-05-07 13:10:36.690 -INFO 49205 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-05-07 13:10:36.691 -INFO 49205 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-07 13:10:36.691 -INFO 49205 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-05-07 13:10:36.691 -INFO 49205 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-05-07 13:10:36.691 -INFO 49205 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5f56424d
+2021-05-07 13:10:37.020 -INFO 49205 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-07 13:10:37.275 -INFO 49205 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-05-07 13:10:37.275 -INFO 49205 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-05-07 13:10:37.281 -INFO 49205 [           main] com.tsinghua.course.CourseApplicationTests : Started CourseApplicationTests in 2.317 seconds (JVM running for 3.188)
+2021-05-07 13:10:37.572 -INFO 49205 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 13:10:37.573 -INFO 49205 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-07 13:10:37.573 -INFO 49205 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-05-07 13:10:37.573 -INFO 49205 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-05-07 13:10:37.573 -INFO 49205 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 13:10:37.573 -INFO 49205 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-05-07 13:11:07.746 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tsinghua.course.CourseApplicationTests], using SpringBootContextLoader
+2021-05-07 13:11:07.750 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AbstractContextLoader : Could not detect default resource locations for test class [com.tsinghua.course.CourseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-05-07 13:11:07.750 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.tsinghua.course.CourseApplicationTests]: CourseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-05-07 13:11:07.818 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.tsinghua.course.CourseApplication for test class com.tsinghua.course.CourseApplicationTests
+2021-05-07 13:11:07.887 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-05-07 13:11:07.898 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@b1712f3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6986bbaf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4879dfad, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4758820d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74eb909f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28ec166e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2eee3069, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2da59753, org.springframework.test.context.event.EventPublishingTestExecutionListener@5629510, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4df5bcb4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@12c7a01b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13d9b21f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2826f61, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@62727399, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4d9ac0b4]
+2021-05-07 13:11:08.292 -INFO 49210 [           main] com.tsinghua.course.CourseApplicationTests : Starting CourseApplicationTests using Java 15.0.1 on wujun-MacBookPro.local with PID 49210 (started by wujun in /Users/wujun/Desktop/course)
+2021-05-07 13:11:08.292 -DEBUG 49210 [           main] com.tsinghua.course.CourseApplicationTests : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-07 13:11:08.293 -INFO 49210 [           main] com.tsinghua.course.CourseApplicationTests : No active profile set, falling back to default profiles: default
+2021-05-07 13:11:08.732 -INFO 49210 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 13:11:08.733 -INFO 49210 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-07 13:11:08.748 -INFO 49210 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 MongoDB repository interfaces.
+2021-05-07 13:11:08.757 -INFO 49210 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 13:11:08.757 -INFO 49210 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-07 13:11:08.769 -INFO 49210 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-05-07 13:11:09.232 -INFO 49210 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-07 13:11:09.290 -INFO 49210 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-07 13:11:09.965 -INFO 49210 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-05-07 13:11:09.978 -INFO 49210 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-07 13:11:09.978 -INFO 49210 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-05-07 13:11:09.979 -INFO 49210 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-05-07 13:11:09.980 -INFO 49210 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-07 13:11:09.980 -INFO 49210 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-05-07 13:11:09.980 -INFO 49210 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-05-07 13:11:09.980 -INFO 49210 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@60b616c8
+2021-05-07 13:11:10.465 -INFO 49210 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-07 13:11:10.822 -INFO 49210 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-05-07 13:11:10.823 -INFO 49210 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-05-07 13:11:10.831 -INFO 49210 [           main] com.tsinghua.course.CourseApplicationTests : Started CourseApplicationTests in 2.892 seconds (JVM running for 3.732)
+2021-05-07 13:11:11.146 -INFO 49210 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 13:11:11.147 -INFO 49210 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-07 13:11:11.147 -INFO 49210 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-05-07 13:11:11.147 -INFO 49210 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-05-07 13:11:11.147 -INFO 49210 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 13:11:11.148 -INFO 49210 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-05-07 14:29:13.299 -INFO 49138 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:78)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2021-05-07 14:32:33.362 -INFO 49138 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-07 14:50:04.004 -INFO 49138 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:78)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+2021-05-07 14:50:54.015 -INFO 49138 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-07 14:51:37.394 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tsinghua.course.CourseApplicationTests], using SpringBootContextLoader
+2021-05-07 14:51:37.398 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AbstractContextLoader : Could not detect default resource locations for test class [com.tsinghua.course.CourseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-05-07 14:51:37.399 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.tsinghua.course.CourseApplicationTests]: CourseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-05-07 14:51:37.474 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.tsinghua.course.CourseApplication for test class com.tsinghua.course.CourseApplicationTests
+2021-05-07 14:51:37.536 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-05-07 14:51:37.549 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@b1712f3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6986bbaf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4879dfad, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4758820d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74eb909f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28ec166e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2eee3069, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2da59753, org.springframework.test.context.event.EventPublishingTestExecutionListener@5629510, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4df5bcb4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@12c7a01b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13d9b21f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2826f61, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@62727399, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4d9ac0b4]
+2021-05-07 14:51:37.928 -INFO 49646 [           main] com.tsinghua.course.CourseApplicationTests : Starting CourseApplicationTests using Java 15.0.1 on wujun-MacBookPro.local with PID 49646 (started by wujun in /Users/wujun/Desktop/course)
+2021-05-07 14:51:37.929 -DEBUG 49646 [           main] com.tsinghua.course.CourseApplicationTests : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-07 14:51:37.930 -INFO 49646 [           main] com.tsinghua.course.CourseApplicationTests : No active profile set, falling back to default profiles: default
+2021-05-07 14:51:38.492 -INFO 49646 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 14:51:38.493 -INFO 49646 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-07 14:51:38.508 -INFO 49646 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 MongoDB repository interfaces.
+2021-05-07 14:51:38.520 -INFO 49646 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 14:51:38.521 -INFO 49646 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-07 14:51:38.534 -INFO 49646 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2021-05-07 14:51:38.977 -INFO 49646 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-07 14:51:39.027 -INFO 49646 [localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-05-07 14:51:39.559 -INFO 49646 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-05-07 14:51:39.570 -INFO 49646 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-07 14:51:39.571 -INFO 49646 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-05-07 14:51:39.571 -INFO 49646 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-05-07 14:51:39.571 -INFO 49646 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-07 14:51:39.571 -INFO 49646 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-05-07 14:51:39.571 -INFO 49646 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-05-07 14:51:39.572 -INFO 49646 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7e94e331
+2021-05-07 14:51:39.909 -INFO 49646 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-07 14:51:40.163 -INFO 49646 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-05-07 14:51:40.163 -INFO 49646 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-05-07 14:51:40.169 -INFO 49646 [           main] com.tsinghua.course.CourseApplicationTests : Started CourseApplicationTests in 2.584 seconds (JVM running for 3.462)
+2021-05-07 14:51:40.486 -INFO 49646 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 14:51:40.487 -INFO 49646 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-07 14:51:40.489 -INFO 49646 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-05-07 14:51:40.489 -INFO 49646 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-05-07 14:51:40.489 -INFO 49646 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 14:51:40.490 -INFO 49646 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-05-07 16:06:48.022 -INFO 49138 [nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-07 16:06:48.024 -INFO 49138 [nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2021-05-07 16:06:48.038 -INFO 49138 [nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 14 ms
+2021-05-07 17:08:57.675 -INFO 49138 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2787, serverValue:2}] to localhost:27017
+2021-05-07 17:08:57.675 -INFO 49138 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2788, serverValue:1}] to localhost:27017
+2021-05-07 17:08:57.677 -INFO 49138 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=65277483}
+2021-05-07 17:12:51.097 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tsinghua.course.CourseApplicationTests], using SpringBootContextLoader
+2021-05-07 17:12:51.104 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AbstractContextLoader : Could not detect default resource locations for test class [com.tsinghua.course.CourseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-05-07 17:12:51.107 -INFO PID_IS_UNDEFINED [           main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.tsinghua.course.CourseApplicationTests]: CourseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-05-07 17:12:51.208 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.tsinghua.course.CourseApplication for test class com.tsinghua.course.CourseApplicationTests
+2021-05-07 17:12:51.289 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-05-07 17:12:51.303 -INFO PID_IS_UNDEFINED [           main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@b1712f3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6986bbaf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4879dfad, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4758820d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74eb909f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28ec166e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2eee3069, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2da59753, org.springframework.test.context.event.EventPublishingTestExecutionListener@5629510, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4df5bcb4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@12c7a01b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13d9b21f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2826f61, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@62727399, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4d9ac0b4]
+2021-05-07 17:12:51.735 -INFO 52940 [           main] com.tsinghua.course.CourseApplicationTests : Starting CourseApplicationTests using Java 15.0.1 on wujun-MacBookPro.local with PID 52940 (started by wujun in /Users/wujun/Desktop/course)
+2021-05-07 17:12:51.736 -DEBUG 52940 [           main] com.tsinghua.course.CourseApplicationTests : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-07 17:12:51.738 -INFO 52940 [           main] com.tsinghua.course.CourseApplicationTests : No active profile set, falling back to default profiles: default
+2021-05-07 17:12:52.302 -INFO 52940 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 17:12:52.304 -INFO 52940 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-07 17:12:52.324 -INFO 52940 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 MongoDB repository interfaces.
+2021-05-07 17:12:52.336 -INFO 52940 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 17:12:52.338 -INFO 52940 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-07 17:12:52.354 -INFO 52940 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-05-07 17:12:52.813 -INFO 52940 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-07 17:12:52.871 -INFO 52940 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:12}] to localhost:27017
+2021-05-07 17:12:52.871 -INFO 52940 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:11}] to localhost:27017
+2021-05-07 17:12:52.871 -INFO 52940 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=15070100}
+2021-05-07 17:12:53.459 -INFO 52940 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-05-07 17:12:53.468 -INFO 52940 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-07 17:12:53.468 -INFO 52940 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-05-07 17:12:53.468 -INFO 52940 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-05-07 17:12:53.469 -INFO 52940 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-07 17:12:53.469 -INFO 52940 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-05-07 17:12:53.469 -INFO 52940 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-05-07 17:12:53.469 -INFO 52940 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@539fc5d1
+2021-05-07 17:12:53.831 -INFO 52940 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-07 17:12:54.084 -INFO 52940 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-05-07 17:12:54.084 -INFO 52940 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-05-07 17:12:54.090 -INFO 52940 [           main] com.tsinghua.course.CourseApplicationTests : Started CourseApplicationTests in 2.743 seconds (JVM running for 3.8)
+2021-05-07 17:12:54.465 -INFO 52940 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 17:12:54.466 -INFO 52940 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-07 17:12:54.466 -INFO 52940 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-05-07 17:12:54.466 -INFO 52940 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-05-07 17:12:54.466 -INFO 52940 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 17:12:54.466 -INFO 52940 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-05-07 17:12:57.435 -INFO 49138 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 17:12:57.503 -INFO 49138 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-07 17:12:57.503 -INFO 49138 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-05-07 17:12:57.503 -INFO 49138 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-05-07 17:12:57.503 -INFO 49138 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 17:12:57.503 -INFO 49138 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-05-07 17:12:59.441 -INFO 52948 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 52948 (/Users/wujun/Desktop/course/target/classes started by wujun in /Users/wujun/Desktop/course)
+2021-05-07 17:12:59.443 -DEBUG 52948 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-07 17:12:59.443 -INFO 52948 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-05-07 17:13:00.034 -INFO 52948 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 17:13:00.035 -INFO 52948 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-07 17:13:00.053 -INFO 52948 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 MongoDB repository interfaces.
+2021-05-07 17:13:00.065 -INFO 52948 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 17:13:00.066 -INFO 52948 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-07 17:13:00.079 -INFO 52948 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-05-07 17:13:00.380 -INFO 52948 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-05-07 17:13:00.387 -INFO 52948 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-07 17:13:00.387 -INFO 52948 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-05-07 17:13:00.387 -INFO 52948 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-07 17:13:00.446 -INFO 52948 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-05-07 17:13:00.447 -INFO 52948 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 961 ms
+2021-05-07 17:13:00.528 -INFO 52948 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-07 17:13:00.569 -INFO 52948 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:14}] to localhost:27017
+2021-05-07 17:13:00.569 -INFO 52948 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:13}] to localhost:27017
+2021-05-07 17:13:00.570 -INFO 52948 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=12208952}
+2021-05-07 17:13:00.870 -INFO 52948 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-05-07 17:13:00.876 -INFO 52948 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-07 17:13:00.876 -INFO 52948 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-05-07 17:13:00.878 -INFO 52948 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-05-07 17:13:00.878 -INFO 52948 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-07 17:13:00.878 -INFO 52948 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-05-07 17:13:00.879 -INFO 52948 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-05-07 17:13:00.879 -INFO 52948 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@42a0786f
+2021-05-07 17:13:00.988 -INFO 52948 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-07 17:13:01.124 -INFO 52948 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-05-07 17:13:01.138 -INFO 52948 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-07 17:13:01.139 -INFO 52948 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-05-07 17:13:01.139 -INFO 52948 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-05-07 17:13:01.146 -INFO 52948 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 1.895 seconds (JVM running for 2.496)
+2021-05-07 17:13:06.898 -INFO 52948 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 17:13:06.915 -INFO 52948 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-07 17:13:06.916 -INFO 52948 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-05-07 17:13:06.916 -INFO 52948 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-05-07 17:13:06.916 -INFO 52948 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-07 17:13:06.916 -INFO 52948 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-05-07 17:13:08.259 -INFO 52953 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 52953 (/Users/wujun/Desktop/course/target/classes started by wujun in /Users/wujun/Desktop/course)
+2021-05-07 17:13:08.260 -DEBUG 52953 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-07 17:13:08.261 -INFO 52953 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-05-07 17:13:08.845 -INFO 52953 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 17:13:08.845 -INFO 52953 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-07 17:13:08.857 -INFO 52953 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2021-05-07 17:13:08.866 -INFO 52953 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-07 17:13:08.867 -INFO 52953 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-07 17:13:08.879 -INFO 52953 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2021-05-07 17:13:09.278 -INFO 52953 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-05-07 17:13:09.284 -INFO 52953 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-07 17:13:09.285 -INFO 52953 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-05-07 17:13:09.285 -INFO 52953 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-05-07 17:13:09.356 -INFO 52953 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-05-07 17:13:09.356 -INFO 52953 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1057 ms
+2021-05-07 17:13:09.445 -INFO 52953 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-07 17:13:09.486 -INFO 52953 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:16}] to localhost:27017
+2021-05-07 17:13:09.486 -INFO 52953 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:15}] to localhost:27017
+2021-05-07 17:13:09.486 -INFO 52953 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=13195139}
+2021-05-07 17:13:09.836 -INFO 52953 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-05-07 17:13:09.844 -INFO 52953 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-07 17:13:09.844 -INFO 52953 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-05-07 17:13:09.844 -INFO 52953 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-05-07 17:13:09.845 -INFO 52953 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-07 17:13:09.845 -INFO 52953 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-05-07 17:13:09.845 -INFO 52953 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-05-07 17:13:09.845 -INFO 52953 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7ceb6c45
+2021-05-07 17:13:09.982 -INFO 52953 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-07 17:13:10.088 -INFO 52953 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-05-07 17:13:10.102 -INFO 52953 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-07 17:13:10.102 -INFO 52953 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-05-07 17:13:10.103 -INFO 52953 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-05-07 17:13:10.108 -INFO 52953 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.069 seconds (JVM running for 2.578)
+2021-05-07 17:13:16.074 -WARN 52953 [ntLoopGroup-6-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-07 17:13:53.743 -WARN 52953 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-05-07 17:13:58.945 -WARN 52953 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-05-07 20:02:34.422 -WARN 52953 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/

@@ -1,0 +1,2 @@
+2021-05-20 14:42:23.838 -WARN 28709 [ntLoopGroup-6-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-20 14:42:23.937 -WARN 28709 [ntLoopGroup-6-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/favicon.ico"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/

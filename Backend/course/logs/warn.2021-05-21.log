@@ -1,0 +1,13 @@
+2021-05-21 15:55:44.988 -WARN 32682 [ntLoopGroup-6-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-21 15:55:53.388 -WARN 32682 [ntLoopGroup-6-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-21 15:55:54.703 -WARN 32682 [ntLoopGroup-6-3] com.tsinghua.course.CourseApplication : null-null-{"path":"/login"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-21 15:55:54.792 -WARN 32682 [ntLoopGroup-6-4] com.tsinghua.course.CourseApplication : null-null-{"path":"/favicon.ico"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-21 16:45:18.227 -WARN 1077 [ntLoopGroup-7-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/login"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-21 16:45:36.895 -WARN 1077 [ntLoopGroup-7-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/register","query":""}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-21 16:48:55.931 -WARN 1093 [ntLoopGroup-7-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/register","query":""}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#86/
+2021-05-21 16:49:19.533 -WARN 1100 [ntLoopGroup-7-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/register","query":""}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#86/
+2021-05-21 16:49:20.469 -WARN 1100 [ntLoopGroup-7-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/register","query":""}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#86/
+2021-05-21 16:53:19.805 -WARN 1132 [ntLoopGroup-6-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/register","query":""}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#86/
+2021-05-21 16:53:33.260 -WARN 1132 [ntLoopGroup-6-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/login","query":""}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#86/
+2021-05-21 16:58:55.025 -WARN 1149 [ntLoopGroup-7-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/login","query":""}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#88/
+2021-05-21 16:59:02.454 -WARN 1149 [ntLoopGroup-7-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/login","query":""}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#88/

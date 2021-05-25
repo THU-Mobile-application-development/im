@@ -1,0 +1,7 @@
+2021-05-07 12:54:35.837 -WARN 49138 [ntLoopGroup-6-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-07 12:54:35.946 -WARN 49138 [ntLoopGroup-6-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/favicon.ico"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-07 12:55:35.536 -WARN 49138 [ntLoopGroup-4-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-05-07 17:13:16.074 -WARN 52953 [ntLoopGroup-6-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#85/
+2021-05-07 17:13:53.743 -WARN 52953 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-05-07 17:13:58.945 -WARN 52953 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-05-07 20:02:34.422 -WARN 52953 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/

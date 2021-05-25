@@ -1,0 +1,7 @@
+2021-05-25 15:28:58.449 -INFO 8523 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-25 15:28:58.604 -INFO 8523 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-25 15:28:58.604 -INFO 8523 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-05-25 15:28:58.604 -INFO 8523 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-05-25 15:28:58.604 -INFO 8523 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-05-25 15:28:58.604 -INFO 8523 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-05-25 15:28:58.652 -INFO 8523 [extShutdownHook] org.mongodb.driver.connection : Closed connection [connectionId{localValue:3, serverValue:90}] to localhost:27017 because the pool has been closed.
