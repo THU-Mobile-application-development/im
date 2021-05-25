@@ -67,8 +67,6 @@ public class UserProcessor {
         mongoTemplate.upsert(query, update, User.class);
 
 
-
-
     }
 
 }
