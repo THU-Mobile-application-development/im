@@ -14,6 +14,7 @@ public enum BizTypeEnum {
     USER_MODIFY_PASSWORD(UserController.class, "/user/modify_password", "用户修改密码"),
     USER_MYINFO(UserController.class, "/user/myinfo", "用户显示info"),
     USER_EDIT_INFO(UserController.class, "/user/edit_info", "用户修改个人信息"),
+    USER_AVATAR(UserController.class, "/user/avatar", "用户修改头像"),
 
     /** 定时任务业务测试 */
     LOG_TEST(TimerController.class, null, "定时日志测试"),

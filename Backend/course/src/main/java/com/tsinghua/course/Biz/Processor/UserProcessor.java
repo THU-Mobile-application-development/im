@@ -10,9 +10,12 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
+import com.tsinghua.course.Base.Constant.GlobalConstant;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import static com.tsinghua.course.Base.Constant.GlobalConstant.DEFAULT_AVATAR;
 
 /**
  * @描述 用户原子处理器，所有与用户相关的原子操作都在此处理器中执行
@@ -38,11 +41,14 @@ public class UserProcessor {
         user.setPhonenumber(phonenumber);
         user.setUserType(UserType.NORMAL);
 //아바타를 디폴트로 설정
+        String uploadPath;
+        String OSName = System.getProperty("os.name");
+        if(OSName.toLowerCase().startsWith("win"))
+            uploadPath = "";
+        else
+            uploadPath = "";
 
-
-//        String OSName = System.getProperty(OS_NAME);
-//        String avatarPath = OSName.toLowerCase().startsWith(WIN) ? WINDOWS_AVATAR_PATH : LINUX_AVATAR_PATH;
-//        user.setAvatar(avatarPath + DEFAULT_AVATAR);
+       user.setAvatar(uploadPath + DEFAULT_AVATAR);
 
 
         mongoTemplate.insert(user);
@@ -68,6 +74,15 @@ public class UserProcessor {
 
 
     }
+
+    public void uploadAvatar(String username, String avatar) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where(KeyConstant.USERNAME).is(username));
+        Update update = new Update();
+        update.set(KeyConstant.AVATAR, avatar);
+        mongoTemplate.upsert(query, update, User.class);
+    }
+
 
 }
 

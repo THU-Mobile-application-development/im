@@ -8,16 +8,18 @@ import com.tsinghua.course.Base.Error.UserWarnEnum;
 import com.tsinghua.course.Base.Model.User;
 import com.tsinghua.course.Biz.Controller.Params.CommonInParams;
 import com.tsinghua.course.Biz.Controller.Params.CommonOutParams;
-import com.tsinghua.course.Biz.Controller.Params.UserParams.In.EditInfoParams;
-import com.tsinghua.course.Biz.Controller.Params.UserParams.In.LoginInParams;
-import com.tsinghua.course.Biz.Controller.Params.UserParams.In.ModifyPasswordInParams;
-import com.tsinghua.course.Biz.Controller.Params.UserParams.In.RegisterInParams;
+import com.tsinghua.course.Biz.Controller.Params.UserParams.In.*;
 import com.tsinghua.course.Biz.Controller.Params.UserParams.Out.MyInfoOutParams;
 import com.tsinghua.course.Biz.Processor.UserProcessor;
 import com.tsinghua.course.Frame.Util.*;
 import io.netty.channel.ChannelHandlerContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.InputStream;
+
 
 
 /**
@@ -157,13 +159,37 @@ public class UserController {
         if (nickname.equals(""))
             throw new CourseWarn(UserWarnEnum.NO_NEW_NICKNAME);
 
-        /* 性别 */
         String phonenumber = inParams.getPhonenumber();
         if (phonenumber.equals(""))
             throw new CourseWarn(UserWarnEnum.NO_NEW_PHONENUMBER);
 
 
         userProcessor.EditUserInfo(username, nickname, phonenumber);
+        return new CommonOutParams(true);
+    }
+    /** 上传头像 */
+    @BizType(BizTypeEnum.USER_AVATAR)
+    @NeedLogin
+    public CommonOutParams userUploadAvatar(AvatarInParams inParams) throws Exception {
+        // 根据Windows和Linux配置不同的头像保存路径
+        String uploadPath;
+        String avatar;
+        String OSName = System.getProperty("os.name");
+        if(OSName.toLowerCase().startsWith("win"))
+            uploadPath = "";
+        else
+            uploadPath = "";
+        // 获取文件内容
+        MultipartFile file = inParams.getAvatar();
+        //InputStream inputStream = file.getInputStream();
+        // 获取原始文件名
+        String originalName = file.getOriginalFilename();
+        UploadFileUtils upload = new UploadFileUtils();
+        avatar = upload.uploadFile(uploadPath,originalName,file);
+        // 生成uuid名称
+        String username = inParams.getUsername();
+        userProcessor.uploadAvatar(username, avatar);
+
         return new CommonOutParams(true);
     }
 

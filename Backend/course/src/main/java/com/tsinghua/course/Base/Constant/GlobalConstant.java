@@ -11,5 +11,8 @@ public class GlobalConstant {
     /** 日志分隔符 */
     public static final String LOG_SPLIT = "-";
 
+    public static final String DEFAULT_AVATAR = "default.png";
+
+
 //    写各种格式 EX；时间，路径，文件名
 }

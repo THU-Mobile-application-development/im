@@ -21,6 +21,8 @@ public class KeyConstant {
     public static final String NICKNAME = "nickname";
 
     public static final String PHONENUMBER = "phonenumber";
+    public static final String AVATAR = "avatar";
+
 
 
 }
