@@ -1,5 +1,6 @@
 package com.tsinghua.course.Biz;
 
+import com.tsinghua.course.Biz.Controller.ContactController;
 import com.tsinghua.course.Biz.Controller.TestController;
 import com.tsinghua.course.Biz.Controller.TimerController;
 import com.tsinghua.course.Biz.Controller.UserController;
@@ -15,6 +16,15 @@ public enum BizTypeEnum {
     USER_MYINFO(UserController.class, "/user/myinfo", "用户显示info"),
     USER_EDIT_INFO(UserController.class, "/user/edit_info", "用户修改个人信息"),
     USER_AVATAR(UserController.class, "/user/avatar", "用户修改头像"),
+
+    /** 以下为联系人业务类型 */
+    CONTACT_FIND(ContactController.class, "/contact/find", "查找用户"),
+    CONTACT_ADD(UserController.class, "/contact/add", "添加用户"),
+    CONTACT_DELETE(UserController.class, "/contact/delete", "删除用户"),
+    CONTACT_LIST(UserController.class, "/contact/list", "用户目录"),
+
+
+
 
     /** 定时任务业务测试 */
     LOG_TEST(TimerController.class, null, "定时日志测试"),

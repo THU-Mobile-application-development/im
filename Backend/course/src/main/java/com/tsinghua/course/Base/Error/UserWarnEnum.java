@@ -20,6 +20,7 @@ public enum UserWarnEnum implements ExceptionInterface {
     NO_NEW_USERNAME("UserWarn010", "没有要变的用户名"),
     NO_NEW_NICKNAME("UserWarn011", "没有要变的昵称"),
     NO_NEW_PHONENUMBER("UserWarn012", "没有要变的手机号码"),
+    NO_TARGET_USER("UserWarn013", "没有搜索的用户"),
 
 
 

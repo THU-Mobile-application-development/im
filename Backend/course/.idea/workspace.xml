@@ -7,9 +7,8 @@
     <list default="true" id="f146c5bf-b39c-4fa2-a145-9f34711b112b" name="Default Changelist" comment="login register info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Base/Constant/KeyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Base/Constant/KeyConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Base/Error/UserWarnEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Base/Error/UserWarnEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/BizTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/BizTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Processor/UserProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Processor/UserProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +136,7 @@
       <workItem from="1621391118428" duration="6926000" />
       <workItem from="1621581240405" duration="2462000" />
       <workItem from="1621667135948" duration="19080000" />
-      <workItem from="1621926009140" duration="8802000" />
+      <workItem from="1621926009140" duration="28014000" />
     </task>
     <servers />
   </component>
