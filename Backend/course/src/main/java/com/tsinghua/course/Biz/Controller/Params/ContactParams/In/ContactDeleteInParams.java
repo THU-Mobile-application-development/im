@@ -12,8 +12,8 @@ import com.tsinghua.course.Biz.Controller.Params.CommonInParams;
 @BizType(BizTypeEnum.CONTACT_DELETE)
 public class ContactDeleteInParams extends CommonInParams {
     @Required
-    private String friend_username;
+    private String delete_username;
 
-    public String getContactUsername() { return friend_username; }
-    public void setContactUsername(String friend_username) { this.friend_username = friend_username; }
+    public String getDeleteUsername() { return delete_username; }
+    public void setDeleteUsername(String friend_username) { this.delete_username = delete_username; }
 }

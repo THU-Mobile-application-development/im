@@ -35,7 +35,6 @@ public class UserController {
     @BizType(BizTypeEnum.USER_LOGIN)
     public CommonOutParams userLogin(LoginInParams inParams) throws Exception {
         String username = inParams.getUsername();
-        System.out.println(username);
         if (username == null)
             throw new CourseWarn(UserWarnEnum.LOGIN_FAILED);
         User user = userProcessor.getUserByUsername(username);
@@ -61,7 +60,6 @@ public class UserController {
     public CommonOutParams userRegister(RegisterInParams inParams) throws Exception {
         /* 用户名 */
         String username = inParams.getUsername();
-        System.out.println(username);
 
         if (username == null)
             throw new CourseWarn(UserWarnEnum.NO_USERNAME);

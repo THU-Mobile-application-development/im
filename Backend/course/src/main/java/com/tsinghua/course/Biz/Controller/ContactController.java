@@ -18,12 +18,12 @@ import com.tsinghua.course.Biz.Controller.Params.ContactParams.Out.ContactListOu
 import com.tsinghua.course.Biz.Processor.ContactProcessor;
 import com.tsinghua.course.Biz.Processor.UserProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.tsinghua.course.Base.Constant.GlobalConstant.*;
-
+@Component
 public class ContactController {
 
     @Autowired
@@ -37,12 +37,21 @@ public class ContactController {
     @BizType(BizTypeEnum.CONTACT_FIND)
     @NeedLogin
     public ContactFindOutParams FindContact(ContactFindInParams inParams) throws Exception {
+
+
+
         String contact_username = inParams.getContactUsername();
+
+
+
         User target_user = userProcessor.getUserByUsername(contact_username);
 
         /* 如果没找到该用户、找到自己，均视为没有找到结果 */
         String username = inParams.getUsername();
         Contact relation = contactProcessor.getRelationByUsername(username, contact_username);
+
+        System.out.println(relation);
+
         if (target_user == null || target_user.getUsername().equals(username)) {
             throw new CourseWarn(UserWarnEnum.NO_TARGET_USER);
         }
@@ -64,33 +73,47 @@ public class ContactController {
 
     @BizType(BizTypeEnum.CONTACT_LIST)
     @NeedLogin
-    public ContactListOutParams AllContact(ContactListOutParams inParams) throws Exception {
-        String username = inParams.getUsername();
-        List<Contact> contactList = contactProcessor.getAllContact(username);
+    public ContactListOutParams AllContact(CommonInParams inParams) throws Exception {
+
+        String username = inParams.getUsername();//
+        List<Contact> contactList = contactProcessor.getAllContact(username);//
 
         List<ContactProps> contactPropsList = new ArrayList<>();
+
+
 
         for (Contact contact: contactList) {
             String contact_username = contact.getContactUsername();
             User target_user = userProcessor.getUserByUsername(contact_username);
 
-            String target_avatar = target_user.getAvatar();
+            //String target_avatar = target_user.getAvatar();
 //            int index = friend_avatar.indexOf(RELATIVE_PATH);
 //            String avatar_url = "http://" + SERVER_IP + ":" + FILE_PORT + friend_avatar.substring(index);
             String target_nickname = target_user.getNickname();
+            System.out.println(target_nickname);
             ContactProps props= new ContactProps();
             props.setPropsUsername(contact_username);
-            props.setPropsAvatar(target_avatar);
+           // props.setPropsAvatar(target_avatar);
             props.setPropsNickname(target_nickname);
             contactPropsList.add(props);
         }
+
         ContactProps[] result = new ContactProps[contactPropsList.size()];
         contactPropsList.toArray(result);
 
+
         ContactListOutParams outParams = new ContactListOutParams();
         outParams.setContactList(result);
+
+
+
+
         return outParams;
     }
+
+
+
+
     /** 审核好友申请 */
     @BizType(BizTypeEnum.CONTACT_ADD)
     @NeedLogin
@@ -108,7 +131,7 @@ public class ContactController {
     public CommonOutParams friendRemoveFriend(ContactDeleteInParams inParams) throws Exception {
         /* 删除好友关系 */
         String username = inParams.getUsername();
-        String contact_username = inParams.getContactUsername();
+        String contact_username = inParams.getDeleteUsername();
         contactProcessor.deleteContact(username, contact_username);
 
 //        /* 删除聊天条目（单向）和关系 */

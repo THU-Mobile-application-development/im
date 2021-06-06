@@ -1,9 +1,6 @@
 package com.tsinghua.course.Biz;
 
-import com.tsinghua.course.Biz.Controller.ContactController;
-import com.tsinghua.course.Biz.Controller.TestController;
-import com.tsinghua.course.Biz.Controller.TimerController;
-import com.tsinghua.course.Biz.Controller.UserController;
+import com.tsinghua.course.Biz.Controller.*;
 
 /**
  * @描述 业务类型枚举，所有的业务类型都需要枚举在此类中
@@ -19,9 +16,15 @@ public enum BizTypeEnum {
 
     /** 以下为联系人业务类型 */
     CONTACT_FIND(ContactController.class, "/contact/find", "查找用户"),
-    CONTACT_ADD(UserController.class, "/contact/add", "添加用户"),
-    CONTACT_DELETE(UserController.class, "/contact/delete", "删除用户"),
-    CONTACT_LIST(UserController.class, "/contact/list", "用户目录"),
+    CONTACT_ADD(ContactController.class, "/contact/add", "添加用户"),
+    CONTACT_DELETE(ContactController.class, "/contact/delete", "删除用户"),
+    CONTACT_LIST(ContactController.class, "/contact/list", "用户目录"),
+
+
+    CHAT_CHECK_RELATION(ChatController.class, "/chat/check_relation", "查看是否已经在聊天"),
+    CHAT_SEND(ChatController.class, "/chat/chat_send", "发送聊天消息"),
+    CHAT_DELETE(ChatController.class, "/chat/chat_delete", "删除聊天内容"),
+    CHAT_HISTORY(ChatController.class, "/chat/chat_history", "查看聊天历史记录"),
 
 
 

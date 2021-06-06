@@ -10,6 +10,7 @@ import com.tsinghua.course.Base.Error.SystemErrorEnum;
 import com.tsinghua.course.Base.Model.User;
 import com.tsinghua.course.Biz.Controller.Params.CommonInParams;
 import com.tsinghua.course.Biz.Controller.Params.CommonOutParams;
+import com.tsinghua.course.Biz.Controller.Params.ContactParams.Out.ContactListOutParams;
 import com.tsinghua.course.Biz.Controller.Params.DefaultParams.Out.SysErrorOutParams;
 import com.tsinghua.course.Biz.Controller.Params.DefaultParams.Out.SysWarnOutParams;
 import com.tsinghua.course.Biz.Processor.UserProcessor;
@@ -69,22 +70,31 @@ public class Dispatcher {
                 User user = userProcessor.getUserByUsername(username);
                 ThreadUtil.setUser(user);
             }
-
             /** 执行业务，返回结果 */
             Object exeBean = applicationContext.getBean(exeCls);
             Object rlt = exeMethod.invoke(exeBean, params);
-            if (rlt == null) /** 定时任务可以不返回参数，因为不需要传参数给客户端 */
-                return new JSONObject().toString();
+            if (rlt == null) {
+                /** 定时任务可以不返回参数，因为不需要传参数给客户端 */
+                return new JSONObject().toString();}
             else if (rlt instanceof List) { /** 如果返回多个参数要封装一下 */
                 JSONArray retArr = new JSONArray();
                 List<CommonOutParams> rlts = (List<CommonOutParams>)rlt;
                 for (CommonOutParams obj : rlts)
                     retArr.add(obj.toJsonObject());
                 return retArr.toString();
-            } else if (rlt instanceof CommonOutParams) /** 否则直接返回参数 */
+            } else if (rlt instanceof CommonOutParams) { /** 否则直接返回参数 */
                 return rlt.toString();
-            else /** 不允许其它类型的参数返回值 */
+            }
+//            else if (rlt instanceof ContactListOutParams){
+//                        return rlt.toString();
+//            }
+
+
+            else /** 不允许其它类型的参数返回值 */ {
                 throw new CourseError(SystemErrorEnum.RETURN_PARAMS_ERROR);
+
+            }
+
         } catch (Exception e) {
             Throwable realError = e;
             boolean isWarning = false;

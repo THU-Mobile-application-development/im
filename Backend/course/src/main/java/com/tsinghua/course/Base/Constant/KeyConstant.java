@@ -24,6 +24,17 @@ public class KeyConstant {
     public static final String AVATAR = "avatar";
     public static final String CONTACT_USERNAME = "contact_username";
 
+    public static final String MY_USERNAME = "my_username";
+    public static final String TO_USERNAME = "to_username";
+    public static final String NOTIFICATION = "noty";
+
+    public static final String CHAT = "chat";
+
+    public static final String TIME = "send_time";
+
+    public static final String ID = "id";
+
+
 
 
 }

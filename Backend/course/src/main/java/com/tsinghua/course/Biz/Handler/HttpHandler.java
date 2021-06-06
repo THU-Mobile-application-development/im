@@ -60,8 +60,6 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
     /** 处理http请求的实际函数 */
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest request) {
-        System.out.println("dddddddd");
-        System.out.println(hasPreSession);
 
         JSONObject requestParams = new JSONObject();
         BizTypeEnum bizTypeEnum = null;
@@ -84,6 +82,7 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
                 if (bizTypeEnum == null)
                     throw new CourseWarn(SystemErrorEnum.BIZ_TYPE_NOT_EXIST);
                 requestParams.put(KeyConstant.BIZ_TYPE, bizTypeEnum);
+
             } catch (Exception e) {
                 throw new CourseWarn(SystemErrorEnum.BIZ_TYPE_NOT_EXIST);
             }
@@ -106,8 +105,14 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
             /** 使用派发器执行业务并返回业务执行结果 */
             String retStr;
+
+            System.out.println("入参");
+            System.out.println(params);
             retStr = dispatcher.dispatch(params);
+            System.out.println("返回?");
+            System.out.println(retStr);
             writeResponse(channelHandlerContext, retStr, request);
+
         } catch (Exception e) {
             String retStr;
             if (e instanceof CourseWarn) {

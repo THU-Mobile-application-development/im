@@ -15,7 +15,9 @@ import java.util.Map;
 public class Contact {
     /** 子对象文档 */
     public static class SubObj {
-        /** 存储的时间 */
+        /**
+         * 存储的时间
+         */
         String time;
 
         public String getTime() {
@@ -49,7 +51,13 @@ public class Contact {
     public String getContactUsername() { return contact_username; }
     public void setContactUsername(String contact_username) { this.contact_username = contact_username; }
 
+    public SubObj getSubObj() {
+        return subObj;
+    }
 
-    public SubObj getSubObj() { return subObj; }
-    public void setSubObj(SubObj subObj) { this.subObj = subObj; }
+    public void setSubObj(SubObj subObj) {
+        this.subObj = subObj;
+    }
+
+
 }
