@@ -3,6 +3,7 @@ package com.tsinghua.course.Biz.Processor;
 import com.tsinghua.course.Base.Constant.KeyConstant;
 import com.tsinghua.course.Base.Model.ChatProps;
 import com.tsinghua.course.Base.Model.ChatRelation;
+import com.tsinghua.course.Base.Model.Contact;
 import com.tsinghua.course.Base.Model.Notification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -22,6 +23,16 @@ public class ChatProcessor {
 
     @Autowired
     MongoTemplate mongoTemplate;
+
+
+
+    public List<ChatRelation> getChatList(String my_username) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where(KeyConstant.MY_USERNAME).is(my_username));
+        return mongoTemplate.find(query, ChatRelation.class);
+
+    }
+
 
 
 
@@ -63,9 +74,16 @@ public class ChatProcessor {
         Query query = new Query();
         query.addCriteria(Criteria.where(KeyConstant.MY_USERNAME).is(my_username)
                 .and(KeyConstant.TO_USERNAME).is(to_username));
+        ChatRelation chat_relate =  mongoTemplate.findOne(query, ChatRelation.class);
+        assert chat_relate != null;
+        List<ChatProps> chat_list = chat_relate.getChatList();
+//        System.out.println(chat_list.get(0).getChatContent());
+    chat_list.add(chat);
 
-        List<ChatProps> chat_list = mongoTemplate.find(query, ChatProps.class);
-        chat_list.add(chat);
+//        System.out.println("working?");
+//        System.out.println(chat_list.get(0).getChatContent());
+//        //System.out.println(chat_list.get(1).getChatContent());
+//
         Update update = new Update();
         update.set(KeyConstant.CHAT, chat_list);
 

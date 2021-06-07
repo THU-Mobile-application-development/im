@@ -17,6 +17,7 @@ public class ChatRelation {
     Date create_time;
 
     List<ChatProps> chat;
+
     Notification noty;
 
     public String getMyUsername() { return my_username; }

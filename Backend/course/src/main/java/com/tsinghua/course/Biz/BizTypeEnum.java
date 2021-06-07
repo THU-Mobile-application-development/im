@@ -25,6 +25,7 @@ public enum BizTypeEnum {
     CHAT_SEND(ChatController.class, "/chat/chat_send", "发送聊天消息"),
     CHAT_DELETE(ChatController.class, "/chat/chat_delete", "删除聊天内容"),
     CHAT_HISTORY(ChatController.class, "/chat/chat_history", "查看聊天历史记录"),
+    CHAT_LIST(ChatController.class, "/chat/list", "聊天目录"),
 
 
 

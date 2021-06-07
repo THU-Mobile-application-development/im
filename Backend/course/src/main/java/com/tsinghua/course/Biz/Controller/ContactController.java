@@ -51,15 +51,23 @@ public class ContactController {
         Contact relation = contactProcessor.getRelationByUsername(username, contact_username);
 
         System.out.println(relation);
-
+        boolean already_contact;
         if (target_user == null || target_user.getUsername().equals(username)) {
             throw new CourseWarn(UserWarnEnum.NO_TARGET_USER);
         }
         else if(relation != null ){
             //已经是朋友的话，直接可以进入聊天
+           already_contact = true   ;
+        }
+        else{
+           already_contact = false   ;
+
+
+
         }
         String nickname = target_user.getNickname();
         String avatar = target_user.getAvatar();
+
         //avatar的具体路径
 //        int index = avatar.indexOf(RELATIVE_PATH);
 //        String avatar_url = "http://" + SERVER_IP + ":" + FILE_PORT + avatar.substring(index);
@@ -67,6 +75,7 @@ public class ContactController {
         outParams.setContactAvatar(avatar);
         outParams.setContactUsername(contact_username);
         outParams.setContactNickname(nickname);
+        outParams.setContactAlready(already_contact);
 
         return outParams;
     }

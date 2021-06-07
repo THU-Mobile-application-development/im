@@ -11,7 +11,9 @@ import com.tsinghua.course.Biz.Controller.Params.ChatParams.In.ChatHistoryInPara
 import com.tsinghua.course.Biz.Controller.Params.ChatParams.In.ChatSendInParams;
 import com.tsinghua.course.Biz.Controller.Params.ChatParams.Out.ChatCheckOutParams;
 import com.tsinghua.course.Biz.Controller.Params.ChatParams.Out.ChatHIstoryOutParams;
+import com.tsinghua.course.Biz.Controller.Params.ChatParams.Out.ChatListOutParams;
 import com.tsinghua.course.Biz.Controller.Params.ChatParams.Out.ChatSendOutParams;
+import com.tsinghua.course.Biz.Controller.Params.CommonInParams;
 import com.tsinghua.course.Biz.Controller.Params.CommonOutParams;
 import com.tsinghua.course.Biz.Controller.Params.ContactParams.Out.ContactListOutParams;
 import com.tsinghua.course.Biz.Processor.ChatProcessor;
@@ -34,9 +36,60 @@ public class ChatController {
     @Autowired
     ChatProcessor chatProcessor;
 
+
+    @BizType(BizTypeEnum.CHAT_LIST)
+    @NeedLogin
+    public ChatListOutParams getChatList(CommonInParams inParams) throws Exception {
+        String my_username = inParams.getUsername();
+        List<ChatRelation> chatList = chatProcessor.getChatList(my_username);
+
+
+//        List<ChatRelation> chatPropsList = new ArrayList<>();
+//
+//
+//
+//        for (Contact contact: contactList) {
+//            String contact_username = contact.getContactUsername();
+//            User target_user = userProcessor.getUserByUsername(contact_username);
+//
+//            //String target_avatar = target_user.getAvatar();
+////            int index = friend_avatar.indexOf(RELATIVE_PATH);
+////            String avatar_url = "http://" + SERVER_IP + ":" + FILE_PORT + friend_avatar.substring(index);
+//            String target_nickname = target_user.getNickname();
+//            System.out.println(target_nickname);
+//            ContactProps props= new ContactProps();
+//            props.setPropsUsername(contact_username);
+//            // props.setPropsAvatar(target_avatar);
+//            props.setPropsNickname(target_nickname);
+//            contactPropsList.add(props);
+//        }
+
+        ChatRelation[] result = new ChatRelation[chatList.size()];
+        chatList.toArray(result);
+
+
+        ChatListOutParams outParams = new ChatListOutParams();
+        outParams.setChatList(result);
+
+
+
+
+        return outParams;
+
+
+
+
+    }
+
+
+
+
+
+
+
     @BizType(BizTypeEnum.CHAT_CHECK_RELATION)
     @NeedLogin
-    public ChatCheckOutParams chatGetChatUserLink(ChatCheckInParams inParams) throws Exception {
+    public ChatCheckOutParams chatGetChatRelation(ChatCheckInParams inParams) throws Exception {
         String my_username = inParams.getUsername();
         String to_username = inParams.getToUsername();
 
@@ -70,6 +123,7 @@ public class ChatController {
     /** 发送消息给指定用户 */
     @BizType(BizTypeEnum.CHAT_SEND)
     @NeedLogin
+
     public CommonOutParams chatSendMessage(ChatSendInParams inParams) throws Exception {
         String my_username = inParams.getUsername();
         String to_username = inParams.getToUsername();
@@ -98,8 +152,7 @@ public class ChatController {
         chatProcessor.updateChat(to_username, my_username, chat_to);
 
         ChatRelation to_Relation = chatProcessor.getChatRelation(to_username,my_username);
-
-        to_Relation.getNotification().setUnreadNum(to_Relation.getNotification().getUnreadNum());
+        to_Relation.getNotification().setUnreadNum(to_Relation.getNotification().getUnreadNum()+1);
         to_Relation.getNotification().setUserRead(true);
         chatProcessor.updateChatNotification(to_username, my_username,to_Relation.getNotification());
 
