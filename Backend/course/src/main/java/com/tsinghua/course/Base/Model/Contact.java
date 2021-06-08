@@ -13,7 +13,9 @@ import java.util.Map;
  **/
 @Document("Contact")
 public class Contact {
-    /** 子对象文档 */
+    /**
+     * 子对象文档
+     */
     // 用户名
     String username;
     // 密码
@@ -22,16 +24,30 @@ public class Contact {
     String nickname;
 
 
-    public String getUsername() { return username; }
-    public void setUsername(String username) { this.username = username; }
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
 
-    public String getNickname() { return nickname; }
-    public void setNickname(String nickname) { this.nickname = nickname; }
+    public String getNickname() {
+        return nickname;
+    }
 
-    public String getContactUsername() { return contact_username; }
-    public void setContactUsername(String contact_username) { this.contact_username = contact_username; }
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
 
+    public String getContactUsername() {
+        return contact_username;
+    }
+
+    public void setContactUsername(String contact_username) {
+        this.contact_username = contact_username;
+    }
 
 
 }

@@ -39,21 +39,27 @@ public class TestController {
     @Autowired
     TestProcessor testProcessor;
 
-    /** 登录后才可以访问此接口 */
+    /**
+     * 登录后才可以访问此接口
+     */
     @NeedLogin
     @BizType(BizTypeEnum.LOGIN_TEST)
     public CommonOutParams loginTest(CommonInParams inParams) {
         return new CommonOutParams(true);
     }
 
-    /** 管理员才可以访问此接口 */
-    @NeedLogin(value = { UserType.ADMIN })
+    /**
+     * 管理员才可以访问此接口
+     */
+    @NeedLogin(value = {UserType.ADMIN})
     @BizType(BizTypeEnum.ADMIN_TEST)
     public CommonOutParams adminTest(CommonInParams inParams) {
         return new CommonOutParams(true);
     }
 
-    /** 测试是否可以访问redis缓存 */
+    /**
+     * 测试是否可以访问redis缓存
+     */
     @BizType(BizTypeEnum.REDIS_TEST)
     public CommonOutParams redisTest(CommonInParams inParams) {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -61,7 +67,9 @@ public class TestController {
         return new CommonOutParams(true);
     }
 
-    /** 测试定时器功能是否正常 */
+    /**
+     * 测试定时器功能是否正常
+     */
     @BizType(BizTypeEnum.TIMER_TEST)
     public CommonOutParams timerTest(CommonInParams inParams) throws Exception {
         /** 设置定时任务的参数 */
@@ -76,7 +84,9 @@ public class TestController {
         return new CommonOutParams(true);
     }
 
-    /** 测试内部报错是否正常 */
+    /**
+     * 测试内部报错是否正常
+     */
     @BizType(BizTypeEnum.ERROR_TEST)
     public CommonOutParams errorTest(CommonInParams inParams) {
         /**
@@ -89,7 +99,9 @@ public class TestController {
         return new CommonOutParams(true);
     }
 
-    /** 测试文件上传是否正常 */
+    /**
+     * 测试文件上传是否正常
+     */
     @BizType(BizTypeEnum.FILE_UPLOAD_TEST)
     public CommonOutParams fileTest(UploadFileInParams inParams) throws Exception {
         UploadFileOutParams outParams = new UploadFileOutParams();
@@ -104,7 +116,9 @@ public class TestController {
         return outParams;
     }
 
-    /** 获取文件下载的路径 */
+    /**
+     * 获取文件下载的路径
+     */
     @NeedLogin
     @BizType(BizTypeEnum.FILE_DOWNLOAD_TEST)
     public CommonOutParams fileDownTest(CommonInParams inParams) throws Exception {
@@ -113,7 +127,9 @@ public class TestController {
         return outParams;
     }
 
-    /** 测试多个返回值，dispatch会自动封装多个返回值 */
+    /**
+     * 测试多个返回值，dispatch会自动封装多个返回值
+     */
     @BizType(BizTypeEnum.MULTI_RETURN_TEST)
     public List<CommonOutParams> multiReturnTest(CommonInParams inParams) {
         List<CommonOutParams> retParams = new ArrayList<>();
@@ -130,7 +146,9 @@ public class TestController {
         return retParams;
     }
 
-    /** mongodb数据库功能测试 */
+    /**
+     * mongodb数据库功能测试
+     */
     @BizType(BizTypeEnum.MONGODB_TEST)
     public CommonOutParams mongodbTest(CommonInParams inParams) {
         /** 执行完操作后可以在mongodb中查看执行的结果 */

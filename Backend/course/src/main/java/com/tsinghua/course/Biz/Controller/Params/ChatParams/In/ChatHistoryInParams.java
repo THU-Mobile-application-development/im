@@ -10,8 +10,13 @@ public class ChatHistoryInParams extends CommonInParams {
 
     String to_username;
 
-    public String getToUsername(){return to_username;}
-    public void setToUsername(String to_username){this.to_username = to_username;}
+    public String getToUsername() {
+        return to_username;
+    }
+
+    public void setToUsername(String to_username) {
+        this.to_username = to_username;
+    }
 
 
 }

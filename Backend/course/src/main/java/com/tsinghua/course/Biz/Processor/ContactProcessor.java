@@ -19,7 +19,9 @@ public class ContactProcessor {
     @Autowired
     MongoTemplate mongoTemplate;
 
-    /** 根据用户名查找自己的某一位好友 */
+    /**
+     * 根据用户名查找自己的某一位好友
+     */
     public Contact getRelationByUsername(String username, String friend_username) {
         Query query = new Query();
         query.addCriteria(Criteria.where(KeyConstant.USERNAME).is(username)
@@ -28,7 +30,9 @@ public class ContactProcessor {
     }
 
 
-    /** 根据用户名查找自己的某一位好友 */
+    /**
+     * 根据用户名查找自己的某一位好友
+     */
     public List<Contact> getAllContact(String username) {
         Query query = new Query();
         query.addCriteria(Criteria.where(KeyConstant.USERNAME).is(username));
@@ -36,7 +40,9 @@ public class ContactProcessor {
     }
 
 
-    /** 添加好友关系 */
+    /**
+     * 添加好友关系
+     */
     public void addContact(String username, String add_contact) {
         Contact relation = new Contact();
         relation.setUsername(username);

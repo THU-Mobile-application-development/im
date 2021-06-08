@@ -14,8 +14,13 @@ public class ContactFindInParams extends CommonInParams {
     @Required
     private String contact_username;
 
-    public String getContactUsername() { return contact_username; }
-    public void setContactUsername(String contact_username) { this.contact_username = contact_username; }
+    public String getContactUsername() {
+        return contact_username;
+    }
+
+    public void setContactUsername(String contact_username) {
+        this.contact_username = contact_username;
+    }
 }
 
 

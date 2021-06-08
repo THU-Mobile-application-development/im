@@ -10,9 +10,13 @@ import java.util.Map;
  **/
 @Document("User")
 public class User {
-    /** 子对象文档 */
+    /**
+     * 子对象文档
+     */
     public static class SubObj {
-        /** 存储的时间 */
+        /**
+         * 存储的时间
+         */
         String time;
 
         public String getTime() {
@@ -23,6 +27,7 @@ public class User {
             this.time = time;
         }
     }
+
     // mongodb唯一id
     String id;
     // 用户名
@@ -56,6 +61,7 @@ public class User {
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
+
     public String getNickname() {
         return nickname;
     }
@@ -63,8 +69,14 @@ public class User {
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
-    public String getPhonenumber() {return phonenumber;}
-    public String getAvatar() {return avatar;}
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
 
     public String getId() {
         return id;
@@ -85,7 +97,10 @@ public class User {
     public UserType getUserType() {
         return userType;
     }
-    public void setAvatar(String avatar) { this.avatar = avatar; }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 
     public void setUserType(UserType userType) {
         this.userType = userType;

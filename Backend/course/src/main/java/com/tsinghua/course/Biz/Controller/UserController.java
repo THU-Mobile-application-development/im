@@ -21,7 +21,6 @@ import java.io.File;
 import java.io.InputStream;
 
 
-
 /**
  * @描述 用户控制器，用于执行用户相关的业务
  **/
@@ -31,7 +30,9 @@ public class UserController {
     @Autowired
     UserProcessor userProcessor;
 
-    /** 用户登录业务 */
+    /**
+     * 用户登录业务
+     */
     @BizType(BizTypeEnum.USER_LOGIN)
     public CommonOutParams userLogin(LoginInParams inParams) throws Exception {
         String username = inParams.getUsername();
@@ -42,7 +43,7 @@ public class UserController {
             throw new CourseWarn(UserWarnEnum.LOGIN_FAILED);
 
         /** 登录成功，记录登录状态 */
-        ChannelHandlerContext ctx =  ThreadUtil.getCtx();
+        ChannelHandlerContext ctx = ThreadUtil.getCtx();
         /** ctx不为空记录WebSocket状态，否则记录http状态 */
         if (ctx != null)
             SocketUtil.setUserSocket(username, ctx);
@@ -55,7 +56,9 @@ public class UserController {
         return new CommonOutParams(true);
     }
 
-    /** 用户注册业务 */
+    /**
+     * 用户注册业务
+     */
     @BizType(BizTypeEnum.USER_REGISTER)
     public CommonOutParams userRegister(RegisterInParams inParams) throws Exception {
         /* 用户名 */
@@ -91,7 +94,9 @@ public class UserController {
     }
 
 
-    /** 用户修改密码业务 */
+    /**
+     * 用户修改密码业务
+     */
     @NeedLogin
     @BizType(BizTypeEnum.USER_MODIFY_PASSWORD)
     public CommonOutParams userModifyPassword(ModifyPasswordInParams inParams) throws Exception {
@@ -101,7 +106,7 @@ public class UserController {
         String old_password = inParams.getOldPassword();
         if (old_password == null)
             throw new CourseWarn(UserWarnEnum.NO_OLD_PASSWORD);
-        if(!user.getPassword().equals(old_password))
+        if (!user.getPassword().equals(old_password))
             throw new CourseWarn(UserWarnEnum.PASSWORD_INCORRECT);
         String new_password = inParams.getNewPassword();
 //        regex = "^(?![0-9]+$)(?![a-zA-Z]+$)(?![0-9a-zA-Z]+$)(?![0-9\\W]+$)(?![a-zA-Z\\W]+$)[0-9A-Za-z\\W]{6,18}$";
@@ -112,13 +117,15 @@ public class UserController {
         String confirm_password = inParams.getConfirmPassword();
         if (confirm_password == null)
             throw new CourseWarn(UserWarnEnum.NO_CONFIRM_PASSWORD);
-        if(!new_password.equals(confirm_password))
+        if (!new_password.equals(confirm_password))
             throw new CourseWarn(UserWarnEnum.NO_MATCH_CONFIRM_PASSWORD);
-        userProcessor.ModifyUserPassword(username,new_password);
+        userProcessor.ModifyUserPassword(username, new_password);
         return new CommonOutParams(true);
     }
 
-    /** 用户显示info业务 */
+    /**
+     * 用户显示info业务
+     */
     @NeedLogin
     @BizType(BizTypeEnum.USER_MYINFO)
     public MyInfoOutParams userMyInfo(CommonInParams inParams) throws Exception {
@@ -127,7 +134,7 @@ public class UserController {
         User user = userProcessor.getUserByUsername(username);
 
         MyInfoOutParams outParams = new MyInfoOutParams(true);
-       // outParams.setAvatar(avatar_url);
+        // outParams.setAvatar(avatar_url);
         outParams.setUsername(username);
         outParams.setNickname(user.getNickname());
         outParams.setPhonenumber(user.getPhonenumber());
@@ -136,12 +143,14 @@ public class UserController {
 
 
         //userProcessor.GetMyInfo(username,user.getNickname(),user.getPhonenumber(),user.getAvatar());
-       // userProcessor.GetMyInfo(username,user.getNickname(),user.getPhonenumber(),"");
+        // userProcessor.GetMyInfo(username,user.getNickname(),user.getPhonenumber(),"");
 
         //return new CommonOutParams(true);
     }
 
-    /** 用户修改info业务 */
+    /**
+     * 用户修改info业务
+     */
     @NeedLogin
     @BizType(BizTypeEnum.USER_EDIT_INFO)
     public CommonOutParams userEditInfo(EditInfoParams inParams) throws Exception {
@@ -165,7 +174,10 @@ public class UserController {
         userProcessor.EditUserInfo(username, nickname, phonenumber);
         return new CommonOutParams(true);
     }
-    /** 上传头像 */
+
+    /**
+     * 上传头像
+     */
     @BizType(BizTypeEnum.USER_AVATAR)
     @NeedLogin
     public CommonOutParams userUploadAvatar(AvatarInParams inParams) throws Exception {
@@ -173,7 +185,7 @@ public class UserController {
         String uploadPath;
         String avatar;
         String OSName = System.getProperty("os.name");
-        if(OSName.toLowerCase().startsWith("win"))
+        if (OSName.toLowerCase().startsWith("win"))
             uploadPath = "";
         else
             uploadPath = "";
@@ -183,7 +195,7 @@ public class UserController {
         // 获取原始文件名
         String originalName = file.getOriginalFilename();
         UploadFileUtils upload = new UploadFileUtils();
-        avatar = upload.uploadFile(uploadPath,originalName,file);
+        avatar = upload.uploadFile(uploadPath, originalName, file);
         // 生成uuid名称
         String username = inParams.getUsername();
         userProcessor.uploadAvatar(username, avatar);

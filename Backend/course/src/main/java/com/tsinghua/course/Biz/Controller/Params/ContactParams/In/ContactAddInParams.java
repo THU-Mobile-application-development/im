@@ -6,8 +6,6 @@ import com.tsinghua.course.Biz.BizTypeEnum;
 import com.tsinghua.course.Biz.Controller.Params.CommonInParams;
 
 
-
-
 /**
  * @描述 审核好友申请的入参
  **/
@@ -17,7 +15,12 @@ public class ContactAddInParams extends CommonInParams {
     @Required
     private String add_contact;
 
-    public String getAddUsername() { return add_contact; }
-    public void setAddUsername(String add_contact) { this.add_contact = add_contact; }
+    public String getAddUsername() {
+        return add_contact;
+    }
+
+    public void setAddUsername(String add_contact) {
+        this.add_contact = add_contact;
+    }
 
 }

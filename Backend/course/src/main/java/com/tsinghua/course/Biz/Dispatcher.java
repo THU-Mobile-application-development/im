@@ -75,10 +75,10 @@ public class Dispatcher {
             Object rlt = exeMethod.invoke(exeBean, params);
             if (rlt == null) {
                 /** 定时任务可以不返回参数，因为不需要传参数给客户端 */
-                return new JSONObject().toString();}
-            else if (rlt instanceof List) { /** 如果返回多个参数要封装一下 */
+                return new JSONObject().toString();
+            } else if (rlt instanceof List) { /** 如果返回多个参数要封装一下 */
                 JSONArray retArr = new JSONArray();
-                List<CommonOutParams> rlts = (List<CommonOutParams>)rlt;
+                List<CommonOutParams> rlts = (List<CommonOutParams>) rlt;
                 for (CommonOutParams obj : rlts)
                     retArr.add(obj.toJsonObject());
                 return retArr.toString();
@@ -102,16 +102,16 @@ public class Dispatcher {
             /** 获取报错的类型，判断是警告还是真实错误 */
             if (e instanceof InvocationTargetException) {
                 /** InvocationTargetException 代表业务内部逻辑执行有错误 */
-                realError = ((InvocationTargetException)e).getTargetException();
+                realError = ((InvocationTargetException) e).getTargetException();
                 /** UndeclaredThrowableException 代表内部还有错误，获取更内层的错误 */
                 if (realError instanceof UndeclaredThrowableException)
-                    realError = ((UndeclaredThrowableException)realError).getUndeclaredThrowable();
+                    realError = ((UndeclaredThrowableException) realError).getUndeclaredThrowable();
             }
             if (realError instanceof CourseWarn) {
                 isWarning = true;
             }
             if (isWarning) {
-                CourseWarn courseWarn = (CourseWarn)realError;
+                CourseWarn courseWarn = (CourseWarn) realError;
                 /** 记录警告日志，并返回警告的参数 */
                 LogUtil.WARN(username, bitType, params, courseWarn);
                 return new SysWarnOutParams(courseWarn).toString();
@@ -123,7 +123,9 @@ public class Dispatcher {
         }
     }
 
-    /** 根据类名和操作类型获取执行业务的具体函数 */
+    /**
+     * 根据类名和操作类型获取执行业务的具体函数
+     */
     private Method getMethodByOptType(Class<?> cls, BizTypeEnum bitType) {
         Method method = null;
         Method[] methods = cls.getDeclaredMethods();
@@ -138,15 +140,17 @@ public class Dispatcher {
         return method;
     }
 
-    /** 根据操作类型获取入参类 */
+    /**
+     * 根据操作类型获取入参类
+     */
     public Class<CommonInParams> getParamByBizType(BizTypeEnum bitType) {
         Reflections reflections = new Reflections(NameConstant.PACKAGE_NAME + ".Biz.Controller.Params");
         /** 根据注解获取入参类 */
         Set<Class<?>> classSet = reflections.getTypesAnnotatedWith(BizType.class);
-        for (Class<?> cls:classSet) {
+        for (Class<?> cls : classSet) {
             if (!CommonInParams.class.isAssignableFrom(cls))
                 continue;
-            Class<CommonInParams> paramCls = (Class<CommonInParams>)cls;
+            Class<CommonInParams> paramCls = (Class<CommonInParams>) cls;
             BizType bizType1 = paramCls.getAnnotation(BizType.class);
             if (bizType1.value().equals(bitType))
                 return paramCls;

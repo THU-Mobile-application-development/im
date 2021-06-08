@@ -33,15 +33,15 @@ public class ContactController {
 //    @Autowired
 //    ChatProcessor chatProcessor;
 
-    /** 搜索联系人 */
+    /**
+     * 搜索联系人
+     */
     @BizType(BizTypeEnum.CONTACT_FIND)
     @NeedLogin
     public ContactFindOutParams FindContact(ContactFindInParams inParams) throws Exception {
 
 
-
         String contact_username = inParams.getContactUsername();
-
 
 
         User target_user = userProcessor.getUserByUsername(contact_username);
@@ -54,14 +54,11 @@ public class ContactController {
         boolean already_contact;
         if (target_user == null || target_user.getUsername().equals(username)) {
             throw new CourseWarn(UserWarnEnum.NO_TARGET_USER);
-        }
-        else if(relation != null ){
+        } else if (relation != null) {
             //已经是朋友的话，直接可以进入聊天
-           already_contact = true   ;
-        }
-        else{
-           already_contact = false   ;
-
+            already_contact = true;
+        } else {
+            already_contact = false;
 
 
         }
@@ -90,8 +87,7 @@ public class ContactController {
         List<ContactProps> contactPropsList = new ArrayList<>();
 
 
-
-        for (Contact contact: contactList) {
+        for (Contact contact : contactList) {
             String contact_username = contact.getContactUsername();
             User target_user = userProcessor.getUserByUsername(contact_username);
 
@@ -100,9 +96,9 @@ public class ContactController {
 //            String avatar_url = "http://" + SERVER_IP + ":" + FILE_PORT + friend_avatar.substring(index);
             String target_nickname = target_user.getNickname();
             System.out.println(target_nickname);
-            ContactProps props= new ContactProps();
+            ContactProps props = new ContactProps();
             props.setPropsUsername(contact_username);
-           // props.setPropsAvatar(target_avatar);
+            // props.setPropsAvatar(target_avatar);
             props.setPropsNickname(target_nickname);
             contactPropsList.add(props);
         }
@@ -115,26 +111,26 @@ public class ContactController {
         outParams.setContactList(result);
 
 
-
-
         return outParams;
     }
 
 
-
-
-    /** 审核好友申请 */
+    /**
+     * 审核好友申请
+     */
     @BizType(BizTypeEnum.CONTACT_ADD)
     @NeedLogin
     public CommonOutParams friendCheckFriendRequest(ContactAddInParams inParams) throws Exception {
         String username = inParams.getUsername();
         String add_username = inParams.getAddUsername();
-            contactProcessor.addContact(username, add_username);
+        contactProcessor.addContact(username, add_username);
 
         return new CommonOutParams(true);
     }
 
-    /** 删除好友 */
+    /**
+     * 删除好友
+     */
     @BizType(BizTypeEnum.CONTACT_DELETE)
     @NeedLogin
     public CommonOutParams friendRemoveFriend(ContactDeleteInParams inParams) throws Exception {

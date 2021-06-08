@@ -23,6 +23,7 @@ import com.tsinghua.course.Frame.Util.SocketUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -44,72 +45,101 @@ public class ChatController {
         List<ChatRelation> chatList = chatProcessor.getChatList(my_username);
 
 
-//        List<ChatRelation> chatPropsList = new ArrayList<>();
-//
-//
-//
-//        for (Contact contact: contactList) {
-//            String contact_username = contact.getContactUsername();
-//            User target_user = userProcessor.getUserByUsername(contact_username);
-//
-//            //String target_avatar = target_user.getAvatar();
-////            int index = friend_avatar.indexOf(RELATIVE_PATH);
-////            String avatar_url = "http://" + SERVER_IP + ":" + FILE_PORT + friend_avatar.substring(index);
-//            String target_nickname = target_user.getNickname();
-//            System.out.println(target_nickname);
-//            ContactProps props= new ContactProps();
-//            props.setPropsUsername(contact_username);
-//            // props.setPropsAvatar(target_avatar);
-//            props.setPropsNickname(target_nickname);
-//            contactPropsList.add(props);
-//        }
+        List<ChatListProps> chatPropsList = new ArrayList<>();
 
-        ChatRelation[] result = new ChatRelation[chatList.size()];
-        chatList.toArray(result);
+        for (ChatRelation chat : chatList) {
+
+            String to_username = chat.getToUsername();
+            String last_time = chat.getChatList().get(chat.getChatList().size() - 1).getSendTime();
+            int unread_num = chat.getNotification().getUnreadNum();
+            //String last_time_str = last_time;
+            String last_chat;
+            if (chat.getChatList().get(chat.getChatList().size() - 1).getChatType() == 0) {
+                last_chat = chat.getChatList().get(chat.getChatList().size() - 1).getChatContent();
+            } else if (chat.getChatList().get(chat.getChatList().size() - 1).getChatType() == 1) {
+                last_chat = "image";
+            } else if (chat.getChatList().get(chat.getChatList().size() - 1).getChatType() == 2) {
+                last_chat = "video";
+
+            } else if (chat.getChatList().get(chat.getChatList().size() - 1).getChatType() == 3) {
+                last_chat = "audio";
+
+            } else {
+                last_chat = "geo";
+            }
+            String to_avatar = userProcessor.getUserByUsername(to_username).getAvatar();
+
+//            int index = friend_avatar.indexOf(RELATIVE_PATH);
+//            String avatar_url = "http://" + SERVER_IP + ":" + FILE_PORT + friend_avatar.substring(index);
+            ChatListProps props = new ChatListProps();
+            props.setLastChat(last_chat);
+            props.setToUsername(to_username);
+            props.setLastTime(last_time);
+            props.setToAvatar(to_avatar);
+            props.setUnreadNum(unread_num);
+            chatPropsList.add(props);
+        }
+
+        ChatListProps[] result = new ChatListProps[chatPropsList.size()];
+        chatPropsList.toArray(result);
 
 
         ChatListOutParams outParams = new ChatListOutParams();
         outParams.setChatList(result);
 
 
-
-
         return outParams;
-
-
 
 
     }
 
 
-
-
-
-
-
     @BizType(BizTypeEnum.CHAT_CHECK_RELATION)
     @NeedLogin
     public ChatCheckOutParams chatGetChatRelation(ChatCheckInParams inParams) throws Exception {
-        String my_username = inParams.getUsername();
+        String from_username = inParams.getUsername();
         String to_username = inParams.getToUsername();
 
-        ChatRelation relation = chatProcessor.getChatRelation(my_username, to_username);
+        ChatRelation relation = chatProcessor.getChatRelation(from_username, to_username);
         Notification init_noty = new Notification();
         init_noty.setUserRead(false);
         init_noty.setUnreadNum(0);
+
+
+        Notification init_noty_to = new Notification();
+        init_noty_to.setUserRead(true);
+        init_noty_to.setUnreadNum(1);
         List<ChatProps> chat = new ArrayList<>();
 
+        String time = TimeFormat.getTime();
+        ChatProps chatp = new ChatProps();
+        chatp.setToUsername(to_username);
+        chatp.setChatContent("lets get talk!");
+        chatp.setChatType(0);
+        chatp.setSendTime(time);
+        chatp.setFromUsername(from_username);
+        chat.add(chatp);
+
+        List<ChatProps> chat_to = new ArrayList<>();
+
+        ChatProps chatp_to = new ChatProps();
+        chatp_to.setToUsername(to_username);
+        chatp_to.setChatContent("lets get talk!");
+        chatp_to.setChatType(0);
+        chatp_to.setSendTime(time);
+        chatp_to.setFromUsername(from_username);
+        chat_to.add(chatp_to);
 
         if (relation == null) {
 
-            chatProcessor.createChatRelation(my_username, to_username,init_noty,chat);
-            chatProcessor.createChatRelation(to_username, my_username,init_noty,chat);
+            chatProcessor.createChatRelation(from_username, to_username, init_noty, chat);
+            chatProcessor.createChatRelation(to_username, from_username, init_noty_to, chat_to);
         }
         /* 否则，调整聊天条目的在线状态 */
         else {
-            init_noty.setUserRead(true);
+            init_noty.setUserRead(false);
             init_noty.setUnreadNum(0);
-            chatProcessor.updateChatNotification(my_username, to_username,init_noty);
+            chatProcessor.updateChatNotification(from_username, to_username, init_noty);
         }
 
         ChatCheckOutParams outParams = new ChatCheckOutParams();
@@ -119,43 +149,42 @@ public class ChatController {
     }
 
 
-
-    /** 发送消息给指定用户 */
+    /**
+     * 发送消息给指定用户
+     */
     @BizType(BizTypeEnum.CHAT_SEND)
     @NeedLogin
 
     public CommonOutParams chatSendMessage(ChatSendInParams inParams) throws Exception {
-        String my_username = inParams.getUsername();
+        String from_username = inParams.getUsername();
         String to_username = inParams.getToUsername();
 
-
+        String time = TimeFormat.getTime();
 
         ChatProps chat = new ChatProps();
-        Date time = new Date();
 
-        chat.setMyUsernmae(my_username);
+        chat.setFromUsername(from_username);
         chat.setChatType(inParams.getChatType());
         chat.setToUsername(to_username);
         chat.setSendTime(time);
         chat.setChatContent(inParams.getChatContent());
 
         ChatProps chat_to = new ChatProps();
-        chat_to.setMyUsernmae(to_username);
+        chat_to.setFromUsername(from_username);
         chat_to.setChatType(inParams.getChatType());
-        chat_to.setToUsername(my_username);
+        chat_to.setToUsername(to_username);
         chat_to.setSendTime(time);
         chat_to.setChatContent(inParams.getChatContent());
 
 
         // 插入新消息
-        chatProcessor.updateChat(my_username, to_username, chat);
-        chatProcessor.updateChat(to_username, my_username, chat_to);
+        chatProcessor.updateChat(from_username, to_username, chat);
+        chatProcessor.updateChat(to_username, from_username, chat_to);
 
-        ChatRelation to_Relation = chatProcessor.getChatRelation(to_username,my_username);
-        to_Relation.getNotification().setUnreadNum(to_Relation.getNotification().getUnreadNum()+1);
+        ChatRelation to_Relation = chatProcessor.getChatRelation(to_username, from_username);
+        to_Relation.getNotification().setUnreadNum(to_Relation.getNotification().getUnreadNum() + 1);
         to_Relation.getNotification().setUserRead(true);
-        chatProcessor.updateChatNotification(to_username, my_username,to_Relation.getNotification());
-
+        chatProcessor.updateChatNotification(to_username, from_username, to_Relation.getNotification());
 
 
         ChatSendOutParams outParams = new ChatSendOutParams();
@@ -167,7 +196,7 @@ public class ChatController {
 
     }
 
-//    /** 查看历史记录 */
+    //    /** 查看历史记录 */
     @BizType(BizTypeEnum.CHAT_HISTORY)
     @NeedLogin
     public ChatHIstoryOutParams chatGetHistory(ChatHistoryInParams inParams) throws Exception {
@@ -180,7 +209,7 @@ public class ChatController {
 //        System.out.println(chat_list.get(1).getChatContent());
 
 
-        ChatRelation chat = chatProcessor.getChatRelation(my_username,to_username);
+        ChatRelation chat = chatProcessor.getChatRelation(my_username, to_username);
         List<ChatProps> chat_list = chat.getChatList();
         ChatProps[] result = new ChatProps[chat_list.size()];
         chat_list.toArray(result);
@@ -203,10 +232,9 @@ public class ChatController {
 //        List<ChatProps> chat_list = chat_relate.getChatList();
 //        chat_list
         System.out.println("is it working?");
-        chatProcessor.deleteChat(my_username,to_username, send_time);
+        chatProcessor.deleteChat(my_username, to_username, send_time);
         return new CommonOutParams(true);
     }
-
 
 
 }

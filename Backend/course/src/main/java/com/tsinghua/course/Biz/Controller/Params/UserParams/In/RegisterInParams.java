@@ -9,6 +9,11 @@ import com.tsinghua.course.Biz.Controller.Params.CommonInParams;
  **/
 @BizType(BizTypeEnum.USER_REGISTER)
 public class RegisterInParams extends CommonInParams {
+
+    @Required
+    private String username;
+
+
     // 密码
     @Required
     private String password;
@@ -18,6 +23,11 @@ public class RegisterInParams extends CommonInParams {
     // 手机号
     @Required
     private String phonenumber;
+
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
 
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }

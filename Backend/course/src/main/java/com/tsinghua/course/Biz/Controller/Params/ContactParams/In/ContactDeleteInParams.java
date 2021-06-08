@@ -14,6 +14,11 @@ public class ContactDeleteInParams extends CommonInParams {
     @Required
     private String delete_username;
 
-    public String getDeleteUsername() { return delete_username; }
-    public void setDeleteUsername(String friend_username) { this.delete_username = delete_username; }
+    public String getDeleteUsername() {
+        return delete_username;
+    }
+
+    public void setDeleteUsername(String friend_username) {
+        this.delete_username = delete_username;
+    }
 }
