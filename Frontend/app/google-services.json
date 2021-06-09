@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "239593199919",
+    "firebase_url": "https://kakaotalk-9e023.firebaseio.com",
+    "project_id": "kakaotalk-9e023",
+    "storage_bucket": "kakaotalk-9e023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239593199919:android:b04d3ec9047ca5e2e1a9da",
+        "android_client_info": {
+          "package_name": "com.ceocho.kakaotalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239593199919-kibqp1u7rac4fjfs7tkltok2v62arlr9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ceocho.kakaotalk",
+            "certificate_hash": "cc2619ce041890a8c2fc5e65b157017d766d7eba"
+          }
+        },
+        {
+          "client_id": "239593199919-c0dehit09dpjs4j16j9tbf9p7ipmi8lq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD50v9_WFq4Bgb9__UfIVoh1omLi_UW2xE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239593199919-c0dehit09dpjs4j16j9tbf9p7ipmi8lq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
