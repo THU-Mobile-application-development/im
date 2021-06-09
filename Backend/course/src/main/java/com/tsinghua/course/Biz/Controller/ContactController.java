@@ -4,6 +4,7 @@ import com.tsinghua.course.Base.Annotation.BizType;
 import com.tsinghua.course.Base.Annotation.NeedLogin;
 import com.tsinghua.course.Base.Error.CourseWarn;
 import com.tsinghua.course.Base.Error.UserWarnEnum;
+import com.tsinghua.course.Base.Model.ChatRelation;
 import com.tsinghua.course.Base.Model.Contact;
 import com.tsinghua.course.Base.Model.ContactProps;
 import com.tsinghua.course.Base.Model.User;
@@ -15,6 +16,7 @@ import com.tsinghua.course.Biz.Controller.Params.ContactParams.In.ContactDeleteI
 import com.tsinghua.course.Biz.Controller.Params.ContactParams.In.ContactFindInParams;
 import com.tsinghua.course.Biz.Controller.Params.ContactParams.Out.ContactFindOutParams;
 import com.tsinghua.course.Biz.Controller.Params.ContactParams.Out.ContactListOutParams;
+import com.tsinghua.course.Biz.Processor.ChatProcessor;
 import com.tsinghua.course.Biz.Processor.ContactProcessor;
 import com.tsinghua.course.Biz.Processor.UserProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,9 @@ public class ContactController {
     UserProcessor userProcessor;
     @Autowired
     ContactProcessor contactProcessor;
+
+    @Autowired
+    ChatProcessor chatProcessor;
 //    @Autowired
 //    ChatProcessor chatProcessor;
 
@@ -138,7 +143,7 @@ public class ContactController {
         String username = inParams.getUsername();
         String contact_username = inParams.getDeleteUsername();
         contactProcessor.deleteContact(username, contact_username);
-
+        chatProcessor.deleteRelation(username,contact_username);
 //        /* 删除聊天条目（单向）和关系 */
 //        ChatUserLink chatUserLink = chatProcessor.getChatUserLink(username, friend_username);
 //        String link_id = chatUserLink.getId();

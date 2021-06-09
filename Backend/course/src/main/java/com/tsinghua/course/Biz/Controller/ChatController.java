@@ -20,6 +20,8 @@ import com.tsinghua.course.Biz.Processor.ChatProcessor;
 import com.tsinghua.course.Biz.Processor.ContactProcessor;
 import com.tsinghua.course.Biz.Processor.UserProcessor;
 import com.tsinghua.course.Frame.Util.SocketUtil;
+import com.tsinghua.course.Frame.Util.ThreadUtil;
+import io.netty.channel.ChannelHandlerContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -46,7 +48,7 @@ public class ChatController {
 
 
         List<ChatListProps> chatPropsList = new ArrayList<>();
-
+        ChannelHandlerContext ctx = ThreadUtil.getCtx();
         for (ChatRelation chat : chatList) {
 
             String to_username = chat.getToUsername();
@@ -153,10 +155,12 @@ public class ChatController {
      * 发送消息给指定用户
      */
     @BizType(BizTypeEnum.CHAT_SEND)
-    @NeedLogin
-
     public CommonOutParams chatSendMessage(ChatSendInParams inParams) throws Exception {
-        String from_username = inParams.getUsername();
+
+        System.out.println("지금 여기까지는 올꺼");
+        String from_username = inParams.getFromUsernmae();
+        System.out.println("아마 이게 문제이지 않을까?");
+        System.out.println(from_username);
         String to_username = inParams.getToUsername();
 
         String time = TimeFormat.getTime();

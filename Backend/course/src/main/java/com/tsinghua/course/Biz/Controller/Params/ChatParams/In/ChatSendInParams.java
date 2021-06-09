@@ -10,8 +10,8 @@ import java.util.Date;
 @BizType(BizTypeEnum.CHAT_SEND)
 public class ChatSendInParams extends CommonInParams {
 
-
-    String my_username;
+    @Required
+    String from_username;
     // 接收方用户名
     @Required
     String to_username;
@@ -24,12 +24,12 @@ public class ChatSendInParams extends CommonInParams {
     @Required
     int type;
 
-    public String getMyUsernmae() {
-        return my_username;
+    public String getFromUsernmae() {
+        return from_username;
     }
 
-    public void setMyUsernmae(String my_username) {
-        this.my_username = my_username;
+    public void setFromUsernmae(String from_username) {
+        this.from_username = from_username;
     }
 
     public String getToUsername() {

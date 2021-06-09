@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -26,24 +28,58 @@ import com.ceocho.kakaotalk.Notifications.MyResponse;
 import com.ceocho.kakaotalk.Notifications.Sender;
 import com.ceocho.kakaotalk.Notifications.Token;
 import com.ceocho.kakaotalk.R;
+import com.ceocho.kakaotalk.Utill.JWebSocketClient;
 import com.ceocho.kakaotalk.Utill.MaptoJsonUtill;
 import com.ceocho.kakaotalk.Utill.OkhttpUtill;
 import com.ceocho.kakaotalk.adapter.MessageAdapter;
 import com.ceocho.kakaotalk.adapter.UserAdapter;
 
+import org.java_websocket.handshake.ServerHandshake;
 import org.json.JSONArray;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.channels.DatagramChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
+
 public class MessageActivity extends AppCompatActivity {
+
+
+//    URI uri = URI.create("ws://172.30.1.6:520/ws");
+//    JWebSocketClient client = new JWebSocketClient(uri) {
+//        @Override
+//        public void onMessage(String message) {
+//            //message就是接收到的消息
+//            Log.e("JWebSClientService", message);
+//            Log.e("JWebSClientService", "fuckkk");
+//
+//        }
+//    };
+
+
+    URI uri = URI.create("ws://172.30.1.6:520/ws");
+    JWebSocketClient client = new JWebSocketClient(uri) {
+        @Override
+        public void onMessage(String message) {
+            //message就是接收到的消息
+            Log.e("JWebSClientService", message);
+        }
+    };
+
+    //public JWebSocketClient client;
+
+
 
     CircleImageView profile_image;
     TextView username;
@@ -66,10 +102,26 @@ public class MessageActivity extends AppCompatActivity {
 
     boolean notfiy = false;
 
+
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
+        try {
+            client.connectBlocking();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+       // initSocketClient();
+      //  mHandler.postDelayed(heartBeatRunnable, HEART_BEAT_RATE);//开启心跳检测
+
+
+
         setContentView(R.layout.activity_message);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -109,7 +161,11 @@ public class MessageActivity extends AppCompatActivity {
         //나중에 바꾸기
         profile_image.setImageResource(R.mipmap.ic_launcher);
 
+        System.out.println("여기다다다다다다다다다다다다다다ㅏ");
         readMessages(userid, avatar);
+
+
+
 
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,10 +179,15 @@ public class MessageActivity extends AppCompatActivity {
                     map.put("content", msg);
                     map.put("type", 0);
                     map.put("to_username", userid);
+                    map.put("from_username", "a");
+                    map.put("bizType","CHAT_SEND");
                     String input = MaptoJsonUtill.getJson(map);
                     Map result = OkhttpUtill.post("chat/chat_send", input);
                     if (result.get("success").toString() == "true") {
                         Toast.makeText(MessageActivity.this, "send message success", Toast.LENGTH_SHORT).show();
+                        if (client != null && client.isOpen()) {
+                            client.send(input);
+                        }
 
                     } else {
                         Toast.makeText(MessageActivity.this, "send message error", Toast.LENGTH_SHORT).show();
@@ -139,145 +200,13 @@ public class MessageActivity extends AppCompatActivity {
                 text_send.setText("");
             }
         });
-//
-//
-//        reference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                User user = dataSnapshot.getValue(User.class);
-//                username.setText(user.getUsername());
-//                if (user.getAvatar().equals("default")) {
-//                    profile_image.setImageResource(R.mipmap.ic_launcher);
-//                } else {
-//                    // change
-//                    Glide.with(getApplicationContext()).load(user.getAvatar()).into(profile_image);
-//                }
-//
-//                readMessages(fuser.getUid(), userid, user.getAvatar());
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-//
-//        seenMessage(userid);
+
+
     }
 
-    //    private void seenMessage(final String userid) {
-//        reference = FirebaseDatabase.getInstance().getReference("Chats");
-//        seenListener = reference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-//                    Chat chat = snapshot.getValue(Chat.class);
-//                    if (chat.getReceiver().equals(fuser.getUid()) && chat.getSender().equals(userid)){
-//                        HashMap<String, Object> hashMap = new HashMap<>();
-//                        hashMap.put("isseen", true);
-//                        snapshot.getRef().updateChildren(hashMap);
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-//    }
-//
-//    private void sendMessage(String sender, final String receiver, String message){
-//
-//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-//
-//        HashMap<String, Object> hashMap = new HashMap<>();
-//        hashMap.put("sender", sender);
-//        hashMap.put("receiver", receiver);
-//        hashMap.put("message", message);
-//        hashMap.put("isseen", false);
-//
-//        reference.child("Chats").push().setValue(hashMap);
-//
-//        // add user to chat fragment
-//        final DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("Chatlist")
-//                .child(fuser.getUid())
-//                .child(userid);
-//
-//        chatRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                if (!dataSnapshot.exists()) {
-//                    chatRef.child("id").setValue(userid);
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-//
-//        final String msg = message;
-//
-//        reference = FirebaseDatabase.getInstance().getReference().child(fuser.getUid());
-//        reference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                User user = dataSnapshot.getValue(User.class);
-//                if (notfiy){
-//                    sendNotification(receiver, user.getUsername(), msg);
-//                }
-//                boolean notify = false;
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-//
-//    }
-//
-//    private void sendNotification(String receiver, final String username, final String message){
-//        DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
-//        Query query = tokens.orderByKey().equalTo(receiver);
-//        query.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-//                    Token token = snapshot.getValue(Token.class);
-//                    Data data = new Data(fuser.getUid(), R.mipmap.ic_launcher, username+": "+message, "New Message",
-//                            userid);
-//
-//                    Sender sender = new Sender(data, token.getToken());
-//
-//                    apiService.sendNotification(sender)
-//                            .enqueue(new Callback<MyResponse>() {
-//                                @Override
-//                                public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
-//                                    if (response.code() == 200){
-//                                        if (response.body().success != 1){
-//                                            Toast.makeText(MessageActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-//                                        }
-//                                    }
-//                                }
-//
-//                                @Override
-//                                public void onFailure(Call<MyResponse> call, Throwable t) {
-//
-//                                }
-//                            });
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-//    }
-//
+
+
+
     private void readMessages(String userid, String avatar) {
 
 
@@ -326,26 +255,110 @@ public class MessageActivity extends AppCompatActivity {
 
 
         }
+
+
+
+    @Override
+    public void onDestroy() {
+        closeConnect();
+        super.onDestroy();
     }
+
+    private void closeConnect() {
+        try {
+            if (null != client) {
+                client.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            client = null;
+        }
+    }
+
 //
-//    private void status(String status) {
-//        reference = FirebaseDatabase.getInstance().getReference("Users").child(fuser.getUid());
+//    private void initSocketClient() {
 //
-//        HashMap<String, Object> hashMap = new HashMap<>();
-//        hashMap.put("status", status);
 //
-//        reference.updateChildren(hashMap);
+//
+//
+//        URI uri = URI.create("ws://172.30.1.6:520/ws");
+//        client = new JWebSocketClient(uri) {
+//            @Override
+//            public void onMessage(String message) {
+//
+//                Log.e("JWebSocketClientService", "收到的消息：" + message);
+//
+//                Intent intent = new Intent();
+//                intent.setAction("com.xch.servicecallback.content");
+//                intent.putExtra("message", message);
+//                sendBroadcast(intent);
+//
+//            }
+//
+//            @Override
+//            public void onOpen(ServerHandshake handshakedata) {
+//                super.onOpen(handshakedata);
+//                Log.e("JWebSocketClientService", "websocket连接成功");
+//            }
+//        };
+//        connect();
+//    }
+
+
+//    private void connect() {
+//        new Thread() {
+//            @Override
+//            public void run() {
+//                try {
+//                    //connectBlocking多出一个等待操作，会先连接再发送，否则未连接发送会报错
+//                    client.connectBlocking();
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.start();
+//
 //    }
 //
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        status("online");
-//    }
+
+//    private static final long HEART_BEAT_RATE = 10 * 1000;//每隔10秒进行一次对长连接的心跳检测
+//    private Handler mHandler = new Handler();
+//    private Runnable heartBeatRunnable = new Runnable() {
+//        @Override
+//        public void run() {
+//            Log.e("JWebSocketClientService", "心跳包检测websocket连接状态");
+//            if (client != null) {
+//                if (client.isClosed()) {
+//                    reconnectWs();
+//                }
+//            } else {
+//                //如果client已为空，重新初始化连接
+//                client = null;
+//               // initSocketClient();
+//            }
+//            //每隔一定的时间，对长连接进行一次心跳检测
+//            mHandler.postDelayed(this, HEART_BEAT_RATE);
+//        }
+//    };
 //
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        reference.removeEventListener(seenListener);
-//        status("offline");
+//    /**
+//     * 开启重连
+//     */
+//    private void reconnectWs() {
+//        mHandler.removeCallbacks(heartBeatRunnable);
+//        new Thread() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Log.e("JWebSocketClientService", "开启重连");
+//                    client.reconnectBlocking();
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.start();
 //    }
+
+
+    }

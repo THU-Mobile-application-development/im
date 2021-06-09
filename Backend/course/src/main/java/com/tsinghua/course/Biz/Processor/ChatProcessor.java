@@ -110,4 +110,15 @@ public class ChatProcessor {
         mongoTemplate.remove(query, ChatProps.class);
     }
 
+
+
+
+
+    public void deleteRelation(String username, String contact_username) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where(KeyConstant.FROM_USERNAME).is(username)
+                .and(KeyConstant.TO_USERNAME).is(contact_username));
+        mongoTemplate.remove(query, ChatRelation.class);
+    }
+
 }

@@ -163,6 +163,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                             Intent intent = new Intent(mContext, MessageActivity.class);
                             intent.putExtra("username", contact_username);
                             intent.putExtra("Avatar", Avatar);
+                            //intent.putExtra("my_username", Avatar);
 
                             mContext.startActivity(intent);
                         }

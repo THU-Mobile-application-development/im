@@ -49,6 +49,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="ReaderModeSettings">
@@ -60,17 +61,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CourseApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CourseApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="course" />
       <extension name="coverage">
@@ -133,7 +123,8 @@
       <workItem from="1622289463043" duration="18447000" />
       <workItem from="1622569889387" duration="21479000" />
       <workItem from="1622744106013" duration="8015000" />
-      <workItem from="1622834420073" duration="56809000" />
+      <workItem from="1622834420073" duration="61988000" />
+      <workItem from="1623171388662" duration="7950000" />
     </task>
     <servers />
   </component>
