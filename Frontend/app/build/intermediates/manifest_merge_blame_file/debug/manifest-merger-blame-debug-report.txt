@@ -1,0 +1,132 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ceocho.kakaotalk"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:6:5-79
+12-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:8:5-81
+13-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:8:22-78
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:9:5-80
+14-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:9:22-77
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:10:5-64
+15-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:10:22-62
+16
+17    <application
+17-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:14:5-67:19
+18        android:allowBackup="true"
+18-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:15:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.1.0] /Users/wujun/.gradle/caches/transforms-2/files-2.1/478b79604eaaf934858ce3739dce1708/core-1.1.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:icon="@mipmap/ic_launcher"
+21-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:16:9-43
+22        android:label="@string/app_name"
+22-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:17:9-41
+23        android:networkSecurityConfig="@xml/network_security_config"
+23-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:21:9-69
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:18:9-54
+25        android:supportsRtl="true"
+25-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:19:9-35
+26        android:testOnly="true"
+27        android:theme="@style/AppTheme" >
+27-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:20:9-40
+28        <activity android:name="com.ceocho.kakaotalk.StartActivity" >
+28-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:23:9-29:20
+28-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:23:19-48
+29            <intent-filter>
+29-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:24:13-28:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:25:17-69
+30-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:25:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:27:17-77
+32-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:27:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:30:9-32:59
+36            android:name="com.ceocho.kakaotalk.RegisterActivity"
+36-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:31:13-45
+37            android:parentActivityName="com.ceocho.kakaotalk.StartActivity" />
+37-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:32:13-56
+38        <activity android:name="com.ceocho.kakaotalk.MainActivity" />
+38-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:33:9-50
+38-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:33:19-47
+39        <activity
+39-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:34:9-36:59
+40            android:name="com.ceocho.kakaotalk.LoginActivity"
+40-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:35:13-42
+41            android:parentActivityName="com.ceocho.kakaotalk.StartActivity" />
+41-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:36:13-56
+42        <activity
+42-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:37:9-38:57
+43            android:name="com.ceocho.kakaotalk.MessageActivity"
+43-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:37:19-50
+44            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" />
+44-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:38:13-55
+45        <activity
+45-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:39:9-40:67
+46            android:name="com.ceocho.kakaotalk.ResetPasswordActivity"
+46-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:39:19-56
+47            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" />
+47-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:40:13-55
+48        <activity
+48-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:41:9-44:20
+49            android:name="com.ceocho.kakaotalk.EditProfileActivity"
+49-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:41:19-54
+50            android:parentActivityName="com.ceocho.kakaotalk.MainActivity"
+50-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:42:13-55
+51            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" >
+51-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:43:13-76
+52        </activity>
+53        <activity
+53-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:47:9-50:20
+54            android:name="com.ceocho.kakaotalk.UserAddActivity"
+54-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:47:19-50
+55            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" >
+55-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:48:13-55
+56        </activity>
+57
+58        <provider
+59            android:name="androidx.core.content.FileProvider"
+59-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:53:13-62
+60            android:authorities="com.ceocho.kakaotalk.fileprovider"
+60-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:54:13-64
+61            android:exported="false"
+61-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:55:13-37
+62            android:grantUriPermissions="true" >
+62-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:56:13-47
+63            <meta-data
+63-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:57:13-59:53
+64                android:name="android.support.FILE_PROVIDER_PATHS"
+64-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:58:17-67
+65                android:resource="@xml/filepaths" />
+65-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:59:17-50
+66        </provider>
+67
+68        <uses-library
+68-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:61:9-64:15
+69            android:name="org.apache.http.legacy"
+69-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:62:13-50
+70            android:required="false" />
+70-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:63:13-37
+71    </application>
+72
+73</manifest>

@@ -1,0 +1,9 @@
+2021-06-04 04:40:45.624 -INFO 1352 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 1352 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-04 04:40:45.625 -INFO 1352 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-04 04:40:47.456 -INFO 1352 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.057 seconds (JVM running for 2.767)
+2021-06-04 04:46:58.550 -INFO 1434 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 1434 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-04 04:46:58.552 -INFO 1434 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-04 04:46:59.847 -INFO 1434 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 1.455 seconds (JVM running for 2.077)
+2021-06-04 04:47:40.769 -INFO 1442 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 1442 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-04 04:47:40.770 -INFO 1442 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-04 04:47:42.164 -INFO 1442 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 1.567 seconds (JVM running for 2.025)

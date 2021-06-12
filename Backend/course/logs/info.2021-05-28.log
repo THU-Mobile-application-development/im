@@ -1,0 +1,12 @@
+2021-05-28 19:14:22.087 -INFO 22302 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 22302 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-05-28 19:14:22.088 -INFO 22302 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-05-28 19:14:24.373 -INFO 22302 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.555 seconds (JVM running for 3.464)
+2021-05-28 19:17:41.240 -INFO 22337 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 22337 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-05-28 19:17:41.241 -INFO 22337 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-05-28 19:17:43.135 -INFO 22337 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.124 seconds (JVM running for 2.672)
+2021-05-28 20:04:22.519 -INFO 23355 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 23355 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-05-28 20:04:22.521 -INFO 23355 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-05-28 20:04:24.507 -INFO 23355 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.211 seconds (JVM running for 2.991)
+2021-05-28 21:22:59.534 -INFO 23718 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 23718 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-05-28 21:22:59.536 -INFO 23718 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-05-28 21:23:01.574 -INFO 23718 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.274 seconds (JVM running for 2.959)

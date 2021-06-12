@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">239593199919-c0dehit09dpjs4j16j9tbf9p7ipmi8lq.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://kakaotalk-9e023.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">239593199919</string>
+    <string name="google_api_key" translatable="false">AIzaSyD50v9_WFq4Bgb9__UfIVoh1omLi_UW2xE</string>
+    <string name="google_app_id" translatable="false">1:239593199919:android:b04d3ec9047ca5e2e1a9da</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD50v9_WFq4Bgb9__UfIVoh1omLi_UW2xE</string>
+    <string name="google_storage_bucket" translatable="false">kakaotalk-9e023.appspot.com</string>
+    <string name="project_id" translatable="false">kakaotalk-9e023</string>
+</resources>

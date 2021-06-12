@@ -1,0 +1,541 @@
+2021-06-08 01:36:37.332 -INFO 15699 [ntLoopGroup-7-6] org.reflections.Reflections : Reflections took 84 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:36:40.024 -INFO 15699 [ntLoopGroup-7-7] org.reflections.Reflections : Reflections took 15 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:36:52.356 -INFO 15699 [ntLoopGroup-7-8] org.reflections.Reflections : Reflections took 31 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:36:55.308 -INFO 15699 [ntLoopGroup-7-9] org.reflections.Reflections : Reflections took 21 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:39:05.997 -INFO 15699 [tLoopGroup-7-10] org.reflections.Reflections : Reflections took 23 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:46:03.784 -INFO 15699 [tLoopGroup-7-11] org.reflections.Reflections : Reflections took 32 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:46:04.130 -INFO 15699 [tLoopGroup-7-12] org.reflections.Reflections : Reflections took 17 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:46:04.224 -INFO 15699 [tLoopGroup-7-13] org.reflections.Reflections : Reflections took 28 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:46:06.478 -INFO 15699 [tLoopGroup-7-14] org.reflections.Reflections : Reflections took 17 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:46:08.576 -INFO 15699 [tLoopGroup-7-15] org.reflections.Reflections : Reflections took 13 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:49:06.585 -INFO 15699 [tLoopGroup-7-16] org.reflections.Reflections : Reflections took 35 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:49:07.354 -INFO 15699 [tLoopGroup-7-17] org.reflections.Reflections : Reflections took 30 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:49:07.484 -INFO 15699 [tLoopGroup-7-18] org.reflections.Reflections : Reflections took 30 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:49:10.936 -INFO 15699 [tLoopGroup-7-19] org.reflections.Reflections : Reflections took 34 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:49:12.929 -INFO 15699 [tLoopGroup-7-20] org.reflections.Reflections : Reflections took 29 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:10.651 -INFO 15699 [tLoopGroup-7-21] org.reflections.Reflections : Reflections took 41 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:15.550 -INFO 15699 [tLoopGroup-7-22] org.reflections.Reflections : Reflections took 33 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:16.914 -INFO 15699 [tLoopGroup-7-23] org.reflections.Reflections : Reflections took 39 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:17.300 -INFO 15699 [tLoopGroup-7-24] org.reflections.Reflections : Reflections took 25 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:17.385 -INFO 15699 [tLoopGroup-7-25] org.reflections.Reflections : Reflections took 30 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:18.737 -INFO 15699 [tLoopGroup-7-26] org.reflections.Reflections : Reflections took 30 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:26.790 -INFO 15699 [tLoopGroup-7-27] org.reflections.Reflections : Reflections took 18 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:38.668 -INFO 15699 [tLoopGroup-7-28] org.reflections.Reflections : Reflections took 14 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:40.096 -INFO 15699 [tLoopGroup-7-29] org.reflections.Reflections : Reflections took 14 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 01:50:42.248 -INFO 15699 [tLoopGroup-7-30] org.reflections.Reflections : Reflections took 13 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:35:53.237 -INFO 15699 [tLoopGroup-7-31] org.reflections.Reflections : Reflections took 41 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:37:21.741 -INFO 15699 [tLoopGroup-7-32] org.reflections.Reflections : Reflections took 34 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:37:22.088 -INFO 15699 [ntLoopGroup-7-1] org.reflections.Reflections : Reflections took 12 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:37:22.148 -INFO 15699 [ntLoopGroup-7-2] org.reflections.Reflections : Reflections took 16 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:37:23.938 -INFO 15699 [ntLoopGroup-7-3] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:40:59.428 -INFO 15699 [ntLoopGroup-7-4] org.reflections.Reflections : Reflections took 15 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:40:59.760 -INFO 15699 [ntLoopGroup-7-5] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:40:59.835 -INFO 15699 [ntLoopGroup-7-6] org.reflections.Reflections : Reflections took 36 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:41:01.312 -INFO 15699 [ntLoopGroup-7-7] org.reflections.Reflections : Reflections took 13 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:43:30.233 -INFO 15699 [ntLoopGroup-7-8] org.reflections.Reflections : Reflections took 25 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:43:30.558 -INFO 15699 [ntLoopGroup-7-9] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:43:30.608 -INFO 15699 [tLoopGroup-7-10] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:43:32.882 -INFO 15699 [tLoopGroup-7-11] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:43:43.876 -INFO 15699 [tLoopGroup-7-12] org.reflections.Reflections : Reflections took 10 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:43:44.357 -INFO 15699 [tLoopGroup-7-13] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:43:44.414 -INFO 15699 [tLoopGroup-7-14] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:43:48.691 -INFO 15699 [tLoopGroup-7-15] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:44:54.118 -INFO 15699 [tLoopGroup-7-16] org.reflections.Reflections : Reflections took 16 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:44:54.437 -INFO 15699 [tLoopGroup-7-17] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:44:54.487 -INFO 15699 [tLoopGroup-7-18] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:44:56.139 -INFO 15699 [tLoopGroup-7-19] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:47:56.509 -INFO 15699 [tLoopGroup-7-20] org.reflections.Reflections : Reflections took 28 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:47:56.909 -INFO 15699 [tLoopGroup-7-21] org.reflections.Reflections : Reflections took 13 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:47:56.982 -INFO 15699 [tLoopGroup-7-22] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:47:58.172 -INFO 15699 [tLoopGroup-7-23] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:48:10.971 -INFO 15699 [tLoopGroup-7-24] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:48:45.329 -INFO 15699 [tLoopGroup-7-25] org.reflections.Reflections : Reflections took 16 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:48:45.762 -INFO 15699 [tLoopGroup-7-26] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:48:45.828 -INFO 15699 [tLoopGroup-7-27] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:48:47.856 -INFO 15699 [tLoopGroup-7-28] org.reflections.Reflections : Reflections took 18 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:48:47.896 -INFO 15699 [tLoopGroup-7-29] org.reflections.Reflections : Reflections took 12 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:48:50.002 -INFO 15699 [tLoopGroup-7-30] org.reflections.Reflections : Reflections took 13 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:48:50.040 -INFO 15699 [tLoopGroup-7-31] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:59:36.650 -INFO 15699 [tLoopGroup-7-32] org.reflections.Reflections : Reflections took 50 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:59:37.191 -INFO 15699 [ntLoopGroup-7-1] org.reflections.Reflections : Reflections took 14 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:59:37.315 -INFO 15699 [ntLoopGroup-7-2] org.reflections.Reflections : Reflections took 26 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:59:39.326 -INFO 15699 [ntLoopGroup-7-3] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:59:41.017 -INFO 15699 [ntLoopGroup-7-4] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:59:42.992 -INFO 15699 [ntLoopGroup-7-5] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:59:50.670 -INFO 15699 [ntLoopGroup-7-6] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 02:59:50.744 -ERROR 15699 [ntLoopGroup-7-6] com.tsinghua.course.CourseApplication : a-CHAT_LIST-{"bizType":"CHAT_LIST","username":"a"}-java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0-com.tsinghua.course.Biz.Controller.ChatController#getChatList#54/com.tsinghua.course.Biz.Controller.ChatController$$FastClassBySpringCGLIB$$4f609ee8#invoke#-1/com.tsinghua.course.Frame.Aspect.LogInAspect#around#45/com.tsinghua.course.Biz.Controller.ChatController$$EnhancerBySpringCGLIB$$932ff1ec#getChatList#-1/com.tsinghua.course.Biz.Dispatcher#dispatch#75/com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#111/com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#50/
+2021-06-08 03:10:07.073 -INFO 15699 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 03:10:07.416 -INFO 15699 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-08 03:10:07.417 -INFO 15699 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-06-08 03:10:07.417 -INFO 15699 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-06-08 03:10:07.417 -INFO 15699 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 03:10:07.419 -INFO 15699 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-06-08 03:10:07.638 -INFO 15699 [extShutdownHook] org.mongodb.driver.connection : Closed connection [connectionId{localValue:3, serverValue:162}] to localhost:27017 because the pool has been closed.
+2021-06-08 03:10:12.694 -INFO 16738 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 16738 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-08 03:10:12.695 -DEBUG 16738 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-08 03:10:12.696 -INFO 16738 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-08 03:10:13.253 -INFO 16738 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 03:10:13.253 -INFO 16738 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-08 03:10:13.273 -INFO 16738 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 MongoDB repository interfaces.
+2021-06-08 03:10:13.285 -INFO 16738 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 03:10:13.286 -INFO 16738 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-08 03:10:13.305 -INFO 16738 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-06-08 03:10:13.758 -INFO 16738 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-06-08 03:10:13.765 -INFO 16738 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-08 03:10:13.766 -INFO 16738 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-06-08 03:10:13.766 -INFO 16738 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-08 03:10:13.832 -INFO 16738 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-06-08 03:10:13.832 -INFO 16738 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1097 ms
+2021-06-08 03:10:13.937 -INFO 16738 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-08 03:10:13.996 -INFO 16738 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:163}] to localhost:27017
+2021-06-08 03:10:13.996 -INFO 16738 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:164}] to localhost:27017
+2021-06-08 03:10:13.996 -INFO 16738 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=23490218}
+2021-06-08 03:10:14.485 -INFO 16738 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-06-08 03:10:14.495 -INFO 16738 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-06-08 03:10:14.495 -INFO 16738 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-06-08 03:10:14.496 -INFO 16738 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-06-08 03:10:14.496 -INFO 16738 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-06-08 03:10:14.496 -INFO 16738 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-06-08 03:10:14.496 -INFO 16738 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-06-08 03:10:14.496 -INFO 16738 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@11eec06b
+2021-06-08 03:10:14.609 -INFO 16738 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-08 03:10:14.771 -INFO 16738 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-06-08 03:10:14.787 -INFO 16738 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-08 03:10:14.787 -INFO 16738 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-06-08 03:10:14.788 -INFO 16738 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-06-08 03:10:14.796 -INFO 16738 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.345 seconds (JVM running for 3.195)
+2021-06-08 03:11:17.774 -INFO 16738 [ntLoopGroup-7-1] org.reflections.Reflections : Reflections took 33 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:17.865 -INFO 16738 [ntLoopGroup-7-1] org.mongodb.driver.connection : Opened connection [connectionId{localValue:3, serverValue:165}] to localhost:27017
+2021-06-08 03:11:18.321 -INFO 16738 [ntLoopGroup-7-2] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:18.425 -INFO 16738 [ntLoopGroup-7-3] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:21.040 -INFO 16738 [ntLoopGroup-7-4] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:23.367 -INFO 16738 [ntLoopGroup-7-5] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:25.215 -INFO 16738 [ntLoopGroup-7-6] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:27.177 -INFO 16738 [ntLoopGroup-7-7] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:27.224 -INFO 16738 [ntLoopGroup-7-8] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:38.212 -INFO 16738 [ntLoopGroup-7-9] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:11:38.256 -INFO 16738 [tLoopGroup-7-10] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:22:11.949 -INFO 16738 [tLoopGroup-7-11] org.reflections.Reflections : Reflections took 31 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:22:16.626 -INFO 16738 [tLoopGroup-7-12] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:22:19.178 -INFO 16738 [tLoopGroup-7-13] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:41:26.432 -INFO 16738 [tLoopGroup-7-14] org.reflections.Reflections : Reflections took 34 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:41:26.578 -WARN 16738 [tLoopGroup-7-14] com.tsinghua.course.CourseApplication : null-CHAT_SEND-{"bizType":"CHAT_SEND","content":"thank you","to_username":"test2","type":0}-UserWarn002-com.tsinghua.course.Biz.Controller.ChatController$$EnhancerBySpringCGLIB$$687669f0#chatSendMessage#-1/
+2021-06-08 03:41:30.677 -INFO 16738 [tLoopGroup-7-15] org.reflections.Reflections : Reflections took 34 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:41:47.579 -INFO 16738 [tLoopGroup-7-16] org.reflections.Reflections : Reflections took 22 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:41:47.624 -ERROR 16738 [tLoopGroup-7-16] com.tsinghua.course.CourseApplication : test1-CHAT_SEND-{"bizType":"CHAT_SEND","content":"thank you","to_username":"test2","type":0,"username":"test1"}-java.lang.NullPointerException: Cannot invoke "com.tsinghua.course.Base.Model.ChatRelation.getChatList()" because "chat_relate" is null-com.tsinghua.course.Biz.Processor.ChatProcessor#updateChat#79/com.tsinghua.course.Biz.Controller.ChatController#chatSendMessage#197/com.tsinghua.course.Biz.Controller.ChatController$$FastClassBySpringCGLIB$$4f609ee8#invoke#-1/com.tsinghua.course.Frame.Aspect.LogInAspect#around#45/com.tsinghua.course.Biz.Controller.ChatController$$EnhancerBySpringCGLIB$$687669f0#chatSendMessage#-1/com.tsinghua.course.Biz.Dispatcher#dispatch#75/com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#111/com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#50/
+2021-06-08 03:42:28.250 -INFO 16738 [tLoopGroup-7-17] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:42:32.928 -INFO 16738 [tLoopGroup-7-18] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:43:41.557 -INFO 16738 [tLoopGroup-7-19] org.reflections.Reflections : Reflections took 27 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:43:41.845 -INFO 16738 [tLoopGroup-7-20] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:43:41.915 -INFO 16738 [tLoopGroup-7-21] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 03:43:52.597 -INFO 16738 [tLoopGroup-7-22] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:09:40.727 -INFO 16738 [tLoopGroup-7-23] org.reflections.Reflections : Reflections took 30 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:09:56.516 -INFO 16738 [tLoopGroup-7-24] org.reflections.Reflections : Reflections took 15 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:23:21.612 -INFO 16738 [tLoopGroup-7-25] org.reflections.Reflections : Reflections took 21 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:23:21.962 -INFO 16738 [tLoopGroup-7-26] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:23:22.027 -INFO 16738 [tLoopGroup-7-27] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:23:23.495 -WARN 16738 [tLoopGroup-7-28] com.tsinghua.course.CourseApplication : null-null-{"path":"/chat/history","to_username":"test2"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 04:24:57.326 -INFO 16738 [tLoopGroup-7-29] org.reflections.Reflections : Reflections took 21 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:35:29.420 -INFO 16738 [tLoopGroup-7-30] org.reflections.Reflections : Reflections took 30 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:35:50.083 -INFO 16738 [tLoopGroup-7-31] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:36:01.426 -ERROR 16738 [tLoopGroup-7-32] io.netty.util.ResourceLeakDetector : LEAK: ByteBuf.release() was not called before it's garbage-collected. See https://netty.io/wiki/reference-counted-objects.html for more information.
+Recent access records: 
+Created at:
+	io.netty.buffer.PooledByteBufAllocator.newDirectBuffer(PooledByteBufAllocator.java:385)
+	io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:187)
+	io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:178)
+	io.netty.buffer.CompositeByteBuf.allocBuffer(CompositeByteBuf.java:1861)
+	io.netty.buffer.CompositeByteBuf.copy(CompositeByteBuf.java:1513)
+	io.netty.buffer.AbstractByteBuf.copy(AbstractByteBuf.java:1196)
+	io.netty.handler.codec.http.multipart.HttpPostStandardRequestDecoder.offer(HttpPostStandardRequestDecoder.java:282)
+	io.netty.handler.codec.http.multipart.HttpPostStandardRequestDecoder.<init>(HttpPostStandardRequestDecoder.java:154)
+	io.netty.handler.codec.http.multipart.HttpPostRequestDecoder.<init>(HttpPostRequestDecoder.java:99)
+	io.netty.handler.codec.http.multipart.HttpPostRequestDecoder.<init>(HttpPostRequestDecoder.java:68)
+	com.tsinghua.course.Biz.Handler.HttpHandler.getRequestParams(HttpHandler.java:156)
+	com.tsinghua.course.Biz.Handler.HttpHandler.channelRead0(HttpHandler.java:76)
+	com.tsinghua.course.Biz.Handler.HttpHandler.channelRead0(HttpHandler.java:50)
+	io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	java.base/java.lang.Thread.run(Thread.java:832)
+2021-06-08 04:36:01.428 -WARN 16738 [tLoopGroup-7-32] com.tsinghua.course.CourseApplication : null-null-{"content":"nice to meet you","path":"/chat/history","to_username":"a","type":0}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 04:36:13.316 -INFO 16738 [ntLoopGroup-7-1] org.reflections.Reflections : Reflections took 20 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 04:57:27.809 -INFO 16738 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 04:57:28.020 -INFO 16738 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-08 04:57:28.021 -INFO 16738 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-06-08 04:57:28.021 -INFO 16738 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-06-08 04:57:28.021 -INFO 16738 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 04:57:28.024 -INFO 16738 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-06-08 04:57:28.114 -INFO 16738 [extShutdownHook] org.mongodb.driver.connection : Closed connection [connectionId{localValue:3, serverValue:165}] to localhost:27017 because the pool has been closed.
+2021-06-08 04:57:42.402 -INFO 17111 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 17111 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-08 04:57:42.404 -DEBUG 17111 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-08 04:57:42.404 -INFO 17111 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-08 04:57:42.905 -INFO 17111 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 04:57:42.906 -INFO 17111 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-08 04:57:42.923 -INFO 17111 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 MongoDB repository interfaces.
+2021-06-08 04:57:42.946 -INFO 17111 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 04:57:42.947 -INFO 17111 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-08 04:57:42.969 -INFO 17111 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-06-08 04:57:43.410 -INFO 17111 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-06-08 04:57:43.418 -INFO 17111 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-08 04:57:43.418 -INFO 17111 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-06-08 04:57:43.418 -INFO 17111 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-08 04:57:43.486 -INFO 17111 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-06-08 04:57:43.486 -INFO 17111 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1047 ms
+2021-06-08 04:57:43.584 -INFO 17111 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-08 04:57:43.625 -INFO 17111 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:167}] to localhost:27017
+2021-06-08 04:57:43.625 -INFO 17111 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:166}] to localhost:27017
+2021-06-08 04:57:43.625 -INFO 17111 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=12220078}
+2021-06-08 04:57:44.078 -INFO 17111 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-06-08 04:57:44.087 -INFO 17111 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-06-08 04:57:44.087 -INFO 17111 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-06-08 04:57:44.087 -INFO 17111 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-06-08 04:57:44.088 -INFO 17111 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-06-08 04:57:44.088 -INFO 17111 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-06-08 04:57:44.088 -INFO 17111 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-06-08 04:57:44.088 -INFO 17111 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@149aa7b2
+2021-06-08 04:57:44.222 -INFO 17111 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-08 04:57:44.372 -INFO 17111 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-06-08 04:57:44.390 -INFO 17111 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-08 04:57:44.390 -INFO 17111 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-06-08 04:57:44.390 -INFO 17111 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-06-08 04:57:44.399 -INFO 17111 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.238 seconds (JVM running for 2.914)
+2021-06-08 04:59:22.396 -INFO 17111 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 04:59:22.413 -INFO 17111 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-08 04:59:22.413 -INFO 17111 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-06-08 04:59:22.413 -INFO 17111 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-06-08 04:59:22.413 -INFO 17111 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 04:59:22.413 -INFO 17111 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-06-08 04:59:25.645 -INFO 17119 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 17119 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-08 04:59:25.647 -DEBUG 17119 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-08 04:59:25.647 -INFO 17119 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-08 04:59:26.083 -INFO 17119 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 04:59:26.083 -INFO 17119 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-08 04:59:26.097 -INFO 17119 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 MongoDB repository interfaces.
+2021-06-08 04:59:26.107 -INFO 17119 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 04:59:26.108 -INFO 17119 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-08 04:59:26.123 -INFO 17119 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-06-08 04:59:26.470 -INFO 17119 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-06-08 04:59:26.476 -INFO 17119 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-08 04:59:26.476 -INFO 17119 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-06-08 04:59:26.476 -INFO 17119 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-08 04:59:26.530 -INFO 17119 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-06-08 04:59:26.530 -INFO 17119 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 855 ms
+2021-06-08 04:59:26.629 -INFO 17119 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-08 04:59:26.666 -INFO 17119 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:168}] to localhost:27017
+2021-06-08 04:59:26.666 -INFO 17119 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:169}] to localhost:27017
+2021-06-08 04:59:26.667 -INFO 17119 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=11885534}
+2021-06-08 04:59:27.052 -INFO 17119 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-06-08 04:59:27.061 -INFO 17119 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-06-08 04:59:27.061 -INFO 17119 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-06-08 04:59:27.061 -INFO 17119 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-06-08 04:59:27.061 -INFO 17119 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-06-08 04:59:27.061 -INFO 17119 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-06-08 04:59:27.061 -INFO 17119 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-06-08 04:59:27.061 -INFO 17119 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6d6cd1e0
+2021-06-08 04:59:27.177 -INFO 17119 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-08 04:59:27.325 -INFO 17119 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-06-08 04:59:27.341 -INFO 17119 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-08 04:59:27.341 -INFO 17119 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-06-08 04:59:27.342 -INFO 17119 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-06-08 04:59:27.349 -INFO 17119 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 1.923 seconds (JVM running for 2.419)
+2021-06-08 05:00:50.884 -INFO 17119 [ntLoopGroup-6-1] org.reflections.Reflections : Reflections took 38 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:00:50.976 -INFO 17119 [ntLoopGroup-6-1] org.mongodb.driver.connection : Opened connection [connectionId{localValue:3, serverValue:170}] to localhost:27017
+2021-06-08 05:00:51.328 -INFO 17119 [ntLoopGroup-6-2] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:00:51.393 -INFO 17119 [ntLoopGroup-6-3] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:00:53.090 -INFO 17119 [ntLoopGroup-6-4] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:00:55.248 -INFO 17119 [ntLoopGroup-6-5] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:00:55.363 -WARN 17119 [ntLoopGroup-6-6] com.tsinghua.course.CourseApplication : null-null-{"path":"/chat/history","to_username":"test1"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 05:02:21.539 -INFO 17119 [ntLoopGroup-6-7] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:02:34.258 -INFO 17119 [ntLoopGroup-6-8] org.reflections.Reflections : Reflections took 16 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:03:58.260 -INFO 17119 [ntLoopGroup-6-9] org.reflections.Reflections : Reflections took 27 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:03:58.689 -INFO 17119 [tLoopGroup-6-10] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:03:58.889 -INFO 17119 [tLoopGroup-6-11] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:04:00.663 -WARN 17119 [tLoopGroup-6-12] com.tsinghua.course.CourseApplication : null-null-{"path":"/chat/history","to_username":"test1"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 05:58:33.765 -INFO 17119 [tLoopGroup-6-13] org.reflections.Reflections : Reflections took 41 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:58:34.141 -INFO 17119 [tLoopGroup-6-14] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:58:34.207 -INFO 17119 [tLoopGroup-6-15] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:58:36.442 -WARN 17119 [tLoopGroup-6-16] com.tsinghua.course.CourseApplication : null-null-{"path":"/chat/history","to_username":"test1"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 05:59:54.335 -INFO 17119 [tLoopGroup-6-17] org.reflections.Reflections : Reflections took 36 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:59:54.398 -INFO 17119 [tLoopGroup-6-18] org.reflections.Reflections : Reflections took 12 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 05:59:55.490 -WARN 17119 [tLoopGroup-6-19] com.tsinghua.course.CourseApplication : null-null-{"path":"/chat/history","to_username":"test1"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 06:00:05.476 -INFO 17119 [tLoopGroup-6-20] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:00:05.559 -INFO 17119 [tLoopGroup-6-21] org.reflections.Reflections : Reflections took 10 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:00:16.533 -WARN 17119 [tLoopGroup-6-22] com.tsinghua.course.CourseApplication : null-null-{"path":"/chat/history","to_username":"test1"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 06:00:54.382 -INFO 17119 [tLoopGroup-6-23] org.reflections.Reflections : Reflections took 26 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:00:54.429 -INFO 17119 [tLoopGroup-6-24] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:01:44.577 -INFO 17119 [tLoopGroup-6-25] org.reflections.Reflections : Reflections took 30 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:01:45.112 -INFO 17119 [tLoopGroup-6-26] org.reflections.Reflections : Reflections took 15 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:01:45.195 -INFO 17119 [tLoopGroup-6-27] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:02:07.697 -WARN 17119 [tLoopGroup-6-28] com.tsinghua.course.CourseApplication : null-null-{"path":"/chat/history","to_username":"test1"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 06:03:36.591 -INFO 17119 [tLoopGroup-6-29] org.reflections.Reflections : Reflections took 26 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:03:36.950 -INFO 17119 [tLoopGroup-6-30] org.reflections.Reflections : Reflections took 19 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:03:37.032 -INFO 17119 [tLoopGroup-6-31] org.reflections.Reflections : Reflections took 14 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 06:03:38.250 -INFO 17119 [tLoopGroup-6-32] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:29:43.502 -INFO 17119 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 08:29:43.822 -INFO 17119 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-08 08:29:43.824 -INFO 17119 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-06-08 08:29:43.825 -INFO 17119 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-06-08 08:29:43.825 -INFO 17119 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 08:29:43.828 -INFO 17119 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-06-08 08:29:43.972 -INFO 17119 [extShutdownHook] org.mongodb.driver.connection : Closed connection [connectionId{localValue:3, serverValue:170}] to localhost:27017 because the pool has been closed.
+2021-06-08 08:29:49.158 -INFO 17739 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 17739 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-08 08:29:49.159 -DEBUG 17739 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-08 08:29:49.159 -INFO 17739 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-08 08:29:49.678 -INFO 17739 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 08:29:49.679 -INFO 17739 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-08 08:29:49.696 -INFO 17739 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 MongoDB repository interfaces.
+2021-06-08 08:29:49.710 -INFO 17739 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 08:29:49.711 -INFO 17739 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-08 08:29:49.725 -INFO 17739 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-06-08 08:29:50.175 -INFO 17739 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-06-08 08:29:50.184 -INFO 17739 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-08 08:29:50.184 -INFO 17739 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-06-08 08:29:50.184 -INFO 17739 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-08 08:29:50.250 -INFO 17739 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-06-08 08:29:50.250 -INFO 17739 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1046 ms
+2021-06-08 08:29:50.369 -INFO 17739 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-08 08:29:50.434 -INFO 17739 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:172}] to localhost:27017
+2021-06-08 08:29:50.434 -INFO 17739 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:171}] to localhost:27017
+2021-06-08 08:29:50.434 -INFO 17739 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=27402818}
+2021-06-08 08:29:50.980 -INFO 17739 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-06-08 08:29:51.011 -INFO 17739 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-06-08 08:29:51.011 -INFO 17739 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-06-08 08:29:51.012 -INFO 17739 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-06-08 08:29:51.013 -INFO 17739 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-06-08 08:29:51.013 -INFO 17739 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-06-08 08:29:51.013 -INFO 17739 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-06-08 08:29:51.013 -INFO 17739 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@39f0c343
+2021-06-08 08:29:51.208 -INFO 17739 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-08 08:29:51.462 -INFO 17739 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-06-08 08:29:51.487 -INFO 17739 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-08 08:29:51.488 -INFO 17739 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-06-08 08:29:51.488 -INFO 17739 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-06-08 08:29:51.497 -INFO 17739 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.64 seconds (JVM running for 3.651)
+2021-06-08 08:34:46.175 -INFO 17739 [ntLoopGroup-6-1] org.reflections.Reflections : Reflections took 42 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:34:46.308 -INFO 17739 [ntLoopGroup-6-1] org.mongodb.driver.connection : Opened connection [connectionId{localValue:3, serverValue:173}] to localhost:27017
+2021-06-08 08:34:46.960 -INFO 17739 [ntLoopGroup-6-2] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:34:47.082 -INFO 17739 [ntLoopGroup-6-3] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:34:49.218 -INFO 17739 [ntLoopGroup-6-4] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:34:51.614 -INFO 17739 [ntLoopGroup-6-5] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:35:52.715 -INFO 17739 [ntLoopGroup-6-6] org.reflections.Reflections : Reflections took 10 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:35:53.056 -INFO 17739 [ntLoopGroup-6-7] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:35:53.100 -INFO 17739 [ntLoopGroup-6-8] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:35:54.403 -INFO 17739 [ntLoopGroup-6-9] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:35:56.623 -INFO 17739 [tLoopGroup-6-10] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:35:56.748 -INFO 17739 [tLoopGroup-6-11] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:56:17.937 -INFO 17739 [tLoopGroup-6-12] org.reflections.Reflections : Reflections took 34 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:56:18.405 -INFO 17739 [tLoopGroup-6-13] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:56:18.459 -INFO 17739 [tLoopGroup-6-14] org.reflections.Reflections : Reflections took 13 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:56:20.478 -INFO 17739 [tLoopGroup-6-15] org.reflections.Reflections : Reflections took 12 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:56:22.728 -INFO 17739 [tLoopGroup-6-16] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:56:22.828 -INFO 17739 [tLoopGroup-6-17] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:59:25.892 -INFO 17739 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 08:59:25.993 -INFO 17739 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-08 08:59:25.993 -INFO 17739 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-06-08 08:59:25.993 -INFO 17739 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-06-08 08:59:25.993 -INFO 17739 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-08 08:59:25.995 -INFO 17739 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-06-08 08:59:26.047 -INFO 17739 [extShutdownHook] org.mongodb.driver.connection : Closed connection [connectionId{localValue:3, serverValue:173}] to localhost:27017 because the pool has been closed.
+2021-06-08 08:59:30.826 -INFO 17866 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 17866 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-08 08:59:30.827 -DEBUG 17866 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-08 08:59:30.828 -INFO 17866 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-08 08:59:31.275 -INFO 17866 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 08:59:31.275 -INFO 17866 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-08 08:59:31.290 -INFO 17866 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 MongoDB repository interfaces.
+2021-06-08 08:59:31.302 -INFO 17866 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-08 08:59:31.302 -INFO 17866 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-08 08:59:31.318 -INFO 17866 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-06-08 08:59:31.717 -INFO 17866 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-06-08 08:59:31.731 -INFO 17866 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-08 08:59:31.731 -INFO 17866 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-06-08 08:59:31.731 -INFO 17866 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-08 08:59:31.805 -INFO 17866 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-06-08 08:59:31.805 -INFO 17866 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 947 ms
+2021-06-08 08:59:31.906 -INFO 17866 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-08 08:59:31.954 -INFO 17866 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:175}] to localhost:27017
+2021-06-08 08:59:31.954 -INFO 17866 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:174}] to localhost:27017
+2021-06-08 08:59:31.954 -INFO 17866 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=12173053}
+2021-06-08 08:59:32.575 -INFO 17866 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-06-08 08:59:32.588 -INFO 17866 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-06-08 08:59:32.589 -INFO 17866 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-06-08 08:59:32.589 -INFO 17866 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-06-08 08:59:32.590 -INFO 17866 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-06-08 08:59:32.590 -INFO 17866 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-06-08 08:59:32.590 -INFO 17866 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-06-08 08:59:32.590 -INFO 17866 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2a99ca99
+2021-06-08 08:59:32.729 -INFO 17866 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-08 08:59:32.968 -INFO 17866 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-06-08 08:59:32.989 -INFO 17866 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-08 08:59:32.990 -INFO 17866 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-06-08 08:59:32.990 -INFO 17866 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-06-08 08:59:32.998 -INFO 17866 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.383 seconds (JVM running for 3.068)
+2021-06-08 08:59:38.220 -INFO 17866 [ntLoopGroup-6-1] org.reflections.Reflections : Reflections took 23 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:59:38.283 -INFO 17866 [ntLoopGroup-6-1] org.mongodb.driver.connection : Opened connection [connectionId{localValue:3, serverValue:176}] to localhost:27017
+2021-06-08 08:59:38.704 -INFO 17866 [ntLoopGroup-6-2] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:59:38.799 -INFO 17866 [ntLoopGroup-6-3] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:59:41.686 -INFO 17866 [ntLoopGroup-6-4] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:59:43.505 -INFO 17866 [ntLoopGroup-6-5] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 08:59:43.623 -INFO 17866 [ntLoopGroup-6-6] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:14.212 -INFO 17866 [ntLoopGroup-6-7] org.reflections.Reflections : Reflections took 78 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:14.571 -INFO 17866 [ntLoopGroup-6-8] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:14.626 -INFO 17866 [ntLoopGroup-6-9] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:16.104 -INFO 17866 [tLoopGroup-6-10] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:22.954 -INFO 17866 [tLoopGroup-6-11] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:22.995 -INFO 17866 [tLoopGroup-6-12] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:24.167 -INFO 17866 [tLoopGroup-6-13] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:28.176 -INFO 17866 [tLoopGroup-6-14] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:31.866 -INFO 17866 [tLoopGroup-6-15] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:31.910 -INFO 17866 [tLoopGroup-6-16] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:33.213 -INFO 17866 [tLoopGroup-6-17] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:36.892 -INFO 17866 [tLoopGroup-6-18] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:36.932 -INFO 17866 [tLoopGroup-6-19] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:23:59.478 -INFO 17866 [tLoopGroup-6-20] org.reflections.Reflections : Reflections took 13 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:15.168 -INFO 17866 [tLoopGroup-6-21] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:24.162 -INFO 17866 [tLoopGroup-6-22] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:24.519 -INFO 17866 [tLoopGroup-6-23] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:24.576 -INFO 17866 [tLoopGroup-6-24] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:29.809 -INFO 17866 [tLoopGroup-6-25] org.reflections.Reflections : Reflections took 19 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:36.519 -INFO 17866 [tLoopGroup-6-26] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:36.580 -INFO 17866 [tLoopGroup-6-27] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:38.802 -INFO 17866 [tLoopGroup-6-28] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:40.671 -INFO 17866 [tLoopGroup-6-29] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:24:40.712 -INFO 17866 [tLoopGroup-6-30] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:28:59.057 -INFO 17866 [tLoopGroup-6-31] org.reflections.Reflections : Reflections took 24 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:28:59.403 -INFO 17866 [tLoopGroup-6-32] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:28:59.455 -INFO 17866 [ntLoopGroup-6-1] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:00.938 -INFO 17866 [ntLoopGroup-6-2] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:00.998 -INFO 17866 [ntLoopGroup-6-3] org.reflections.Reflections : Reflections took 7 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:01.125 -INFO 17866 [ntLoopGroup-6-4] org.reflections.Reflections : Reflections took 13 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:01.221 -INFO 17866 [ntLoopGroup-6-5] org.reflections.Reflections : Reflections took 71 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:01.293 -INFO 17866 [ntLoopGroup-6-6] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:01.320 -INFO 17866 [ntLoopGroup-6-7] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:01.341 -INFO 17866 [ntLoopGroup-6-8] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:02.546 -INFO 17866 [ntLoopGroup-6-9] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:02.577 -INFO 17866 [tLoopGroup-6-10] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:05.049 -INFO 17866 [tLoopGroup-6-11] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:05.122 -INFO 17866 [tLoopGroup-6-12] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:05.150 -INFO 17866 [tLoopGroup-6-13] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:05.173 -INFO 17866 [tLoopGroup-6-14] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:05.220 -INFO 17866 [tLoopGroup-6-15] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:05.239 -INFO 17866 [tLoopGroup-6-16] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:05.260 -INFO 17866 [tLoopGroup-6-17] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:06.723 -INFO 17866 [tLoopGroup-6-18] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:06.759 -INFO 17866 [tLoopGroup-6-19] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:11.910 -INFO 17866 [tLoopGroup-6-20] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:14.132 -INFO 17866 [tLoopGroup-6-21] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:14.228 -INFO 17866 [tLoopGroup-6-22] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:29:14.312 -INFO 17866 [tLoopGroup-6-23] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:11.301 -INFO 17866 [tLoopGroup-6-24] org.reflections.Reflections : Reflections took 24 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:11.613 -INFO 17866 [tLoopGroup-6-25] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:11.659 -INFO 17866 [tLoopGroup-6-26] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:13.027 -INFO 17866 [tLoopGroup-6-27] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:13.104 -INFO 17866 [tLoopGroup-6-28] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:13.142 -INFO 17866 [tLoopGroup-6-29] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:13.169 -INFO 17866 [tLoopGroup-6-30] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:13.251 -INFO 17866 [tLoopGroup-6-31] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:13.277 -INFO 17866 [tLoopGroup-6-32] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:13.302 -INFO 17866 [ntLoopGroup-6-1] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:15.104 -INFO 17866 [ntLoopGroup-6-2] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 09:35:15.151 -INFO 17866 [ntLoopGroup-6-3] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:30.280 -INFO 17866 [ntLoopGroup-6-4] org.reflections.Reflections : Reflections took 27 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:30.599 -INFO 17866 [ntLoopGroup-6-5] org.reflections.Reflections : Reflections took 19 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:30.687 -INFO 17866 [ntLoopGroup-6-6] org.reflections.Reflections : Reflections took 24 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:33.075 -INFO 17866 [ntLoopGroup-6-7] org.reflections.Reflections : Reflections took 39 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:34.671 -INFO 17866 [ntLoopGroup-6-8] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:34.953 -INFO 17866 [ntLoopGroup-6-9] org.reflections.Reflections : Reflections took 8 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:34.990 -INFO 17866 [tLoopGroup-6-10] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:37.642 -INFO 17866 [tLoopGroup-6-11] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:41.660 -INFO 17866 [tLoopGroup-6-12] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:41.786 -INFO 17866 [tLoopGroup-6-13] org.reflections.Reflections : Reflections took 10 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:41.868 -INFO 17866 [tLoopGroup-6-14] org.reflections.Reflections : Reflections took 15 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:43.266 -INFO 17866 [tLoopGroup-6-15] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:43.304 -INFO 17866 [tLoopGroup-6-16] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:44.647 -INFO 17866 [tLoopGroup-6-17] org.reflections.Reflections : Reflections took 10 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:45.940 -INFO 17866 [tLoopGroup-6-18] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:46.087 -INFO 17866 [tLoopGroup-6-19] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:46.121 -INFO 17866 [tLoopGroup-6-20] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:25:48.236 -INFO 17866 [tLoopGroup-6-21] org.reflections.Reflections : Reflections took 6 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:28:33.253 -INFO 17866 [tLoopGroup-6-22] org.reflections.Reflections : Reflections took 30 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:28:33.346 -INFO 17866 [tLoopGroup-6-23] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:28:33.404 -INFO 17866 [tLoopGroup-6-24] org.reflections.Reflections : Reflections took 12 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:36:42.160 -INFO 17866 [tLoopGroup-6-25] org.reflections.Reflections : Reflections took 66 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:36:44.082 -INFO 17866 [tLoopGroup-6-26] org.reflections.Reflections : Reflections took 53 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:37:04.898 -INFO 17866 [tLoopGroup-6-27] org.reflections.Reflections : Reflections took 26 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:37:04.963 -INFO 17866 [tLoopGroup-6-28] org.reflections.Reflections : Reflections took 16 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:38:32.038 -INFO 17866 [tLoopGroup-6-29] org.reflections.Reflections : Reflections took 69 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:38:33.632 -INFO 17866 [tLoopGroup-6-30] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:38:45.672 -INFO 17866 [tLoopGroup-6-31] org.reflections.Reflections : Reflections took 11 ms to scan 1 urls, producing 4 keys and 49 values 
+2021-06-08 17:50:45.381 -WARN 17866 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-06-08 17:50:47.771 -WARN 17866 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-06-08 17:50:50.238 -WARN 17866 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-06-08 17:50:51.888 -WARN 17866 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-06-08 17:50:54.060 -WARN 17866 [ntLoopGroup-5-1] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-06-08 17:52:19.262 -WARN 17866 [ntLoopGroup-6-1] com.tsinghua.course.CourseApplication : null-null-{"path":"/"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 17:52:19.546 -WARN 17866 [ntLoopGroup-6-2] com.tsinghua.course.CourseApplication : null-null-{"path":"/favicon.ico"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 20:33:46.894 -WARN 17866 [ntLoopGroup-6-3] com.tsinghua.course.CourseApplication : null-null-{"path":"/bad-request"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 20:34:05.677 -WARN 17866 [ntLoopGroup-6-4] com.tsinghua.course.CourseApplication : null-null-{"path":"/bad-request"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 20:36:45.878 -WARN 17866 [ntLoopGroup-5-2] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-06-08 20:36:47.241 -WARN 17866 [ntLoopGroup-5-2] com.tsinghua.course.CourseApplication : null-null-{}-SysError004-com.tsinghua.course.Biz.Handler.WebSocketHandler#channelRead0#52/
+2021-06-08 20:37:13.961 -WARN 17866 [ntLoopGroup-6-5] com.tsinghua.course.CourseApplication : null-null-{"path":"/bad-request"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 20:37:54.897 -WARN 17866 [ntLoopGroup-6-6] com.tsinghua.course.CourseApplication : null-null-{"path":"/bad-request"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/
+2021-06-08 20:38:02.436 -WARN 17866 [ntLoopGroup-6-7] com.tsinghua.course.CourseApplication : null-null-{"path":"/bad-request"}-SysError006-com.tsinghua.course.Biz.Handler.HttpHandler#channelRead0#87/

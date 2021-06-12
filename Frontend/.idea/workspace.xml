@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ebe31a1-1977-46c7-9354-e6fb2019276a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/ATask/ListInsert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/filepaths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/src/main/java/com/tsinghua/course/Biz/BizTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/src/main/java/com/tsinghua/course/Biz/BizTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/src/main/java/com/tsinghua/course/Biz/Controller/Params/CommonParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/src/main/java/com/tsinghua/course/Biz/Controller/Params/CommonParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/src/main/java/com/tsinghua/course/Biz/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/src/main/java/com/tsinghua/course/Biz/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/src/main/java/com/tsinghua/course/Biz/Handler/HttpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/src/main/java/com/tsinghua/course/Biz/Handler/HttpHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/target/classes/com/tsinghua/course/Biz/BizTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/target/classes/com/tsinghua/course/Biz/BizTypeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/target/classes/com/tsinghua/course/Biz/Controller/Params/CommonParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/target/classes/com/tsinghua/course/Biz/Controller/Params/CommonParams.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/target/classes/com/tsinghua/course/Biz/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/target/classes/com/tsinghua/course/Biz/Controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/course/target/classes/com/tsinghua/course/Biz/Handler/HttpHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/course/target/classes/com/tsinghua/course/Biz/Handler/HttpHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/Fragments/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/Fragments/ProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/Utill/MaptoJsonUtill.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/Utill/MaptoJsonUtill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/Utill/OkhttpUtill.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceocho/kakaotalk/Utill/OkhttpUtill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_XL_API_30]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1tlDilLqsryJJn6OK1AxVeZAQvC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-11T18:04:33.104Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="kakaotalk.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ebe31a1-1977-46c7-9354-e6fb2019276a" name="Default Changelist" comment="" />
+      <created>1623334911785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623334911785</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="633" y="291" key="AndroidCreateResourceFileDialog" timestamp="1623336004321">
+      <screen x="0" y="25" width="1792" height="1024" />
+    </state>
+    <state x="633" y="291" key="AndroidCreateResourceFileDialog/1792.25.1920.1055/0.25.1792.1024@0.25.1792.1024" timestamp="1623336004321" />
+    <state width="679" height="262" key="GridCell.Tab.0.bottom" timestamp="1623434732775">
+      <screen x="0" y="25" width="1792" height="1021" />
+    </state>
+    <state width="679" height="262" key="GridCell.Tab.0.bottom/1792.25.1920.1055/0.25.1792.1019@0.25.1792.1019" timestamp="1623431650641" />
+    <state width="679" height="262" key="GridCell.Tab.0.bottom/1792.25.1920.1055/0.25.1792.1021@0.25.1792.1021" timestamp="1623434732775" />
+    <state width="679" height="262" key="GridCell.Tab.0.bottom/1792.25.1920.1055/0.25.1792.1023@0.25.1792.1023" timestamp="1623367883740" />
+    <state width="679" height="262" key="GridCell.Tab.0.bottom/1792.25.1920.1055/0.25.1792.1024@0.25.1792.1024" timestamp="1623409051626" />
+    <state width="679" height="262" key="GridCell.Tab.0.center" timestamp="1623434732774">
+      <screen x="0" y="25" width="1792" height="1021" />
+    </state>
+    <state width="679" height="262" key="GridCell.Tab.0.center/1792.25.1920.1055/0.25.1792.1019@0.25.1792.1019" timestamp="1623431650641" />
+    <state width="679" height="262" key="GridCell.Tab.0.center/1792.25.1920.1055/0.25.1792.1021@0.25.1792.1021" timestamp="1623434732774" />
+    <state width="679" height="262" key="GridCell.Tab.0.center/1792.25.1920.1055/0.25.1792.1023@0.25.1792.1023" timestamp="1623367883740" />
+    <state width="679" height="262" key="GridCell.Tab.0.center/1792.25.1920.1055/0.25.1792.1024@0.25.1792.1024" timestamp="1623409051626" />
+    <state width="679" height="262" key="GridCell.Tab.0.left" timestamp="1623434732774">
+      <screen x="0" y="25" width="1792" height="1021" />
+    </state>
+    <state width="679" height="262" key="GridCell.Tab.0.left/1792.25.1920.1055/0.25.1792.1019@0.25.1792.1019" timestamp="1623431650641" />
+    <state width="679" height="262" key="GridCell.Tab.0.left/1792.25.1920.1055/0.25.1792.1021@0.25.1792.1021" timestamp="1623434732774" />
+    <state width="679" height="262" key="GridCell.Tab.0.left/1792.25.1920.1055/0.25.1792.1023@0.25.1792.1023" timestamp="1623367883739" />
+    <state width="679" height="262" key="GridCell.Tab.0.left/1792.25.1920.1055/0.25.1792.1024@0.25.1792.1024" timestamp="1623409051625" />
+    <state width="679" height="262" key="GridCell.Tab.0.right" timestamp="1623434732774">
+      <screen x="0" y="25" width="1792" height="1021" />
+    </state>
+    <state width="679" height="262" key="GridCell.Tab.0.right/1792.25.1920.1055/0.25.1792.1019@0.25.1792.1019" timestamp="1623431650641" />
+    <state width="679" height="262" key="GridCell.Tab.0.right/1792.25.1920.1055/0.25.1792.1021@0.25.1792.1021" timestamp="1623434732774" />
+    <state width="679" height="262" key="GridCell.Tab.0.right/1792.25.1920.1055/0.25.1792.1023@0.25.1792.1023" timestamp="1623367883740" />
+    <state width="679" height="262" key="GridCell.Tab.0.right/1792.25.1920.1055/0.25.1792.1024@0.25.1792.1024" timestamp="1623409051626" />
+  </component>
+</project>

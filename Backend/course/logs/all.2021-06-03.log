@@ -1,0 +1,58 @@
+2021-06-03 02:31:26.484 -INFO 9637 [tLoopGroup-7-17] org.reflections.Reflections : Reflections took 21 ms to scan 1 urls, producing 4 keys and 33 values 
+2021-06-03 02:31:30.227 -INFO 9637 [tLoopGroup-7-18] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 33 values 
+2021-06-03 02:31:48.784 -INFO 9637 [tLoopGroup-7-19] org.reflections.Reflections : Reflections took 4 ms to scan 1 urls, producing 4 keys and 33 values 
+2021-06-03 02:31:54.536 -INFO 9637 [tLoopGroup-7-20] org.reflections.Reflections : Reflections took 5 ms to scan 1 urls, producing 4 keys and 33 values 
+2021-06-03 02:32:56.971 -INFO 9637 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-03 02:32:57.052 -INFO 9637 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-03 02:32:57.053 -INFO 9637 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
+2021-06-03 02:32:57.053 -INFO 9637 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-06-03 02:32:57.053 -INFO 9637 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-06-03 02:32:57.053 -INFO 9637 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-06-03 02:32:57.080 -INFO 9637 [extShutdownHook] org.mongodb.driver.connection : Closed connection [connectionId{localValue:3, serverValue:154}] to localhost:27017 because the pool has been closed.
+2021-06-03 02:33:01.113 -INFO 11753 [           main] com.tsinghua.course.CourseApplication : Starting CourseApplication using Java 15.0.1 on wujun-MacBookPro.local with PID 11753 (/Users/wujun/Desktop/im/Backend/course/target/classes started by wujun in /Users/wujun/Desktop/im/Backend/course)
+2021-06-03 02:33:01.114 -DEBUG 11753 [           main] com.tsinghua.course.CourseApplication : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-03 02:33:01.114 -INFO 11753 [           main] com.tsinghua.course.CourseApplication : No active profile set, falling back to default profiles: default
+2021-06-03 02:33:01.582 -INFO 11753 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-03 02:33:01.582 -INFO 11753 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-03 02:33:01.597 -INFO 11753 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 MongoDB repository interfaces.
+2021-06-03 02:33:01.610 -INFO 11753 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-03 02:33:01.611 -INFO 11753 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-03 02:33:01.625 -INFO 11753 [           main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-06-03 02:33:02.004 -INFO 11753 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2021-06-03 02:33:02.013 -INFO 11753 [           main] org.apache.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-03 02:33:02.013 -INFO 11753 [           main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2021-06-03 02:33:02.014 -INFO 11753 [           main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-03 02:33:02.100 -INFO 11753 [           main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2021-06-03 02:33:02.100 -INFO 11753 [           main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 956 ms
+2021-06-03 02:33:02.206 -INFO 11753 [           main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-03 02:33:02.249 -INFO 11753 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:1, serverValue:156}] to localhost:27017
+2021-06-03 02:33:02.249 -INFO 11753 [localhost:27017] org.mongodb.driver.connection : Opened connection [connectionId{localValue:2, serverValue:155}] to localhost:27017
+2021-06-03 02:33:02.250 -INFO 11753 [localhost:27017] org.mongodb.driver.cluster : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=12566792}
+2021-06-03 02:33:02.662 -INFO 11753 [           main] org.quartz.impl.StdSchedulerFactory : Using default implementation for ThreadExecutor
+2021-06-03 02:33:02.669 -INFO 11753 [           main] org.quartz.core.SchedulerSignalerImpl : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-06-03 02:33:02.669 -INFO 11753 [           main] org.quartz.core.QuartzScheduler : Quartz Scheduler v.2.3.2 created.
+2021-06-03 02:33:02.669 -INFO 11753 [           main] org.quartz.simpl.RAMJobStore : RAMJobStore initialized.
+2021-06-03 02:33:02.670 -INFO 11753 [           main] org.quartz.core.QuartzScheduler : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-06-03 02:33:02.670 -INFO 11753 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-06-03 02:33:02.670 -INFO 11753 [           main] org.quartz.impl.StdSchedulerFactory : Quartz scheduler version: 2.3.2
+2021-06-03 02:33:02.670 -INFO 11753 [           main] org.quartz.core.QuartzScheduler : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@123307c4
+2021-06-03 02:33:02.792 -INFO 11753 [           main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-03 02:33:02.940 -INFO 11753 [           main] org.apache.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"]
+2021-06-03 02:33:02.959 -INFO 11753 [           main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-03 02:33:02.959 -INFO 11753 [           main] org.springframework.scheduling.quartz.SchedulerFactoryBean : Starting Quartz Scheduler now
+2021-06-03 02:33:02.959 -INFO 11753 [           main] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-06-03 02:33:02.968 -INFO 11753 [           main] com.tsinghua.course.CourseApplication : Started CourseApplication in 2.109 seconds (JVM running for 2.941)
+2021-06-03 02:33:06.634 -INFO 11753 [ntLoopGroup-7-1] org.reflections.Reflections : Reflections took 21 ms to scan 1 urls, producing 4 keys and 33 values 
+2021-06-03 02:33:06.731 -INFO 11753 [ntLoopGroup-7-1] org.mongodb.driver.connection : Opened connection [connectionId{localValue:3, serverValue:157}] to localhost:27017
+2021-06-03 02:33:08.588 -INFO 11753 [ntLoopGroup-7-2] org.reflections.Reflections : Reflections took 14 ms to scan 1 urls, producing 4 keys and 33 values 
+2021-06-03 02:33:08.590 -WARN 11753 [ntLoopGroup-7-2] com.tsinghua.course.CourseApplication : null-CONTACT_DELETE-{"bizType":"CONTACT_DELETE","path":"/contact/delete"}-default-com.tsinghua.course.Biz.Controller.Params.CommonParams#fromJsonObject#53/
+2021-06-03 02:33:18.124 -INFO 11753 [ntLoopGroup-7-3] org.reflections.Reflections : Reflections took 9 ms to scan 1 urls, producing 4 keys and 33 values 
+2021-06-03 02:33:45.784 -INFO 11753 [ntLoopGroup-7-4] org.reflections.Reflections : Reflections took 19 ms to scan 1 urls, producing 4 keys and 33 values 
+2021-06-03 02:33:49.573 -INFO 11753 [ntLoopGroup-7-5] org.reflections.Reflections : Reflections took 10 ms to scan 1 urls, producing 4 keys and 33 values 
