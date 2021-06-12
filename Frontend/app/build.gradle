@@ -2,12 +2,24 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
+    useLibrary 'org.apache.http.legacy'
+
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'build.xml'
+    }
+
 
     defaultConfig {
         applicationId "com.ceocho.kakaotalk"
@@ -60,4 +72,21 @@ dependencies {
 
 
     implementation "org.java-websocket:Java-WebSocket:1.4.0"
+
+//   compile group: 'org.apache.httpcomponents', name: 'httpclient-android', version: '4.3.5'
+//    compile (group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.3.6') {
+//        exclude module: 'org.apache.httpcomponents:httpclient'
+//    }
+//    implementation ('org.apache.httpcomponents:httpclient-android:4.3.5.1') {
+//        exclude group: 'org.apache.http'
+//    }
+//
+//    implementation ('org.apache.httpcomponents:httpcore:4.3.2') {
+//        exclude group: 'org.apache.http'
+//    }
+    implementation group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.3.1'
+
+
+
+
 }

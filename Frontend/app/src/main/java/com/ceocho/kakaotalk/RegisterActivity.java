@@ -21,9 +21,6 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity {
 
     MaterialEditText username, nickname, password, phonenumber;
-//    EditText test;
-
-    //    EditText username, email, password;
     Button btn_register;
 
 
@@ -44,22 +41,18 @@ public class RegisterActivity extends AppCompatActivity {
 
         btn_register = findViewById(R.id.btn_register);
 
-//        test = (EditText) findViewById(R.id.test);
 
 
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-//                String txt_test = test.getText().toString();
 
                 String txt_username = username.getText().toString();
                 String txt_phonenumber = phonenumber.getText().toString();
                 String txt_password = password.getText().toString();
                 String txt_nickname = nickname.getText().toString();
 
-
-//                Toast.makeText(RegisterActivity.this, txt_test, Toast.LENGTH_SHORT).show();
 
                 if (TextUtils.isEmpty(txt_username) || TextUtils.isEmpty(txt_phonenumber) || TextUtils.isEmpty(txt_password)) {
                     Toast.makeText(RegisterActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
@@ -82,7 +75,6 @@ public class RegisterActivity extends AppCompatActivity {
         map.put("nickname", nickname);
         String input = MaptoJsonUtill.getJson(map);
         Map result = OkhttpUtill.post("user/register", input);
-
 
         if (result.get("success").toString() == "true") {
             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);

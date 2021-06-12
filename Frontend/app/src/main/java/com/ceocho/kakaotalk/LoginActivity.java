@@ -44,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
 //    };
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,12 +63,9 @@ public class LoginActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Login");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
         id = findViewById(R.id.id);
         password = findViewById(R.id.password);
         btn_login = findViewById(R.id.btn_login);
-
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,15 +76,13 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     map.put("username", id.getText().toString());
                     map.put("password", password.getText().toString());
-                    map.put("bizType","USER_LOGIN");
+                    //map.put("bizType","USER_LOGIN");
 
                     String input = MaptoJsonUtill.getJson(map);
                     Map result = OkhttpUtill.post("user/login", input);
 //                    if (client != null && client.isOpen()) {
 //                        client.send(input);
 //                    }
-
-                    System.out.println(result);
 
                     if (result != null && !result.isEmpty()) {
 
@@ -103,21 +97,11 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
 
-
                 }
             }
         });
 
-
-
-
     }
-
-
-
-
-
-
 }
 
 

@@ -1,5 +1,10 @@
 package com.ceocho.kakaotalk.Utill;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -105,6 +110,9 @@ public class MaptoJsonUtill {
 
 
     }
+
+
+
 
 
 }

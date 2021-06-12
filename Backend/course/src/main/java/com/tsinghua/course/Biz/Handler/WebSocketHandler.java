@@ -44,15 +44,8 @@ public class WebSocketHandler extends SimpleChannelInboundHandler<Object> {
             }
             /** 获取参数和操作类型 */
             try {
-                System.out.println("이거야 너무 많지 이렇게 하면됌");
-                System.out.println(((TextWebSocketFrame)msg).text());
-
                 jsonMsg = JSON.parseObject(((TextWebSocketFrame)msg).text());
-                System.out.println("여기까지는 온거야?");
                 String bizTypeStr = jsonMsg.getString(KeyConstant.BIZ_TYPE);
-                System.out.println("다음은 이거란");
-
-                System.out.println(bizTypeStr);
                 bizTypeEnum = BizTypeEnum.valueOf(bizTypeStr);
                 jsonMsg.put(KeyConstant.BIZ_TYPE, bizTypeEnum);
             } catch (Exception e) {
@@ -66,23 +59,16 @@ public class WebSocketHandler extends SimpleChannelInboundHandler<Object> {
             Class<CommonInParams> clz = dispatcher.getParamByBizType(bizTypeEnum);
             CommonInParams params = clz.newInstance();
             params.fromJsonObject(jsonMsg);
-            System.out.println("약사님께");
-
             /** 如果不是登录，需要获取用户信息 */
             if (!bizTypeEnum.equals(BizTypeEnum.USER_LOGIN)) {
                 username = SocketUtil.getSocketUser(ctx);
                 params.setUsername(username);
-                System.out.println(username);
-                System.out.println("두입먹고");
             } else {
                 username = params.getUsername();
                 if (username == null)
                     throw new CourseWarn(UserWarnEnum.LOGIN_FAILED);
-                System.out.println("술취아");
-
             }
             /** 执行业务 */
-            System.out.println("약사님께 드렸다밍");
             retStr = dispatcher.dispatch(params);
         } catch (Exception e) {
             /** 处理出错，记录警告日志或者错误日志 */

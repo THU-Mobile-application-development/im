@@ -1,5 +1,14 @@
 package com.ceocho.kakaotalk.Utill;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.util.Log;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,6 +23,7 @@ import okhttp3.Cookie;
 import okhttp3.CookieJar;
 import okhttp3.HttpUrl;
 import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
@@ -24,7 +34,7 @@ public class OkhttpUtill {
     //private  static String baseURL = "http://172.20.10.5:7000/";
     //private static String baseURL = "http://172.30.1.59:7000/";
     //private static String baseURL = "http://172.30.1.5:7000/";
-    public static String baseURL = "http://172.30.1.6:7000/";
+    public static String baseURL = "http://172.30.1.41:7000/";
 
 
     private static OkHttpClient client = new OkHttpClient.Builder()
@@ -136,6 +146,83 @@ public class OkhttpUtill {
         }
         return result[0];
     }
+
+
+    public static boolean isNetworkConnected(Context context) {
+        ConnectivityManager cm = (ConnectivityManager)
+                context.getSystemService( Context.CONNECTIVITY_SERVICE );
+        NetworkInfo info = cm.getActiveNetworkInfo();
+        if(info != null){
+            if(info.getType() == ConnectivityManager.TYPE_WIFI){
+                Log.d("isconnected : ", "WIFI 로 설정됨");
+            }else if(info.getType() == ConnectivityManager.TYPE_MOBILE){
+                Log.d("isconnected : ", "일반망으로 설정됨");
+            }
+            Log.d("isconnected : ", "OK => " + info.isConnected());
+            return true;
+        }else {
+            Log.d("isconnected : ", "False => 데이터 통신 불가!!!" );
+            return false;
+        }
+
+    }
+
+    public static void upload(File file) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/*");
+
+        RequestBody formBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("avatar", file.getName(),
+                        RequestBody.create(MEDIA_TYPE_PNG, file))
+                //.addFormDataPart("other_field", "other_field_value")
+                .build();
+        Request request = new Request.Builder()
+                .url(baseURL + "user/avatar")
+                .post(formBody)
+                .build();
+
+        System.out.println("여기까지 ffdsfsffgdasfs온거니?");
+
+//        Request request = new Request.Builder().url(baseURL+"user/avatar").post(formBody).build();
+//        System.out.println("여기까지 fafdasfsafs?");
+
+        Response response = client.newCall(request).execute();
+        System.out.println("여기까지 온거니?");
+        String res = response.body().string();
+        Log.e("TAG", "Response : " + res);
+
+
+//
+//        MediaType mediaType = MediaType.parse("image/jpg");
+//        RequestBody requestBody = RequestBody.create(mediaType, file);
+//
+//        MultipartBody multipartBody = new MultipartBody.Builder("---DevApp")
+//                .addFormDataPart("AWSAccessKeyId", "AKIAJCBCKQITFUEAAITA")
+//                .addFormDataPart("acl", "public-read")
+//                .addFormDataPart("key", "formtasks/images/19463-selfie.jpg")
+//                .addFormDataPart("signature", "kos3NHJW+qUaQMpYZfaOs19hUMRw=")
+//                .addFormDataPart("policy", "eyJjb25kaXRpb25zIjogd3siYWNsIjogInB1YmxpYy1yZWFkIn0sIHsiQ29udGVudC1UeXBlIjogImltYWdlL2pwZyJ9LCB7ImJ1Y2tldCI6ICJzaG9wcGluZy1kZXZlbCJ9LCB7ImtleSI6ICJmb3JtdGFza3MvaW1hZ2VzLzE5NDYzLXNlbGZpZS5qcGcifV0sICJleHBpcmF0aW9uIjogIjIwMTgtMDQtMTdUMjE6NTU6NDhaIn0=")
+//                .addFormDataPart("Content-Type", "image/jpg")
+//                .addFormDataPart("file", null, requestBody).build();
+//
+//
+//        Request request = new Request.Builder()
+//                .url(baseURL+"user/avatar")
+//                .post(multipartBody)
+//                .addHeader("content-type", "multipart/form-data;")
+//                .addHeader("cache-control", "no-cache")
+//                .build();
+//
+//        Response execute = client.newCall(request).execute();
+//        System.out.println(execute.body().string());
+
+
+
+
+
+    }
+
 
 
 }

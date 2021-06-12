@@ -61,6 +61,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CourseApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CourseApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="course" />
       <extension name="coverage">
@@ -125,6 +138,8 @@
       <workItem from="1622744106013" duration="8015000" />
       <workItem from="1622834420073" duration="61988000" />
       <workItem from="1623171388662" duration="7950000" />
+      <workItem from="1623283330311" duration="18317000" />
+      <workItem from="1623431799290" duration="5097000" />
     </task>
     <servers />
   </component>

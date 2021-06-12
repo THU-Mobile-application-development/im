@@ -17,6 +17,8 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+
+
         <!--  用于处理mongodb数据库  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

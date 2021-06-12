@@ -35,6 +35,7 @@ public class UserController {
      */
     @BizType(BizTypeEnum.USER_LOGIN)
     public CommonOutParams userLogin(LoginInParams inParams) throws Exception {
+
         String username = inParams.getUsername();
         if (username == null)
             throw new CourseWarn(UserWarnEnum.LOGIN_FAILED);
@@ -181,6 +182,8 @@ public class UserController {
     @BizType(BizTypeEnum.USER_AVATAR)
     @NeedLogin
     public CommonOutParams userUploadAvatar(AvatarInParams inParams) throws Exception {
+
+        System.out.println("여기까지는 왔는감");
         // 根据Windows和Linux配置不同的头像保存路径
         String uploadPath;
         String avatar;

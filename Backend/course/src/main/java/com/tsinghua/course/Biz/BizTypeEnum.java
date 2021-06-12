@@ -32,6 +32,12 @@ public enum BizTypeEnum {
     CHAT_LIST(ChatController.class, "/chat/list", "聊天目录"),
 
 
+//    STORY_PUBLISH(StoryController.class, "/story/publish", "发布动态"),
+//    CHAT_REPLY(StoryController.class, "/story/reply", "回复动态"),
+//    STORY_LIKE(StoryController.class, "/story/like", "点赞动态"),
+//    STORY_LIST(StoryController.class, "/story/list", "动态目录"),
+
+
     /**
      * 定时任务业务测试
      */

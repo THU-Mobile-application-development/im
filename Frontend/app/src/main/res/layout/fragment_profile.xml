@@ -101,14 +101,24 @@ tools:context=".Fragments.ProfileFragment"
             android:src="@mipmap/ic_launcher"/>
 
         <Button
-            android:id="@+id/upload_avatar_btn"
+            android:id="@+id/select_photo_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_image"
             android:layout_marginTop="16dp"
             android:layout_centerHorizontal="true"
 
+            android:text="SELECT PHOTO" />
+        <Button
+            android:id="@+id/upload_avatar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/select_photo_btn"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+
             android:text="Upload avatar" />
+
 
     </RelativeLayout>
 

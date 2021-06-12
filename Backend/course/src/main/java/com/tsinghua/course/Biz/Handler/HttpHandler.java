@@ -1,6 +1,7 @@
 package com.tsinghua.course.Biz.Handler;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.tsinghua.course.Base.Constant.KeyConstant;
 import com.tsinghua.course.Base.Constant.NameConstant;
@@ -52,26 +53,21 @@ import java.util.Set;
 public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
     @Autowired
     private Dispatcher dispatcher;
-    /** 存储httpSession的对象 */
-    private HttpSession httpSession;
+
     /** 之前是否已经存在httpSession */
-    private boolean hasPreSession;
+    private ThreadLocal<Boolean> hasPreSession = new ThreadLocal<>();
 
     /** 处理http请求的实际函数 */
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest request) {
-
         JSONObject requestParams = new JSONObject();
         BizTypeEnum bizTypeEnum = null;
         try {
             /** 执行业务的线程存在复用情况，需要清除以前的线程变量 */
             ThreadUtil.clean();
+            hasPreSession.remove();
             /** 获取session，如果session，如果不存在需要新建session */
             getSession(request);
-            if (!hasPreSession)
-                httpSession = HttpSession.newSession();
-            /** 将session存入线程变量之中，方便后来的业务获取 */
-            ThreadUtil.setHttpSession(httpSession);
             /** 解析参数列表 */
             requestParams = getRequestParams(request);
 
@@ -82,7 +78,6 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
                 if (bizTypeEnum == null)
                     throw new CourseWarn(SystemErrorEnum.BIZ_TYPE_NOT_EXIST);
                 requestParams.put(KeyConstant.BIZ_TYPE, bizTypeEnum);
-
             } catch (Exception e) {
                 throw new CourseWarn(SystemErrorEnum.BIZ_TYPE_NOT_EXIST);
             }
@@ -93,26 +88,14 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
             params.fromJsonObject(requestParams);
 
             /** 获取缓存在session中的用户名信息 */
-            if (hasPreSession && !bizTypeEnum.equals(BizTypeEnum.USER_LOGIN)) {
-
-                params.setUsername(httpSession.getUsername());
+            if (hasPreSession.get() && !bizTypeEnum.equals(BizTypeEnum.USER_LOGIN)) {
+                params.setUsername(ThreadUtil.getHttpSession().getUsername());
             }
-
-//            if (hasPreSession && !bizTypeEnum.equals(BizTypeEnum.USER_REGISTER)) {
-//
-//                params.setUsername(httpSession.getUsername());
-//            }
 
             /** 使用派发器执行业务并返回业务执行结果 */
             String retStr;
-
-            System.out.println("入参");
-            System.out.println(params);
             retStr = dispatcher.dispatch(params);
-            System.out.println("返回?");
-            System.out.println(retStr);
             writeResponse(channelHandlerContext, retStr, request);
-
         } catch (Exception e) {
             String retStr;
             if (e instanceof CourseWarn) {
@@ -127,7 +110,6 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
                 /** 返回客户端INTERNAL_SERVER_ERROR，即服务器内部错误 */
                 retStr = new SysErrorOutParams().toString();
             }
-
             /** 将返回结果写入管道 */
             writeResponse(channelHandlerContext, retStr, request);
         }
@@ -165,6 +147,19 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
         List<InterfaceHttpData> httpPostData = decoder.getBodyHttpDatas();
 
         for (InterfaceHttpData data : httpPostData) {
+            Object obj = params.get(data.getName());
+            /** 如果之前存了对象，说明传了数组，转化为数组 */
+            if (obj != null) {
+                if (obj instanceof JSONArray)
+                    ((JSONArray) obj).add(data);
+                else {
+                    JSONArray objArr = new JSONArray();
+                    objArr.add(obj);
+                    objArr.add(data);
+                    params.put(data.getName(), objArr);
+                }
+                continue;
+            }
             /** 普通属性直接赋值就可以了 */
             if (data.getHttpDataType() == InterfaceHttpData.HttpDataType.Attribute) {
                 MixedAttribute attribute = (MixedAttribute) data;
@@ -193,19 +188,27 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
     /** 根据请求的cookie获取HttpSession */
     private void getSession(FullHttpRequest msg) {
-        hasPreSession = false;
+        boolean hasPre = false;
+        HttpSession httpSession = null;
         String cookieStr = msg.headers().get(HttpHeaderNames.COOKIE);
         if (cookieStr != null && !cookieStr.equals("")) {
             Set<Cookie> cookieSet = ServerCookieDecoder.STRICT.decode(cookieStr);
             for (Cookie cookie:cookieSet) {
                 if (cookie.name().equals(NameConstant.HTTP_SESSION_NAME))
+                /** 获取之前的session */
                     if (HttpSession.sessionExist(cookie.value())) {
-                        this.httpSession = HttpSession.getSession(cookie.value());
-                        hasPreSession = true;
+                        httpSession = HttpSession.getSession(cookie.value());
+                        hasPre = true;
                         break;
                     }
             }
         }
+        hasPreSession.set(hasPre);
+        /** 不存在session需要新建session */
+        if (httpSession == null)
+            httpSession = HttpSession.newSession();
+        /** 将session存到线程变量中 */
+        ThreadUtil.setHttpSession(httpSession);
     }
 
     /** 将内容写入返回管道中 */
@@ -221,8 +224,8 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
             response.headers().set(HttpHeaderNames.ACCESS_CONTROL_ALLOW_ORIGIN, clientIP);
 
         /** 如果之前不存在session，需要设置一下session */
-        if (!hasPreSession) {
-            Cookie cookie = new DefaultCookie(NameConstant.HTTP_SESSION_NAME, httpSession.getSessionId());
+        if (!hasPreSession.get()) {
+            Cookie cookie = new DefaultCookie(NameConstant.HTTP_SESSION_NAME, ThreadUtil.getHttpSession().getSessionId());
             cookie.setPath("/");
             String encodeCookie = ServerCookieEncoder.STRICT.encode(cookie);
             response.headers().set(HttpHeaderNames.SET_COOKIE,encodeCookie);

@@ -4,14 +4,21 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.ceocho.kakaotalk.ATask.ListInsert;
 import com.ceocho.kakaotalk.EditProfileActivity;
 import com.ceocho.kakaotalk.LoginActivity;
 import com.ceocho.kakaotalk.MainActivity;
@@ -28,10 +36,19 @@ import com.ceocho.kakaotalk.Model.User;
 import com.ceocho.kakaotalk.R;
 import com.ceocho.kakaotalk.ResetPasswordActivity;
 import com.ceocho.kakaotalk.Utill.OkhttpUtill;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -40,25 +57,27 @@ public class ProfileFragment extends Fragment {
 
     CircleImageView image_profile;
     TextView username, nickname, phonenumber;
-    Button edit_profile, upload_avatar, edit_password;
+    Button edit_profile, upload_avatar, edit_password,select_photo;
+    final int LOAD_IMAGE = 1001;
+    long fileSize = 0;
 
     private static final int IMAGE_REQUEST = 1;
     private Uri imageUri;
+    public String imageRealPath, imageDbPath;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-
         image_profile = view.findViewById(R.id.profile_image);
         username = view.findViewById(R.id.username);
         nickname = view.findViewById(R.id.nickname);
         phonenumber = view.findViewById(R.id.phonenumber);
         edit_profile = view.findViewById(R.id.edit_profile_btn);
-        upload_avatar = view.findViewById(R.id.upload_avatar_btn);
+        select_photo = view.findViewById(R.id.select_photo_btn);
         edit_password = view.findViewById(R.id.edit_password_btn);
+        upload_avatar = view.findViewById(R.id.upload_avatar_btn);
 
         Map result = OkhttpUtill.get("user/myinfo");
 
@@ -85,6 +104,76 @@ public class ProfileFragment extends Fragment {
                 startActivityForResult(intent, 1);
             }
         });
+
+
+
+
+        select_photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_PICK);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), LOAD_IMAGE);
+            }
+        });
+
+
+        upload_avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //네트워크가 정상적으로 연결되어 있으면
+                if(OkhttpUtill.isNetworkConnected(getActivity().getApplicationContext()) == true) {
+                    if(fileSize <= 30000000) { //파일 크기가 30메가 보다 작아야 업로드 할 수 있음
+
+                        //ListInsert listInsert = new ListInsert( imageDbPath, imageRealPath);
+//                        try {
+//                            listInsert.execute().get();
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//
+//                        }
+                        System.out.println("it is working?");
+                        //ListInsert listInsert = new ListInsert( imageDbPath, imageRealPath);
+                        new ListInsert(imageDbPath, imageRealPath).execute();
+
+//                        Intent showIntent = new Intent(getActivity().getApplicationContext(), Sub1.class);
+//                        showIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |   // 이 엑티비티 플래그를 사용하여 엑티비티를 호출하게 되면 새로운 태스크를 생성하여 그 태스크안에 엑티비티를 추가하게 됩니다. 단, 기존에 존재하는 태스크들중에 생성하려는 엑티비티와 동일한 affinity(관계, 유사)를 가지고 있는 태스크가 있다면 그곳으로 새 엑티비티가 들어가게됩니다.
+//                                Intent.FLAG_ACTIVITY_SINGLE_TOP | // 엑티비티를 호출할 경우 호출된 엑티비티가 현재 태스크의 최상단에 존재하고 있었다면 새로운 인스턴스를 생성하지 않습니다. 예를 들어 ABC가 엑티비티 스택에 존재하는 상태에서 C를 호출하였다면 여전히 ABC가 존재하게 됩니다.
+//                                Intent.FLAG_ACTIVITY_CLEAR_TOP); // 만약에 엑티비티스택에 호출하려는 엑티비티의 인스턴스가 이미 존재하고 있을 경우에 새로운 인스턴스를 생성하는 것 대신에 존재하고 있는 엑티비티를 포그라운드로 가져옵니다. 그리고 엑티비티스택의 최상단 엑티비티부터 포그라운드로 가져올 엑티비티까지의 모든 엑티비티를 삭제합니다.
+//                        startActivity(showIntent);
+//
+//                        finish();
+                    } else {
+                        // 알림창 띄움
+                        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity().getApplicationContext());
+                        builder.setTitle("알림");
+                        builder.setMessage("파일 크기가 30MB초과하는 파일은 업로드가 제한되어 있습니다.\n30MB이하 파일로 선택해 주십시요!!!");
+                        builder.setPositiveButton("예", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                        builder.show();
+                    }
+                } else {
+                    Toast.makeText(getActivity().getApplicationContext(), "인터넷이 연결되어 있지 않습니다.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
         return view;
     }
 
@@ -107,6 +196,35 @@ public class ProfileFragment extends Fragment {
             }
 
         }
+
+        if(requestCode == LOAD_IMAGE && resultCode == RESULT_OK) {
+            try {
+                String path = "";
+
+                //데이타에서 Uri 얻기
+                Uri selectImageUri = data.getData();
+                if(selectImageUri != null) {
+                    //Uri에서 경로 얻기
+                    path = getPathFromURI(selectImageUri);
+                }
+
+
+
+                //이미지 경로 설정
+                imageRealPath = path;
+                Log.d("Sub1Add", "imageFilePathA Path : " + imageRealPath);
+                String uploadFileName = imageRealPath.split("/")[imageRealPath.split("/").length - 1];
+                imageDbPath = OkhttpUtill.baseURL + "user/avatar/" + uploadFileName;
+
+                fileSize = imageRealPath.length();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
     }
 
 
@@ -116,101 +234,17 @@ public class ProfileFragment extends Fragment {
     }
 
 
-//    public void mOnPopupClick(View v){
-//        //데이터 담아서 팝업(액티비티) 호출
-//        Intent intent = new Intent(getActivity(), EditProfileActivity.class);
-//        intent.putExtra("data", "Test Popup");
-//        startActivityForResult(intent, 1);
-//    }
 
-
-//        image_profile.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//                openImage();
-//            }
-//
-//        });
-//
-//        return view;
-//    }
-//
-//    private void openImage() {
-//        Intent intent = new Intent();
-//        intent.setType("image/*");
-//        intent.setAction(Intent.ACTION_GET_CONTENT);
-//        startActivityForResult(intent, IMAGE_REQUEST);
-//    }
-//
-//    private String getFileExtension(Uri uri) {
-//        ContentResolver contentResolver = getContext().getContentResolver();
-//        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
-//        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
-//    }
-//
-//    private void uploadImage() {
-//        final ProgressDialog pd = new ProgressDialog(getContext());
-//        pd.setMessage("Uploading");
-//        pd.show();
-//
-//        if (imageUri != null) {
-//            final StorageReference fileReference = storageReference.child(System.currentTimeMillis()
-//                    +"."+getFileExtension(imageUri));
-//
-//            uploadTask = fileReference.putFile(imageUri);
-//
-//            uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-//                @Override
-//                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-//                    if (!task.isSuccessful()){
-//                        throw task.getException();
-//                    }
-//
-//                    return fileReference.getDownloadUrl();
-//
-//                }
-//            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-//                @Override
-//                public void onComplete(@NonNull Task<Uri> task) {
-//                    if (task.isSuccessful()){
-//                        Uri downloadUri = task.getResult();
-//                        String mUri = downloadUri.toString();
-//
-//                        reference = FirebaseDatabase.getInstance().getReference("Users").child(fuser.getUid());
-//                        HashMap<String, Object> map = new HashMap<>();
-//                        map.put("imageURL", mUri);
-//                        reference.updateChildren(map);
-//
-//                        pd.dismiss();
-//                    } else {
-//                        Toast.makeText(getContext(), "Failed!", Toast.LENGTH_SHORT).show();
-//                        pd.dismiss();
-//                    }
-//                }
-//            }).addOnFailureListener(new OnFailureListener() {
-//                @Override
-//                public void onFailure(@NonNull Exception e) {
-//                    Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//        } else {
-//            Toast.makeText(getContext(), "No image selected", Toast.LENGTH_SHORT).show();
-//        }
-//    }
-//
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if ((requestCode == IMAGE_REQUEST) && (resultCode == RESULT_OK)
-//                && (data != null) && (data.getData() != null)){
-//            imageUri = data.getData();
-//
-//            if (uploadTask != null && uploadTask.isInProgress()){
-//                Toast.makeText(getContext(),"Upload in progress", Toast.LENGTH_SHORT).show();
-//            } else {
-//                uploadImage();
-//            }
-//        }
-//    }
+    //URI에서 실제 경로 추출하는 메서드
+    public String getPathFromURI(Uri contentUri) {
+        String res = null;
+        String[] proj = {MediaStore.Images.Media.DATA};
+        Cursor cursor = getActivity().getApplicationContext().getContentResolver().query(contentUri, proj, null, null, null);
+        if (cursor.moveToFirst()) {
+            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            res = cursor.getString(column_index);
+        }
+        cursor.close();
+        return res;
+    }
 }
