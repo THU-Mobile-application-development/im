@@ -12,15 +12,15 @@ public class ChatDeleteInParams extends CommonInParams {
     @Required
     String to_username;
     @Required
-    Date send_time;
+    String chatId;
 
 
-    public Date getTime() {
-        return send_time;
+    public String getChatId() {
+        return chatId;
     }
 
-    public void setTime(Date send_time) {
-        this.send_time = send_time;
+    public void setchatId(String chatId) {
+        this.chatId = chatId;
     }
 
     public String getToUsername() {

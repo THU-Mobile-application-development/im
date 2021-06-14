@@ -19,6 +19,7 @@ import com.tsinghua.course.Biz.Controller.Params.ContactParams.Out.ContactListOu
 import com.tsinghua.course.Biz.Processor.ChatProcessor;
 import com.tsinghua.course.Biz.Processor.ContactProcessor;
 import com.tsinghua.course.Biz.Processor.UserProcessor;
+import com.tsinghua.course.Frame.Util.CommonUtil;
 import com.tsinghua.course.Frame.Util.SocketUtil;
 import com.tsinghua.course.Frame.Util.ThreadUtil;
 import io.netty.channel.ChannelHandlerContext;
@@ -120,7 +121,9 @@ public class ChatController {
         chatp.setChatType(0);
         chatp.setSendTime(time);
         chatp.setFromUsername(from_username);
+        chatp.setChatId(CommonUtil.getUniqueId());
         chat.add(chatp);
+
 
         List<ChatProps> chat_to = new ArrayList<>();
 
@@ -130,6 +133,7 @@ public class ChatController {
         chatp_to.setChatType(0);
         chatp_to.setSendTime(time);
         chatp_to.setFromUsername(from_username);
+        chatp_to.setChatId(CommonUtil.getUniqueId());
         chat_to.add(chatp_to);
 
         if (relation == null) {
@@ -172,6 +176,7 @@ public class ChatController {
         chat.setToUsername(to_username);
         chat.setSendTime(time);
         chat.setChatContent(inParams.getChatContent());
+        chat.setChatId(CommonUtil.getUniqueId());
 
         ChatProps chat_to = new ChatProps();
         chat_to.setFromUsername(from_username);
@@ -179,6 +184,7 @@ public class ChatController {
         chat_to.setToUsername(to_username);
         chat_to.setSendTime(time);
         chat_to.setChatContent(inParams.getChatContent());
+        chat_to.setChatId(CommonUtil.getUniqueId());
 
 
         // 插入新消息
@@ -231,12 +237,12 @@ public class ChatController {
         System.out.println("fuckkkkkkkkk");
         String to_username = inParams.getToUsername();
         String my_username = inParams.getUsername();
-        Date send_time = inParams.getTime();
+        String chatId = inParams.getChatId();
 //        ChatRelation chat_relate = chatProcessor.getChatRelation(my_username,to_username);
 //        List<ChatProps> chat_list = chat_relate.getChatList();
 //        chat_list
         System.out.println("is it working?");
-        chatProcessor.deleteChat(my_username, to_username, send_time);
+        chatProcessor.deleteChat(my_username, to_username, chatId);
         return new CommonOutParams(true);
     }
 

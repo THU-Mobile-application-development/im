@@ -52,6 +52,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
   </component>
@@ -61,15 +64,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CourseApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,7 +140,8 @@
       <workItem from="1622834420073" duration="61988000" />
       <workItem from="1623171388662" duration="7950000" />
       <workItem from="1623283330311" duration="18317000" />
-      <workItem from="1623431799290" duration="5097000" />
+      <workItem from="1623431799290" duration="7969000" />
+      <workItem from="1623512598294" duration="19914000" />
     </task>
     <servers />
   </component>

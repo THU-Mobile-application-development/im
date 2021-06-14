@@ -51,7 +51,6 @@ public abstract class CommonParams {
 
     /** 根据jsonObject对象解析参数 */
     public void fromJsonObject(JSONObject paramJson) throws Exception {
-        System.out.println(paramJson);
         /** 根据json中对应属性的键值来设置属性值 */
         Field[] fields = ParseUtil.getAllFields(getClass());
         for (Field field : fields) {
@@ -62,7 +61,6 @@ public abstract class CommonParams {
                 if (field.getType().isArray()) {
                     Class subCls = field.getType().getComponentType();
                     if (obj instanceof JSONArray) {
-                        System.out.println("dlrdfdsfasf");
                         JSONArray arr = (JSONArray) obj;
                         field.set(this, transferJsonArr(arr, field.getType().getComponentType()));
                     } else {
@@ -72,12 +70,9 @@ public abstract class CommonParams {
                     }
                 } else {
 
-                    System.out.println("이건");
 
                     /** 不是数组直接赋值 */
                     try {
-                        System.out.println(this);
-                        System.out.println(obj);
                         field.set(this, obj);
                     } catch (Exception e) {
                         field.set(this, JSON.parseObject(obj.toString(), field.getType()));

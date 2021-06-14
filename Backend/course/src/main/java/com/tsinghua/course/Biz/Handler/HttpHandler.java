@@ -86,7 +86,7 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
             Class<CommonInParams> clz = dispatcher.getParamByBizType(bizTypeEnum);
             CommonInParams params = clz.newInstance();
             params.fromJsonObject(requestParams);
-
+            System.out.println(params);
             /** 获取缓存在session中的用户名信息 */
             if (hasPreSession.get() && !bizTypeEnum.equals(BizTypeEnum.USER_LOGIN)) {
                 params.setUsername(ThreadUtil.getHttpSession().getUsername());
@@ -96,6 +96,7 @@ public class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
             String retStr;
             retStr = dispatcher.dispatch(params);
             writeResponse(channelHandlerContext, retStr, request);
+
         } catch (Exception e) {
             String retStr;
             if (e instanceof CourseWarn) {

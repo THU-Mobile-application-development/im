@@ -11,6 +11,7 @@ package com.tsinghua.course.Frame.Util;
 
         import javax.imageio.ImageIO;
 
+        import io.netty.handler.codec.http.multipart.FileUpload;
         import org.slf4j.Logger;
         import org.slf4j.LoggerFactory;
         import org.springframework.util.FileCopyUtils;
@@ -21,7 +22,7 @@ public class UploadFileUtils {
 
     private static final Logger logger = LoggerFactory.getLogger(UploadFileUtils.class);
 
-    public static String uploadFile(String uploadPath, String originalName, MultipartFile fileData) throws Exception {
+    public static String uploadFile(String uploadPath, String originalName, FileUpload fileData) throws Exception {
 
         //겹쳐지지 않는 파일명을 위한 유니크한 값 생성
         UUID uid = UUID.randomUUID();
@@ -37,8 +38,9 @@ public class UploadFileUtils {
 
         //파일을 저장
         //FileCopyUtils.copy(fileData, target);
-        fileData.transferTo(target);
-
+        //fileData.transferTo(target);
+        //fileData.copy();
+        fileData.renameTo(target);
 
         return uploadPath+savedPath+"/"+savedName;
         //파일의 확장자에 따라 썸네일(이미지일경우) 또는 아이콘을 생성함.

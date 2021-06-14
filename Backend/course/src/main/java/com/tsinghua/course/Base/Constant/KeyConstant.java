@@ -29,8 +29,15 @@ public class KeyConstant {
     public static final String NOTIFICATION = "noty";
 
     public static final String CHAT = "chat";
+    public static final String LIKESNUM = "likesNum";
+    public static final String LIKEUSER = "likeuser";
 
-    public static final String TIME = "send_time";
+
+
+    public static final String STORY = "story";
+
+    public static final String STORYID = "storyId";
+
 
     public static final String ID = "id";
 

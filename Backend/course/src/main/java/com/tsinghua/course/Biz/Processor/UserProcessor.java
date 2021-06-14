@@ -76,6 +76,8 @@ public class UserProcessor {
     }
 
     public void uploadAvatar(String username, String avatar) {
+        System.out.println("이게 아바타 패스야");
+        System.out.println(avatar);
         Query query = new Query();
         query.addCriteria(Criteria.where(KeyConstant.USERNAME).is(username));
         Update update = new Update();

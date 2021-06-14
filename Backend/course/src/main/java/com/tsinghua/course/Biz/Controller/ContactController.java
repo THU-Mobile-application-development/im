@@ -55,7 +55,6 @@ public class ContactController {
         String username = inParams.getUsername();
         Contact relation = contactProcessor.getRelationByUsername(username, contact_username);
 
-        System.out.println(relation);
         boolean already_contact;
         if (target_user == null || target_user.getUsername().equals(username)) {
             throw new CourseWarn(UserWarnEnum.NO_TARGET_USER);
@@ -100,7 +99,6 @@ public class ContactController {
 //            int index = friend_avatar.indexOf(RELATIVE_PATH);
 //            String avatar_url = "http://" + SERVER_IP + ":" + FILE_PORT + friend_avatar.substring(index);
             String target_nickname = target_user.getNickname();
-            System.out.println(target_nickname);
             ContactProps props = new ContactProps();
             props.setPropsUsername(contact_username);
             // props.setPropsAvatar(target_avatar);

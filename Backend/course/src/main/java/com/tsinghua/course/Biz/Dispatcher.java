@@ -73,6 +73,7 @@ public class Dispatcher {
             /** 执行业务，返回结果 */
             Object exeBean = applicationContext.getBean(exeCls);
             Object rlt = exeMethod.invoke(exeBean, params);
+            System.out.println(rlt);
             if (rlt == null) /** 定时任务可以不返回参数，因为不需要传参数给客户端 */
                 return new JSONObject().toString();
             else if (rlt instanceof List) { /** 如果返回多个参数要封装一下 */
@@ -130,7 +131,6 @@ public class Dispatcher {
 
     /** 根据操作类型获取入参类 */
     public Class<CommonInParams> getParamByBizType(BizTypeEnum bitType) {
-        System.out.println(bitType);
         Reflections reflections = new Reflections(NameConstant.PACKAGE_NAME + ".Biz.Controller.Params");
         /** 根据注解获取入参类 */
         Set<Class<?>> classSet = reflections.getTypesAnnotatedWith(BizType.class);

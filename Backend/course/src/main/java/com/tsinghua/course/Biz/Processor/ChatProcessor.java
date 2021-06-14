@@ -96,18 +96,23 @@ public class ChatProcessor {
 //    }
 
 
-    public void deleteChat(String fron_username, String to_username, Date send_time) {
+    public void deleteChat(String from_username, String to_username, String chatId) {
         Query query = new Query();
-        query.addCriteria(Criteria.where(KeyConstant.FROM_USERNAME).is(fron_username)
-                .and(KeyConstant.TO_USERNAME).is(to_username)
-                .and(KeyConstant.TIME).is(send_time));
-        System.out.println("it si wofdggh");
-        List<ChatProps> chat = mongoTemplate.find(query, ChatProps.class);
+        query.addCriteria(Criteria.where(KeyConstant.FROM_USERNAME).is(from_username)
+                .and(KeyConstant.TO_USERNAME).is(to_username));
+              //  .and(KeyConstant.CHATID).is(chatId));
+      ChatRelation chat = mongoTemplate.findOne(query, ChatRelation.class);
+      //System.out.println(chat.getChatList().get(0).getChatContent());
         System.out.println(chat);
-        System.out.println(chat.get(0).getChatContent());
-        //System.out.println(chat.get(1).getChatContent());
+        for(int i =0; i<chat.getChatList().size();i++){
+            if(chat.getChatList().get(i).getChatId().equals(chatId)){
+                chat.getChatList().remove(i);
+            }
+        }
+        Update update = new Update();
+        update.set(KeyConstant.CHAT, chat);
 
-        mongoTemplate.remove(query, ChatProps.class);
+        mongoTemplate.upsert(query, update, ChatRelation.class);
     }
 
 

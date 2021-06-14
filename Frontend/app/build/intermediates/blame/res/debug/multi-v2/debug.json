@@ -666,23 +666,6 @@
                     }
                 },
                 {
-                    "source": "/Users/wujun/.gradle/caches/transforms-2/files-2.1/48151eebb6fa866db8aa638f60cf7059/glide-4.10.0/res/values/values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
-                    },
-                    "to": {
-                        "startLines": "529",
-                        "startColumns": "4",
-                        "startOffsets": "31631",
-                        "endColumns": "57",
-                        "endOffsets": "31684"
-                    }
-                },
-                {
                     "source": "/Users/wujun/.gradle/caches/transforms-2/files-2.1/9c9df88b3d275a048bcd72124ba8b7bf/jetified-library-2.1.4/res/values/values.xml",
                     "from": {
                         "startLines": "5,6,7,8,9,10,11,12,2",
@@ -697,6 +680,23 @@
                         "startOffsets": "19724,19777,20483,20536,23726,24393,24448,24497,273506",
                         "endColumns": "52,47,52,49,55,54,48,49,1722",
                         "endOffsets": "19772,19820,20531,20581,23777,24443,24492,24542,275224"
+                    }
+                },
+                {
+                    "source": "/Users/wujun/.gradle/caches/transforms-2/files-2.1/82a4b85f7a1ccf9e0fd5ec680fdd9376/glide-4.11.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    },
+                    "to": {
+                        "startLines": "529",
+                        "startColumns": "4",
+                        "startOffsets": "31631",
+                        "endColumns": "57",
+                        "endOffsets": "31684"
                     }
                 },
                 {

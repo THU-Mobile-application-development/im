@@ -3,10 +3,12 @@ package com.tsinghua.course.Base.Model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Document("Story")
 public class Story {
 
-    String id;
+    String storyId;
 
     // 发布者头像
     String avatar;
@@ -17,27 +19,25 @@ public class Story {
     // 发布时间
     String publishTime;
     // 动态类型
-    int type;
+    String type;
     // 图片数组
-    String[] images;
-    // 视频
-    String video;
+    String content;
     // 点赞数
     int likesNum;
     // 点赞用户数组
-    String[] likeuser;
+    List<String> likeuser;
     // 评论数
     int commentsNum;
     // 评论用户数组
-    StoryReply[] replys;
+    List<StoryReply> replys;
 
 
-    public String getId() {
-        return id;
+    public String getStoryId() {
+        return storyId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setStoryId(String storyId) {
+        this.storyId = storyId;
     }
 
 
@@ -74,29 +74,22 @@ public class Story {
         this.publishTime = publishTime;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 
 
-    public String[] getImages() {
-        return images;
+
+    public String getContent() {
+        return content;
     }
 
-    public void setImages(String[] images) {
-        this.images = images;
-    }
-
-    public String getVideo() {
-        return video;
-    }
-
-    public void setVideo(String video) {
-        this.video = video;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public int getLikesNum() {
@@ -107,20 +100,20 @@ public class Story {
         this.likesNum = likesNum;
     }
 
-    public String[] getLikeUsername() {
+    public List<String> getLikeUsername() {
         return likeuser;
     }
 
-    public void setLikeUsername(String[] likeuser) {
+    public void setLikeUsername(List<String> likeuser) {
         this.likeuser = likeuser;
     }
 
 
-    public StoryReply[] getReply() {
+    public List<StoryReply> getReply() {
         return replys;
     }
 
-    public void setReply(StoryReply[] replys) {
+    public void setReply(List<StoryReply> replys) {
         this.replys = replys;
     }
 

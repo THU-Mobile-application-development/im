@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -35,10 +36,20 @@ import com.ceocho.kakaotalk.MainActivity;
 import com.ceocho.kakaotalk.Model.User;
 import com.ceocho.kakaotalk.R;
 import com.ceocho.kakaotalk.ResetPasswordActivity;
+import com.ceocho.kakaotalk.Utill.BitmapUtil;
 import com.ceocho.kakaotalk.Utill.OkhttpUtill;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -84,7 +95,40 @@ public class ProfileFragment extends Fragment {
         username.setText(result.get("username").toString());
         nickname.setText(result.get("nickname").toString());
         phonenumber.setText(result.get("phonenumber").toString());
-        //image_profile.setImageResource();
+
+//        File sourceimage = new File("c:\\new_logo.gif");
+//        image1 = ImageIO.read(sourceimage);
+//
+//        InputStream is = new BufferedInputStream(
+//                new FileInputStream("c:\\new_logo.gif"));
+//        image2 = ImageIO.read(is);
+//
+
+//        Bitmap bm = getImageBitmap("file://"+result.get("avatar").toString());
+//        image_profile.setImageBitmap(bm);
+//        Glide.with(this)
+//                .load(bm)
+//                .into(image_profile);
+//
+  //  Bitmap bitmap = getImageBitmap("file://"+result.get("avatar").toString());
+       Uri myUri = Uri.parse("file:///usr/local/share/avatar/2021/06/14/9eab4881-80d8-42d9-9042-47db296a118d_IMG_20210614_033500.jpg");
+//        Bitmap bitmap = null;
+//        try {
+//            bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), myUri);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+
+        Bitmap  mBitmap = null;
+        try {
+            mBitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), myUri);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // image_profile.setImageResource(mBitmap);
+        Glide.with(this).load(mBitmap).into(image_profile);
+
         edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -176,6 +220,30 @@ public class ProfileFragment extends Fragment {
 
         return view;
     }
+   // Bitmap bmImg;
+
+//    private Bitmap getImageBitmap(String url) {
+//        Bitmap bm = null;
+//        URL myFileUrl =null;
+//
+//        try {
+//            myFileUrl= new URL(url);
+//
+//            HttpURLConnection conn= (FileURLConnection)myFileUrl.openConnection();
+//            conn.setDoInput(true);
+//            conn.connect();
+//            int length = conn.getContentLength();
+//            InputStream is = conn.getInputStream();
+//
+//            bmImg = BitmapFactory.decodeStream(is);
+//            image_profile.setImageBitmap(bmImg);
+//        } catch (IOException e) {
+//            System.out.println("Error");
+//            //Log.e(TAG, "Error getting bitmap", e);
+//        }
+//        return bm;
+//    }
+//
 
 
     @Override

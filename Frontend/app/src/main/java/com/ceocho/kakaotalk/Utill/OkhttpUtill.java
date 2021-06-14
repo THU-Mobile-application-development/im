@@ -34,7 +34,7 @@ public class OkhttpUtill {
     //private  static String baseURL = "http://172.20.10.5:7000/";
     //private static String baseURL = "http://172.30.1.59:7000/";
     //private static String baseURL = "http://172.30.1.5:7000/";
-    public static String baseURL = "http://172.30.1.41:7000/";
+    public static String baseURL = "http://172.30.1.51:7000/";
 
 
     private static OkHttpClient client = new OkHttpClient.Builder()
@@ -168,8 +168,11 @@ public class OkhttpUtill {
     }
 
     public static void upload(File file) throws IOException {
-        OkHttpClient client = new OkHttpClient();
+       // OkHttpClient client = new OkHttpClient();
+        final Map[] result = {new HashMap()};
+
         final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/*");
+        final CountDownLatch latch = new CountDownLatch(1);
 
         RequestBody formBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
@@ -187,10 +190,35 @@ public class OkhttpUtill {
 //        Request request = new Request.Builder().url(baseURL+"user/avatar").post(formBody).build();
 //        System.out.println("여기까지 fafdasfsafs?");
 
-        Response response = client.newCall(request).execute();
-        System.out.println("여기까지 온거니?");
-        String res = response.body().string();
-        Log.e("TAG", "Response : " + res);
+        client.newCall(request).enqueue(new Callback() {
+
+
+                                            public void onFailure(Call call, IOException e) {
+                                                System.out.println("error + Connect Server Error is " + e.toString());
+                                                latch.countDown();
+
+                                            }
+
+                                            @Override
+                                            public void onResponse(Call call, Response response) throws IOException {
+
+                                                String responseBodyString = response.body().string();
+
+                                                System.out.println("Response Body is " + responseBodyString);
+
+                                                final Map res = MaptoJsonUtill.getMap(responseBodyString);
+
+
+                                                result[0] = res;
+                                                latch.countDown();
+
+
+                                            }
+                                        });
+    }
+}
+//        String res = response.body().string();
+//        Log.e("TAG", "Response : " + res);
 
 
 //
@@ -221,8 +249,5 @@ public class OkhttpUtill {
 
 
 
-    }
 
 
-
-}

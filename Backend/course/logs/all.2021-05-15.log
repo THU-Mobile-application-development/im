@@ -1,6 +1,0 @@
-2021-05-15 16:36:48.423 -INFO 52953 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2021-05-15 16:36:48.987 -INFO 52953 [extShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-05-15 16:36:48.987 -INFO 52953 [extShutdownHook] org.springframework.scheduling.quartz.SchedulerFactoryBean : Shutting down Quartz Scheduler
-2021-05-15 16:36:48.987 -INFO 52953 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2021-05-15 16:36:48.987 -INFO 52953 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2021-05-15 16:36:48.988 -INFO 52953 [extShutdownHook] org.quartz.core.QuartzScheduler : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.

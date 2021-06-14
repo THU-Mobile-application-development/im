@@ -7,7 +7,7 @@ import java.util.Date;
 @Document
 public class ChatProps {
 
-    String id;
+    String chatId;
 
     String from_username;
     // 接收方用户名
@@ -20,12 +20,12 @@ public class ChatProps {
     int type;
 
 
-    public String getId() {
-        return id;
+    public String getChatId() {
+        return chatId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setChatId(String chatId) {
+        this.chatId = chatId;
     }
 
     public String getFromUsername() {

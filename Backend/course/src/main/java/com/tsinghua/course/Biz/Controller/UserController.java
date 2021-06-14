@@ -13,6 +13,7 @@ import com.tsinghua.course.Biz.Controller.Params.UserParams.Out.MyInfoOutParams;
 import com.tsinghua.course.Biz.Processor.UserProcessor;
 import com.tsinghua.course.Frame.Util.*;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.http.multipart.FileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
@@ -135,7 +136,7 @@ public class UserController {
         User user = userProcessor.getUserByUsername(username);
 
         MyInfoOutParams outParams = new MyInfoOutParams(true);
-        // outParams.setAvatar(avatar_url);
+        outParams.setAvatar(user.getAvatar());
         outParams.setUsername(username);
         outParams.setNickname(user.getNickname());
         outParams.setPhonenumber(user.getPhonenumber());
@@ -182,8 +183,7 @@ public class UserController {
     @BizType(BizTypeEnum.USER_AVATAR)
     @NeedLogin
     public CommonOutParams userUploadAvatar(AvatarInParams inParams) throws Exception {
-
-        System.out.println("여기까지는 왔는감");
+        System.out.println("여기까지는 오는거니?");
         // 根据Windows和Linux配置不同的头像保存路径
         String uploadPath;
         String avatar;
@@ -191,19 +191,31 @@ public class UserController {
         if (OSName.toLowerCase().startsWith("win"))
             uploadPath = "";
         else
-            uploadPath = "";
-        // 获取文件内容
-        MultipartFile file = inParams.getAvatar();
-        //InputStream inputStream = file.getInputStream();
-        // 获取原始文件名
-        String originalName = file.getOriginalFilename();
-        UploadFileUtils upload = new UploadFileUtils();
-        avatar = upload.uploadFile(uploadPath, originalName, file);
-        // 生成uuid名称
+            uploadPath = "/usr/local/share/avatar";
+        System.out.println(uploadPath);
+        File dir = new File(uploadPath);
+        if (!dir.exists())
+            dir.mkdirs();
+        FileUpload fileUpload = inParams.getAvatar();
+
+        avatar = UploadFileUtils.uploadFile(uploadPath,fileUpload.getFilename(),fileUpload);
+        System.out.println(avatar);
         String username = inParams.getUsername();
         userProcessor.uploadAvatar(username, avatar);
 
         return new CommonOutParams(true);
+
+        // 获取文件内容
+        //MultipartFile file = inParams.getAvatar();
+        //InputStream inputStream = file.getInputStream();
+        // 获取原始文件名
+//        String originalName = file.getOriginalFilename();
+//        UploadFileUtils upload = new UploadFileUtils();
+//        avatar = upload.uploadFile(uploadPath, originalName, file);
+//        // 生成uuid名称
+        //String username = inParams.getUsername();
+        //userProcessor.uploadAvatar(username, avatar);
+
     }
 
 
