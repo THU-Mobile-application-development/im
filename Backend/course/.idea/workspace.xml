@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f146c5bf-b39c-4fa2-a145-9f34711b112b" name="Default Changelist" comment="login register info" />
+    <list default="true" id="f146c5bf-b39c-4fa2-a145-9f34711b112b" name="Default Changelist" comment="login register info">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/all.2021-06-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.2021-06-15.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/info.2021-06-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/info.2021-06-15.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/warn.2021-06-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/warn.2021-06-15.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Base/Constant/KeyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Base/Constant/KeyConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Base/Model/Story.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Base/Model/Story.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/Params/StoryParams/In/StoryLikeInParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/Params/StoryParams/In/StoryLikeInParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/StoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/StoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Processor/StoryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Processor/StoryProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsinghua/course/Base/Constant/KeyConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsinghua/course/Base/Constant/KeyConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsinghua/course/Biz/Controller/StoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsinghua/course/Biz/Controller/StoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tsinghua/course/Biz/Processor/StoryProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tsinghua/course/Biz/Processor/StoryProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,22 +74,14 @@
     <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.tsinghua.course.Base.Model" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.tsinghua.course.Biz.Controller.Params.UserParams.In" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CourseApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CourseApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="course" />
       <extension name="coverage">
@@ -141,7 +148,9 @@
       <workItem from="1623171388662" duration="7950000" />
       <workItem from="1623283330311" duration="18317000" />
       <workItem from="1623431799290" duration="7969000" />
-      <workItem from="1623512598294" duration="19914000" />
+      <workItem from="1623512598294" duration="24294000" />
+      <workItem from="1623818262350" duration="17000" />
+      <workItem from="1624116793418" duration="5449000" />
     </task>
     <servers />
   </component>

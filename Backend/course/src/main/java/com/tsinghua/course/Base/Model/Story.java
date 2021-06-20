@@ -3,10 +3,14 @@ package com.tsinghua.course.Base.Model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 @Document("Story")
-public class Story {
+public class Story  {
 
     String storyId;
 
@@ -116,6 +120,9 @@ public class Story {
     public void setReply(List<StoryReply> replys) {
         this.replys = replys;
     }
+
+
+
 
 
 }

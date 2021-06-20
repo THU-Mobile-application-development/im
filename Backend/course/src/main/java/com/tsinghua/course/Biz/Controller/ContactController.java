@@ -35,8 +35,6 @@ public class ContactController {
 
     @Autowired
     ChatProcessor chatProcessor;
-//    @Autowired
-//    ChatProcessor chatProcessor;
 
     /**
      * 搜索联系人

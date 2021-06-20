@@ -23,9 +23,6 @@ public class StoryProcessor {
         Story story = new Story();
         List<String> likeuser = new ArrayList<String>();
         List<StoryReply> reply  = new ArrayList<StoryReply>();
-
-
-
         story.setPublishTime(TimeFormat.getTime());
         story.setUsername(user.getUsername());
         story.setNickname(user.getNickname());
@@ -36,9 +33,6 @@ public class StoryProcessor {
         story.setLikeUsername(likeuser);
         story.setReply(reply);
         story.setStoryId(CommonUtil.getUniqueId());
-
-
-
         mongoTemplate.insert(story);
     }
 
@@ -51,27 +45,36 @@ public class StoryProcessor {
         Update update = new Update();
         update.set(KeyConstant.LIKESNUM, story.getLikesNum()+1);
         mongoTemplate.upsert(query, update, Story.class);
-
-
-
-
     }
 
     public void likestoryuser(String storyId,String username) {
         Query query = new Query();
         query.addCriteria(Criteria.where(KeyConstant.STORYID).is(storyId));
         Story story = mongoTemplate.findOne(query, Story.class);
-
         List<String> likeuser = story.getLikeUsername();
         likeuser.add(username);
         Update update = new Update();
-
         update.set(KeyConstant.LIKEUSER, likeuser);
         mongoTemplate.upsert(query, update, Story.class);
 
+    }
+    public void addReply(String storyId,StoryReply reply) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where(KeyConstant.STORYID).is(storyId));
+        Story story = mongoTemplate.findOne(query, Story.class);
+        List<StoryReply> replies = story.getReply();
+        replies.add(reply);
+        Update update = new Update();
+        update.set(KeyConstant.REPLY, replies);
+        mongoTemplate.upsert(query, update, Story.class);
+
+    }
 
 
-
+    public List<Story> getStoryByUsername(String username) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where(KeyConstant.USERNAME).is(username));
+        return mongoTemplate.find(query, Story.class);
     }
 
 

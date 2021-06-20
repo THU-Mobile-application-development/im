@@ -31,6 +31,7 @@ public class KeyConstant {
     public static final String CHAT = "chat";
     public static final String LIKESNUM = "likesNum";
     public static final String LIKEUSER = "likeuser";
+    public static final String REPLY = "replys";
 
 
 
