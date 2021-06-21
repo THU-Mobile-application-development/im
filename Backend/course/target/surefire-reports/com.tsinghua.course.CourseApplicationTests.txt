@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.tsinghua.course.CourseApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.063 s - in com.tsinghua.course.CourseApplicationTests

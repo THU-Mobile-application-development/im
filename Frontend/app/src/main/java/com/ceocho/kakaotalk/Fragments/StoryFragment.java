@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ceocho.kakaotalk.ATask.ListInsert;
+import com.ceocho.kakaotalk.EditProfileActivity;
 import com.ceocho.kakaotalk.MainActivity;
 import com.ceocho.kakaotalk.MessageActivity;
 import com.ceocho.kakaotalk.Model.Reply;
@@ -54,7 +55,7 @@ public class StoryFragment extends Fragment {
 
     private List<Story> mStorys;
 
-    Button publish_story;
+    Button publish_story,select_content;
 
 
     final int LOAD_IMAGE = 1001;
@@ -72,6 +73,7 @@ public class StoryFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_story, container, false);
         publish_story = view.findViewById(R.id.publish_story_btn);
+        select_content = view.findViewById(R.id.select_content_btn);
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -81,62 +83,54 @@ public class StoryFragment extends Fragment {
         mStorys = new ArrayList<>();
 
         loadStorys();
+
         publish_story.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                show();
+                if(OkhttpUtill.isNetworkConnected(getActivity().getApplicationContext()) == true) {
+                    if(fileSize <= 30000000) { //파일 크기가 30메가 보다 작아야 업로드 할 수 있음
+
+                        System.out.println("it is working?");
+                        new ListInsert(imageDbPath, imageRealPath,"story/publish").execute();
+
+                    } else {
+                        // 알림창 띄움
+                        final androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext());
+                        builder.setTitle("알림");
+                        builder.setMessage("파일 크기가 30MB초과하는 파일은 업로드가 제한되어 있습니다.\n30MB이하 파일로 선택해 주십시요!!!");
+                        builder.setPositiveButton("예", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                        builder.show();
+                    }
+                } else {
+                    Toast.makeText(getActivity().getApplicationContext(), "인터넷이 연결되어 있지 않습니다.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
+        select_content.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_PICK);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), LOAD_IMAGE);
             }
         });
 
 
 
+
+
+
+
         return view;
     }
-
-
-
-    private void show() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Publish Story");
-        builder.setPositiveButton("cancel",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getActivity().getApplicationContext(), "cancel.", Toast.LENGTH_LONG).show();
-                    }
-                });
-
-        builder.setNegativeButton("chat",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        if(OkhttpUtill.isNetworkConnected(getActivity().getApplicationContext()) == true) {
-                            if(fileSize <= 30000000) { //파일 크기가 30메가 보다 작아야 업로드 할 수 있음
-
-                                System.out.println("it is working?");
-                                new ListInsert(imageDbPath, imageRealPath).execute();
-
-                            } else {
-                                // 알림창 띄움
-                                final androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(getActivity().getApplicationContext());
-                                builder.setTitle("알림");
-                                builder.setMessage("파일 크기가 30MB초과하는 파일은 업로드가 제한되어 있습니다.\n30MB이하 파일로 선택해 주십시요!!!");
-                                builder.setPositiveButton("예", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-                                        dialogInterface.dismiss();
-                                    }
-                                });
-                                builder.show();
-                            }
-                        } else {
-                            Toast.makeText(getActivity().getApplicationContext(), "인터넷이 연결되어 있지 않습니다.", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-        builder.show();
-    }
-
 
 
 
@@ -245,10 +239,6 @@ public class StoryFragment extends Fragment {
         //arraylist 안에 arraylist 만들수있는 함수 만들기
         List<String> storylikeUsername = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("storyList"), "likeUsername");
         List<String> storyReply = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("storyList"), "reply");
-        System.out.println("여기중요햄 ");
-        System.out.println(storylikeUsername.get(0));
-        System.out.println(storylikeUsername.get(0).getClass().getName());
-        //List<String> propsAvatar = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("contacts"),"propsAvatar");
             mStorys.clear();
             for (int i = 0; i < storyId.size(); i++) {
                 String avatar = storyAvatar.get(i);
@@ -271,9 +261,9 @@ public class StoryFragment extends Fragment {
                     Replylist.add(reply);
                 }
                 List<String> userlike_list = new ArrayList<>();
-
-
-
+                userlike_list = MaptoJsonUtill.getlikeuser(storylikeUsername.get(i),Integer.parseInt(likenum));
+                System.out.println("이거야이거!!");
+                System.out.println(userlike_list);
                 Story story = new Story();
                 story.setReply(Replylist);
                 story.setAvatar(avatar);
@@ -283,9 +273,12 @@ public class StoryFragment extends Fragment {
                 story.setType(type);
                 story.setUsername(username);
                 story.setLikesNum(Integer.parseInt(likenum));
+                story.setLikeUsername(userlike_list);
+                mStorys.add(story);
+
             }
-//            userAdapter = new UserAdapter(getContext(), mUsers, false);
-//            recyclerView.setAdapter(userAdapter);
+            storyAdapter = new StoryAdapter(getContext(), mStorys);
+            recyclerView.setAdapter(storyAdapter);
 
 
 

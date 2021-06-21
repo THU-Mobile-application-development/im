@@ -20,11 +20,12 @@ public class ListInsert extends AsyncTask<Void, Void, String> {
 
     //메인 액티비티의 변수를 받기 위해 변수를 선언하고 생성자를 만든다.
     //무언가를 받고자 할때는 대부분 생성자를 이용한다.
-    String imagedbpath, imagerealpath;
+    String imagedbpath, imagerealpath,order;
 
-    public ListInsert(String imagedbpath, String imagerealpath) {
+    public ListInsert(String imagedbpath, String imagerealpath,String order) {
         this.imagedbpath = imagedbpath;
         this.imagerealpath = imagerealpath;
+        this.order = order;
     }
 
     public ListInsert() {
@@ -48,7 +49,7 @@ public class ListInsert extends AsyncTask<Void, Void, String> {
         File file = new File(imagerealpath);
 
         try {
-            OkhttpUtill.upload(file);
+            OkhttpUtill.upload(file,order);
         } catch (IOException e) {
             e.printStackTrace();
         }

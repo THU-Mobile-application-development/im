@@ -167,25 +167,38 @@ public class OkhttpUtill {
 
     }
 
-    public static void upload(File file) throws IOException {
+    public static void upload(File file,String order) throws IOException {
        // OkHttpClient client = new OkHttpClient();
         final Map[] result = {new HashMap()};
 
         final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/*");
         final CountDownLatch latch = new CountDownLatch(1);
 
-        RequestBody formBody = new MultipartBody.Builder()
-                .setType(MultipartBody.FORM)
-                .addFormDataPart("avatar", file.getName(),
-                        RequestBody.create(MEDIA_TYPE_PNG, file))
-                //.addFormDataPart("other_field", "other_field_value")
-                .build();
+        RequestBody formBody;
+        if(order.equals("user/avatar")) {
+            formBody = new MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("avatar", file.getName(),
+                            RequestBody.create(MEDIA_TYPE_PNG, file))
+                    //.addFormDataPart("other_field", "other_field_value")
+                    .build();
+        }
+        else{
+            formBody = new MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("content", file.getName(),
+                            RequestBody.create(MEDIA_TYPE_PNG, file))
+                    //.addFormDataPart("other_field", "other_field_value")
+                    .build();
+
+        }
+
+
         Request request = new Request.Builder()
-                .url(baseURL + "user/avatar")
+                .url(baseURL + order)
                 .post(formBody)
                 .build();
 
-        System.out.println("여기까지 ffdsfsffgdasfs온거니?");
 
 //        Request request = new Request.Builder().url(baseURL+"user/avatar").post(formBody).build();
 //        System.out.println("여기까지 fafdasfsafs?");

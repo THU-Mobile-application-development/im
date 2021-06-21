@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="8.140.133.34" id="627d4d7c-9273-43fa-9d83-d6be0dd32b5b" port="22" nameFormat="DESCRIPTIVE" username="course33" />
+      <sshConfig authType="PASSWORD" id="2cdd72ce-ed04-4f5a-9e90-74f842631867" customName="dsd" nameFormat="CUSTOM" username="course33">
+        <option name="customName" value="dsd" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

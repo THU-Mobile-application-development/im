@@ -10,18 +10,30 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/publish_story_btn"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PUBLISH STORY" />
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/select_content_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="select content" />
+
+            <Button
+                android:id="@+id/publish_story_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="confirm publish" />
+        </LinearLayout>
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp" />
 
     </LinearLayout>

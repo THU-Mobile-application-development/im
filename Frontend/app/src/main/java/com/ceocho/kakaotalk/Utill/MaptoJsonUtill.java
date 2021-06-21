@@ -146,6 +146,24 @@ public class MaptoJsonUtill<staic, statc> {
         return null;
     }
 
+    public static List<String> getlikeuser(String str,int times){
+        System.out.println("이게 스트링이얌");
+        System.out.println(str);
+        List<String> result = new ArrayList<>();
+        String[] splitstr = str.split(",");
+        for(int i = 0 ;i<times;i++){
+            splitstr[i] = splitstr[i].replace("\"","");
+            splitstr[i] = splitstr[i].replace("[","");
+            splitstr[i] = splitstr[i].replace("]","");
+            result.add(splitstr[i]);
+        }
+        System.out.println("이게 결과얌");
+        System.out.println(result);
+        return result;
+
+    }
+
+
 
 
 

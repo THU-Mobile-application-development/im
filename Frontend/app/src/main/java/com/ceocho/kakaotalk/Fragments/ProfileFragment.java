@@ -171,7 +171,7 @@ public class ProfileFragment extends Fragment {
                     if(fileSize <= 30000000) { //파일 크기가 30메가 보다 작아야 업로드 할 수 있음
 
                         System.out.println("it is working?");
-                        new ListInsert(imageDbPath, imageRealPath).execute();
+                        new ListInsert(imageDbPath, imageRealPath,"user/avatar").execute();
 
                     } else {
                         // 알림창 띄움

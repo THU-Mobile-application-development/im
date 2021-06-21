@@ -10,17 +10,17 @@ import com.tsinghua.course.Biz.Controller.Params.CommonInParams;
 public class StoryLikeInParams extends CommonInParams {
     // 动态id
     @Required
-    private String stroyId;
+    private String storyId;
     // 发布动态的用户名
 //    @Required
 //    private String publishUsername;
 
     public String getStroyId() {
-        return stroyId;
+        return storyId;
     }
 
-    public void setStroyId(String stroyId) {
-        this.stroyId = stroyId;
+    public void setStroyId(String storyId) {
+        this.storyId = storyId;
     }
 
 //    public String getPublishUsername() {
