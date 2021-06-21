@@ -34,7 +34,7 @@ public class OkhttpUtill {
     //private  static String baseURL = "http://172.20.10.5:7000/";
     //private static String baseURL = "http://172.30.1.59:7000/";
     //private static String baseURL = "http://172.30.1.5:7000/";
-    public static String baseURL = "http://172.30.1.51:7000/";
+    public static String baseURL = "http://172.30.1.6:7000/";
 
 
     private static OkHttpClient client = new OkHttpClient.Builder()

@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.ceocho.kakaotalk.Fragments.ChatsFragment;
 import com.ceocho.kakaotalk.Fragments.ProfileFragment;
+import com.ceocho.kakaotalk.Fragments.StoryFragment;
 import com.ceocho.kakaotalk.Fragments.UsersFragment;
 import com.ceocho.kakaotalk.Model.Chat;
 import com.ceocho.kakaotalk.Model.User;
@@ -86,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
         viewPagerAdapter.addFragment(new UsersFragment(), "Users");
         viewPagerAdapter.addFragment(new ProfileFragment(), "Profile");
+        viewPagerAdapter.addFragment(new StoryFragment(), "Story");
+
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager((viewPager));

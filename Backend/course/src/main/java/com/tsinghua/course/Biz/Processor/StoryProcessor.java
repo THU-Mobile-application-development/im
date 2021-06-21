@@ -29,6 +29,7 @@ public class StoryProcessor {
         story.setAvatar(user.getAvatar());
         story.setType(type);
         story.setLikesNum(0);
+        story.setReplyNum(0);
         story.setContent(content);
         story.setLikeUsername(likeuser);
         story.setReply(reply);
@@ -40,8 +41,6 @@ public class StoryProcessor {
         Query query = new Query();
         query.addCriteria(Criteria.where(KeyConstant.STORYID).is(storyId));
         Story story = mongoTemplate.findOne(query, Story.class);
-        System.out.println(story.getLikesNum());
-        //story.setLikesNum(story.getLikesNum()+1);
         Update update = new Update();
         update.set(KeyConstant.LIKESNUM, story.getLikesNum()+1);
         mongoTemplate.upsert(query, update, Story.class);
@@ -68,6 +67,15 @@ public class StoryProcessor {
         update.set(KeyConstant.REPLY, replies);
         mongoTemplate.upsert(query, update, Story.class);
 
+    }
+
+    public void replystorynum(String storyId) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where(KeyConstant.STORYID).is(storyId));
+        Story story = mongoTemplate.findOne(query, Story.class);
+        Update update = new Update();
+        update.set(KeyConstant.REPLYNUM, story.getReplyNum()+1);
+        mongoTemplate.upsert(query, update, Story.class);
     }
 
 

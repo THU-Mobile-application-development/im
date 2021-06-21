@@ -25,17 +25,20 @@ public class ChatProcessor {
     MongoTemplate mongoTemplate;
 
 
-    public List<ChatRelation> getChatList(String fron_username) {
+    public List<ChatRelation> getChatList(String from_username) {
+        System.out.println(from_username);
+        System.out.println("여기는 되니 ");
         Query query = new Query();
-        query.addCriteria(Criteria.where(KeyConstant.FROM_USERNAME).is(fron_username));
+        query.addCriteria(Criteria.where(KeyConstant.FROM_USERNAME).is(from_username));
+        System.out.println("그럼 여기는? ");
         return mongoTemplate.find(query, ChatRelation.class);
 
     }
 
 
-    public ChatRelation getChatRelation(String fron_username, String to_username) {
+    public ChatRelation getChatRelation(String from_username, String to_username) {
         Query query = new Query();
-        query.addCriteria(Criteria.where(KeyConstant.FROM_USERNAME).is(fron_username)
+        query.addCriteria(Criteria.where(KeyConstant.FROM_USERNAME).is(from_username)
                 .and(KeyConstant.TO_USERNAME).is(to_username));
         return mongoTemplate.findOne(query, ChatRelation.class);
     }

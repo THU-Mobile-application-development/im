@@ -32,6 +32,7 @@ public class KeyConstant {
     public static final String LIKESNUM = "likesNum";
     public static final String LIKEUSER = "likeuser";
     public static final String REPLY = "replys";
+    public static final String REPLYNUM = "replyNum";
 
 
 

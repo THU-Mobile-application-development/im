@@ -22,30 +22,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 
 
-public class MaptoJsonUtill {
+public class MaptoJsonUtill<staic, statc> {
 
 
     public static Map<String, Object> getMap(String jsonString) {
-//        System.out.println("fuckkkkkkkkkkkkk?");
-//        System.out.println(jsonString);
-//
-//        ObjectMapper mapper = new ObjectMapper();
-//        try {
-//            System.out.println("it is working?");
-//            System.out.println(jsonString);
-//            // convert JSON string to Map
-//            Map<String, Object> map = mapper.readValue(jsonString, Map.class);
-//
-//            // it works
-//            //Map<String, String> map = mapper.readValue(jsonString, new TypeReference<Map<String, String>>() {});
-//
-//            System.out.println(map);
-//            return map;
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return null;
-//        }
         JSONObject jsonObject;
         try {
             jsonObject = new JSONObject(jsonString);
@@ -95,7 +75,7 @@ public class MaptoJsonUtill {
 
 
     public static List<String> jsonlisttolist(JSONArray arr, String keyname) {
-
+        System.out.println(arr);
 
         List<String> list = new ArrayList<String>();
         for (int i = 0; i < arr.length(); i++) {
@@ -110,6 +90,62 @@ public class MaptoJsonUtill {
 
 
     }
+
+    public static List<String> getreplycontent(String str,int times) {
+        List<String> result = new ArrayList<>();
+        for(int i=0;i<times;i++) {
+            String content = "";
+            content = substringBetween(str, "\"content\":\"", "\",");
+            result.add(content);
+            str = str.substring(str.indexOf(content)+content.length());
+            System.out.println(content);
+        }
+        return result;
+
+    }
+
+    public static List<String> getreplytime(String str,int times) {
+        List<String> result = new ArrayList<>();
+        for(int i=0;i<times;i++) {
+            String content = "";
+            content = substringBetween(str, "\"replytime\":\"", "\",");
+            result.add(content);
+            str = str.substring(str.indexOf(content)+content.length());
+            System.out.println(content);
+        }
+        return result;
+
+    }
+
+    public static List<String> getreplyusername(String str,int times) {
+        List<String> result = new ArrayList<>();
+        for(int i=0;i<times;i++) {
+            String content = "";
+            content = substringBetween(str, "\"username\":\"", "\"");
+            result.add(content);
+            str = str.substring(str.indexOf(content)+content.length());
+            System.out.println(content);
+        }
+        return result;
+
+    }
+
+
+
+    public static String substringBetween(String str, String open, String close) {
+        if (str == null || open == null || close == null) {
+            return null;
+        }
+        int start = str.indexOf(open);
+        if (start != -1) {
+            int end = str.indexOf(close, start + open.length());
+            if (end != -1) {
+                return str.substring(start + open.length(), end);
+            }
+        }
+        return null;
+    }
+
 
 
 

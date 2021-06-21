@@ -31,7 +31,7 @@ public class Story  {
     // 点赞用户数组
     List<String> likeuser;
     // 评论数
-    int commentsNum;
+    int replyNum;
     // 评论用户数组
     List<StoryReply> replys;
 
@@ -94,6 +94,14 @@ public class Story  {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public int getReplyNum() {
+        return replyNum;
+    }
+
+    public void setReplyNum(int replyNum) {
+        this.replyNum = replyNum;
     }
 
     public int getLikesNum() {

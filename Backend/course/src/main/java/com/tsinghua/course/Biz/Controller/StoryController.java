@@ -102,6 +102,7 @@ public class StoryController {
 
         /* 新建Comment对象 */
         storyProcessor.addReply(storyId, reply);
+        storyProcessor.replystorynum(storyId);
 
 
         return new CommonOutParams(true);

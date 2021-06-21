@@ -44,10 +44,13 @@ public class ChatController {
     @BizType(BizTypeEnum.CHAT_LIST)
     @NeedLogin
     public ChatListOutParams getChatList(CommonInParams inParams) throws Exception {
-        String my_username = inParams.getUsername();
-        List<ChatRelation> chatList = chatProcessor.getChatList(my_username);
+        System.out.println("1111111");
+        String from_username = inParams.getUsername();
+        List<ChatRelation> chatList = new ArrayList<>();
+        System.out.println(chatProcessor.getChatList(from_username).get(0).getCreateTime());
+        chatList.addAll(chatProcessor.getChatList(from_username));
 
-
+        System.out.println("2222222");
         List<ChatListProps> chatPropsList = new ArrayList<>();
         ChannelHandlerContext ctx = ThreadUtil.getCtx();
         for (ChatRelation chat : chatList) {
@@ -83,6 +86,9 @@ public class ChatController {
             chatPropsList.add(props);
         }
 
+        System.out.println("333333");
+
+
         ChatListProps[] result = new ChatListProps[chatPropsList.size()];
         chatPropsList.toArray(result);
 
@@ -90,6 +96,7 @@ public class ChatController {
         ChatListOutParams outParams = new ChatListOutParams();
         outParams.setChatList(result);
 
+        System.out.println("444444");
 
         return outParams;
 

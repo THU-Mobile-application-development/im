@@ -123,7 +123,6 @@ public class ChatsFragment extends Fragment {
         List<String> propsUnreadNum = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("chat"), "unreadNum");
 
 
-        //List<String> propsAvatar = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("contacts"),"propsAvatar");
         if (search_users.getText().toString().equals("")) {
             mUsers.clear();
             for (int i = 0; i < propsLastChat.size(); i++) {
