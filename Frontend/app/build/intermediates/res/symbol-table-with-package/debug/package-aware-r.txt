@@ -1226,6 +1226,7 @@ id disableHome
 id edit_password_btn
 id edit_profile_btn
 id edit_query
+id edit_username_btn
 id end
 id end_padder
 id enterAlways

@@ -154,9 +154,6 @@ public class UserController {
     public CommonOutParams userEditInfo(EditInfoParams inParams) throws Exception {
 
         String username = inParams.getUsername();
-        if (username.equals(""))
-            throw new CourseWarn(UserWarnEnum.NO_NEW_USERNAME);
-
 
         String nickname = inParams.getNickname();
         if (nickname.equals(""))
@@ -171,6 +168,27 @@ public class UserController {
         return new CommonOutParams(true);
     }
 
+
+    @NeedLogin
+    @BizType(BizTypeEnum.USER_EDIT_USERNAME)
+    public CommonOutParams userEditInfo(EditUsernameInParams inParams) throws Exception {
+
+        String username = inParams.getUsername();
+        if (username.equals(""))
+            throw new CourseWarn(UserWarnEnum.NO_NEW_USERNAME);
+
+        String nickname = inParams.getNickname();
+        if (nickname.equals(""))
+            throw new CourseWarn(UserWarnEnum.NO_NEW_NICKNAME);
+
+        String phonenumber = inParams.getPhonenumber();
+        if (phonenumber.equals(""))
+            throw new CourseWarn(UserWarnEnum.NO_NEW_PHONENUMBER);
+
+
+        userProcessor.EditUsername(username, nickname, phonenumber);
+        return new CommonOutParams(true);
+    }
 
     @BizType(BizTypeEnum.USER_AVATAR)
     @NeedLogin

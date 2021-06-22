@@ -43,7 +43,7 @@ public class ProfileFragment extends Fragment {
 
     CircleImageView image_profile;
     TextView username, nickname, phonenumber;
-    Button edit_profile, upload_avatar, edit_password, select_photo;
+    Button edit_profile, upload_avatar, edit_password, select_photo,edit_username;
     final int LOAD_IMAGE = 1001;
     long fileSize = 0;
 
@@ -64,6 +64,7 @@ public class ProfileFragment extends Fragment {
         select_photo = view.findViewById(R.id.select_photo_btn);
         edit_password = view.findViewById(R.id.edit_password_btn);
         upload_avatar = view.findViewById(R.id.upload_avatar_btn);
+        edit_username = view.findViewById(R.id.edit_username_btn);
 
         Map result = OkhttpUtill.get("user/myinfo");
 
@@ -90,7 +91,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
 
                 Intent intent = new Intent(getActivity(), EditProfileActivity.class);
-                intent.putExtra("data", "Test Popup");
+                intent.putExtra("data", "edit_info");
                 startActivityForResult(intent, 1);
 
             }
@@ -101,6 +102,15 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), ResetPasswordActivity.class);
                 intent.putExtra("data", "Test Popup");
+                startActivityForResult(intent, 1);
+            }
+        });
+
+        edit_username.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), EditProfileActivity.class);
+                intent.putExtra("data", "edit_username");
                 startActivityForResult(intent, 1);
             }
         });

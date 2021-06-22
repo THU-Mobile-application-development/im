@@ -19,7 +19,6 @@ public class EditInfoParams extends CommonInParams {
     private String phonenumber;
 
     // 用户名
-    @Required
     private String username;
 
     public String getUsername() { return username; }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -68,7 +69,7 @@ public class UsersFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), UserAddActivity.class);
                 intent.putExtra("data", "Test Popup");
                 startActivityForResult(intent, 1);
-
+                reload();
             }
 
         });
@@ -97,6 +98,15 @@ public class UsersFragment extends Fragment {
 
         return view;
     }
+
+
+    public void reload() {
+
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+        ft.detach(this).attach(this).commit();
+    }
+
 
     @Override
     public void onResume() {

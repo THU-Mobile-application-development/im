@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class EditProfileActivity extends Activity {
 
-    EditText username, nickname, phonenumber;
+    EditText nickname, phonenumber;
     Button confirm_btn, cancel_btn;
 
 
@@ -36,52 +36,80 @@ public class EditProfileActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_edit_info);
 
-        username = findViewById(R.id.username);
         phonenumber = findViewById(R.id.phonenumber);
         nickname = findViewById(R.id.nickname);
         confirm_btn = findViewById(R.id.confirm_edit);
         cancel_btn = findViewById(R.id.cancel_edit);
 
+        //데이터 가져오기
+        Intent intent = getIntent();
+        String data = intent.getStringExtra("data");
+
         Map result = OkhttpUtill.get("user/myinfo");
+        int flag = 0;
+        if(data.equals("edit_info")){
+            nickname.setText("请输入要改变的昵称");
+            phonenumber.setText("请输入要改变的手机号码");
+            flag = 0;
 
-        username.setText(result.get("username").toString());
-        nickname.setText(result.get("nickname").toString());
-        phonenumber.setText(result.get("phonenumber").toString());
+        }
+        else{
+            nickname.setText("请输入要改变的用户名");
+            phonenumber.setText("请确认用户名");
+            flag = 1;
+
+        }
 
 
+        int finalFlag = flag;
         confirm_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-//                String txt_test = test.getText().toString();
 
-                String txt_username = username.getText().toString();
                 String txt_phonenumber = phonenumber.getText().toString();
                 String txt_nickname = nickname.getText().toString();
-
-
-//                Toast.makeText(RegisterActivity.this, txt_test, Toast.LENGTH_SHORT).show();
-
-                if (TextUtils.isEmpty(txt_username) || TextUtils.isEmpty(txt_phonenumber) || TextUtils.isEmpty(txt_nickname)) {
+                if ( TextUtils.isEmpty(txt_phonenumber) || TextUtils.isEmpty(txt_nickname)) {
                     Toast.makeText(EditProfileActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
                 } else {
-                    edit_profile(txt_username, txt_phonenumber, txt_nickname, v);
+                    if(finalFlag == 0) {
+                        edit_profile(txt_phonenumber, txt_nickname, v);
+                    }
+                    else{
+                        edit_username(txt_phonenumber, result.get("phonenumber").toString(),result.get("nickname").toString(), v);
+
+                    }
                 }
             }
         });
 
 
-        //데이터 가져오기
-        Intent intent = getIntent();
-        String data = intent.getStringExtra("data");
+
     }
-
-
-    private void edit_profile(final String username, String phonenumber, String nickname, View v) {
+    private void edit_username(String username, String phonenumber, String nickname, View v) {
         Map map = new HashMap();
 
 
+        map.put("phonenumber", phonenumber);
+        map.put("nickname", nickname);
         map.put("username", username);
+
+        String input = MaptoJsonUtill.getJson(map);
+        Map result = OkhttpUtill.post("user/edit_username", input);
+
+
+        if (result.get("success").toString() == "true") {
+            mOnClose(v);
+        } else {
+            Toast.makeText(EditProfileActivity.this, "Register failed!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    private void edit_profile( String phonenumber, String nickname, View v) {
+        Map map = new HashMap();
+
+
         map.put("phonenumber", phonenumber);
         map.put("nickname", nickname);
         String input = MaptoJsonUtill.getJson(map);
@@ -95,6 +123,8 @@ public class EditProfileActivity extends Activity {
         }
 
     }
+
+
 
 
     //확인 버튼 클릭

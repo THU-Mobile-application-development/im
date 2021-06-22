@@ -64,6 +64,17 @@ public class UserProcessor {
         Update update = new Update();
         update.set(KeyConstant.NICKNAME, nickname);
         update.set(KeyConstant.PHONENUMBER, phonenumber);
+        mongoTemplate.upsert(query, update, User.class);
+
+
+    }
+
+    public void EditUsername(String username, String nickname, String phonenumber) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where(KeyConstant.NICKNAME).is(username)
+                .and(KeyConstant.PHONENUMBER).is(phonenumber));
+
+        Update update = new Update();
         update.set(KeyConstant.USERNAME, username);
         mongoTemplate.upsert(query, update, User.class);
 

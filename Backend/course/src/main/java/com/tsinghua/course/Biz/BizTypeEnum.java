@@ -14,6 +14,8 @@ public enum BizTypeEnum {
     USER_MODIFY_PASSWORD(UserController.class, "/user/modify_password", "用户修改密码"),
     USER_MYINFO(UserController.class, "/user/myinfo", "用户显示info"),
     USER_EDIT_INFO(UserController.class, "/user/edit_info", "用户修改个人信息"),
+    USER_EDIT_USERNAME(UserController.class, "/user/edit_username", "修改用户名"),
+
     USER_AVATAR(UserController.class, "/user/avatar", "用户修改头像"),
 
     /**
