@@ -169,7 +169,7 @@ public class OkhttpUtill {
 
     }
 
-    public static void upload(File file,String order) throws IOException {
+    public static void upload(File file,String order,String type) throws IOException {
        // OkHttpClient client = new OkHttpClient();
         final Map[] result = {new HashMap()};
 
@@ -190,7 +190,7 @@ public class OkhttpUtill {
                     .setType(MultipartBody.FORM)
                     .addFormDataPart("content", file.getName(),
                             RequestBody.create(MEDIA_TYPE_PNG, file))
-                    //.addFormDataPart("other_field", "other_field_value")
+                    .addFormDataPart("type", type)
                     .build();
 
         }

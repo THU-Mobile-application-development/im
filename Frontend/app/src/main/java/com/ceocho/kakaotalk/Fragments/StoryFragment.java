@@ -157,7 +157,6 @@ public class StoryFragment extends Fragment {
             }
             String sendText = data.getExtras().getString("result");
             if (sendText.equals("ok")) {
-                System.out.println("it is working?");
 
 
                 refresh();
@@ -183,7 +182,7 @@ public class StoryFragment extends Fragment {
                 imageRealPath = path;
                 Log.d("Sub1Add", "imageFilePathA Path : " + imageRealPath);
                 String uploadFileName = imageRealPath.split("/")[imageRealPath.split("/").length - 1];
-                imageDbPath = OkhttpUtill.baseURL + "user/avatar/" + uploadFileName;
+                imageDbPath = OkhttpUtill.baseURL + "story/publish/" + uploadFileName;
 
                 fileSize = imageRealPath.length();
             } catch (Exception e) {

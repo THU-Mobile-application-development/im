@@ -3,6 +3,7 @@ package com.ceocho.kakaotalk.ATask;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Log;
 
 
@@ -10,6 +11,8 @@ import com.ceocho.kakaotalk.Utill.OkhttpUtill;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URLConnection;
+import java.nio.file.Files;
 
 public class ListInsert extends AsyncTask<Void, Void, String> {
     private static final String TAG = "main ListInsert";
@@ -47,14 +50,32 @@ public class ListInsert extends AsyncTask<Void, Void, String> {
 
         System.out.println(imagerealpath);
         File file = new File(imagerealpath);
+        String extension = getExtension(imagerealpath);
+        String type;
+        if (extension.equals("mp4") || extension.equals("MP4") || extension.equals("MOV") || extension.equals("mov") || extension.equals("AVI") || extension.equals("avi") ||
+                extension.equals("MKV") || extension.equals("mkv") || extension.equals("WMV") || extension.equals("wmv") || extension.equals("TS") || extension.equals("ts") ||
+                extension.equals("TP") || extension.equals("tp") || extension.equals("FLV") || extension.equals("flv") || extension.equals("3GP") || extension.equals("3gp") ||
+                extension.equals("MPG") || extension.equals("mpg") || extension.equals("MPEG") || extension.equals("mpeg") || extension.equals("MPE") || extension.equals("mpe") ||
+                extension.equals("ASF") || extension.equals("asf") || extension.equals("ASX") || extension.equals("asx") || extension.equals("DAT") || extension.equals("dat") ||
+                extension.equals("RM") || extension.equals("rm")) {
+            type = "1";
+        }
+        else{
+            type = "0";
+        }
+
+
 
         try {
-            OkhttpUtill.upload(file,order);
+            OkhttpUtill.upload(file,order,type);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         return null;
+    }
+    private String getExtension(String url) {
+        return url.substring(url.lastIndexOf(".") + 1, url.length());
     }
 
     @Override

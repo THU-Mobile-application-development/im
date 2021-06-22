@@ -41,7 +41,7 @@ public class UserProcessor {
         user.setPhonenumber(phonenumber);
         user.setUserType(UserType.NORMAL);
 //아바타를 디폴트로 설정
-        String uploadPath= "home/uploads/avatar";
+        String uploadPath= "/home/uploads/avatar";
 
        user.setAvatar(uploadPath + DEFAULT_AVATAR);
 

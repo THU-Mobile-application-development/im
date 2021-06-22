@@ -52,14 +52,9 @@ public class StoryController {
         User user = userProcessor.getUserByUsername(username);
 
         String type = inParams.getType();
-        String uploadPath;
+        String uploadPath = "/home/uploads/story";
         String content;
 
-        String OSName = System.getProperty("os.name");
-        if (OSName.toLowerCase().startsWith("win"))
-            uploadPath = "";
-        else
-            uploadPath = "/usr/local/share/avatar";
         File dir = new File(uploadPath);
         if (!dir.exists())
             dir.mkdirs();
@@ -115,7 +110,6 @@ public class StoryController {
     @NeedLogin
     public StoryListOutParams getStoryList(CommonInParams inParams) throws Exception {
 
-        System.out.println("dhfas");
         String my_username = inParams.getUsername();
 
 
@@ -131,13 +125,9 @@ public class StoryController {
             user_story.addAll(new_story);
         }
 
-        System.out.println("working?");
         compare(user_story);
 
-        for (Story story : user_story){
-            System.out.println("is it wording/");
-            System.out.println(story.getContent());
-        }
+
 
         StoryListOutParams outParams = new StoryListOutParams();
         outParams.setStoryList(user_story);

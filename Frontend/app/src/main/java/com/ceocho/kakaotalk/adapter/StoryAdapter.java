@@ -1,12 +1,15 @@
 package com.ceocho.kakaotalk.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,12 +23,15 @@ import com.bumptech.glide.Glide;
 import com.ceocho.kakaotalk.Fragments.StoryFragment;
 import com.ceocho.kakaotalk.MessageActivity;
 import com.ceocho.kakaotalk.Model.Chat;
+import com.ceocho.kakaotalk.Model.Reply;
 import com.ceocho.kakaotalk.Model.Story;
 import com.ceocho.kakaotalk.Model.User;
 import com.ceocho.kakaotalk.R;
 import com.ceocho.kakaotalk.Utill.MaptoJsonUtill;
 import com.ceocho.kakaotalk.Utill.OkhttpUtill;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -60,6 +66,20 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
 
         holder.story_username.setText(story.getUsername());
         holder.publish_time.setText(story.getPublishTime());
+        String url = story.getAvatar();
+        url = url.replace("/home/uploads/", "");
+        Glide.with(mContext)
+                .load(OkhttpUtill.contentURL + url)
+                .into(holder.avatar);
+
+        //여기서 영상인지 사진인지 판단 필요 type으로
+        String url_content = story.getContent();
+        url_content = url_content.replace("/home/uploads/", "");
+        Glide.with(mContext)
+                .load(OkhttpUtill.contentURL + url_content)
+                .into(holder.story_content);
+
+
         replyAdapter = new ReplyAdapter(mContext,story.getReply());;
         reply_recycle.setAdapter(replyAdapter);
         likeAdapter = new LikeAdapter(mContext,story.getLikeUsername());
@@ -72,7 +92,48 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
                 map.put("storyId", story.getStoryId());
                 String input = MaptoJsonUtill.getJson(map);
                 Map result = OkhttpUtill.post("story/like", input);
+                Map my_result = OkhttpUtill.get("user/myinfo");
+                String username = my_result.get("username").toString();
+                story.getLikeUsername().add(username);
+                likeAdapter.notifyDataSetChanged();
 
+            }
+        });
+
+        holder.reply_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final EditText editText = new EditText(mContext);
+                AlertDialog.Builder dlg = new AlertDialog.Builder(mContext);
+                dlg.setTitle("Reply");
+                dlg.setView(editText);
+                dlg.setPositiveButton("confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Map map = new HashMap();
+                        map.put("storyId", story.getStoryId());
+                        map.put("content",editText.getText().toString());
+                        String input = MaptoJsonUtill.getJson(map);
+                        Map result = OkhttpUtill.post("story/reply", input);
+                        Map my_result = OkhttpUtill.get("user/myinfo");
+                        String username = my_result.get("username").toString();
+                        Reply reply = new Reply();
+                        reply.setContent(editText.getText().toString());
+                        reply.setUsername(username);
+                        SimpleDateFormat sDate2 = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+                        reply.setReplytime(sDate2.format(new Date()));
+                        story.getReply().add(reply);
+                        replyAdapter.notifyDataSetChanged();
+
+                    }
+                });
+                dlg.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                dlg.show();
             }
         });
 
@@ -95,9 +156,8 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
 
         public ViewHolder(View itemView) {
             super(itemView);
-//이미지
-//            story_content = itemView.findViewById(R.id.story_content);
-//            avatar = itemView.findViewById(R.id.avatar);
+            story_content = itemView.findViewById(R.id.story_content);
+            avatar = itemView.findViewById(R.id.avatar);
             story_username = itemView.findViewById(R.id.story_username);
             publish_time = itemView.findViewById(R.id.publish_time);
             reply_btn = itemView.findViewById(R.id.reply_btb);

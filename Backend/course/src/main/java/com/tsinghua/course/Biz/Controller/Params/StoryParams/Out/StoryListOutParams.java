@@ -12,7 +12,6 @@ import java.util.List;
 @BizType(BizTypeEnum.STORY_LIST)
 public class StoryListOutParams extends CommonOutParams {
 
-    // 所有好友
     List<Story> storyList;
 
 

@@ -101,7 +101,7 @@ public class EditProfileActivity extends Activity {
         if (result.get("success").toString() == "true") {
             mOnClose(v);
         } else {
-            Toast.makeText(EditProfileActivity.this, "Register failed!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditProfileActivity.this, "failed!", Toast.LENGTH_SHORT).show();
         }
 
     }
