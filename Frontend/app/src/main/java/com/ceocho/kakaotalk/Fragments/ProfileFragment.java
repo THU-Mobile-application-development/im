@@ -1,19 +1,13 @@
 package com.ceocho.kakaotalk.Fragments;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -23,7 +17,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,35 +24,17 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.ceocho.kakaotalk.ATask.ListInsert;
 import com.ceocho.kakaotalk.EditProfileActivity;
-import com.ceocho.kakaotalk.LoginActivity;
-import com.ceocho.kakaotalk.MainActivity;
-import com.ceocho.kakaotalk.Model.User;
 import com.ceocho.kakaotalk.R;
 import com.ceocho.kakaotalk.ResetPasswordActivity;
-import com.ceocho.kakaotalk.Utill.BitmapUtil;
+import com.ceocho.kakaotalk.ATask.BitmapUtil;
 import com.ceocho.kakaotalk.Utill.OkhttpUtill;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
 
-
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -68,7 +43,7 @@ public class ProfileFragment extends Fragment {
 
     CircleImageView image_profile;
     TextView username, nickname, phonenumber;
-    Button edit_profile, upload_avatar, edit_password,select_photo;
+    Button edit_profile, upload_avatar, edit_password, select_photo;
     final int LOAD_IMAGE = 1001;
     long fileSize = 0;
 
@@ -96,38 +71,19 @@ public class ProfileFragment extends Fragment {
         nickname.setText(result.get("nickname").toString());
         phonenumber.setText(result.get("phonenumber").toString());
 
-//        File sourceimage = new File("c:\\new_logo.gif");
-//        image1 = ImageIO.read(sourceimage);
-//
-//        InputStream is = new BufferedInputStream(
-//                new FileInputStream("c:\\new_logo.gif"));
-//        image2 = ImageIO.read(is);
-//
+        try {
+            Bitmap bitmap = new BitmapUtil(result.get("avatar").toString()).execute().get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-//        Bitmap bm = getImageBitmap("file://"+result.get("avatar").toString());
-//        image_profile.setImageBitmap(bm);
-//        Glide.with(this)
-//                .load(bm)
-//                .into(image_profile);
-//
-  //  Bitmap bitmap = getImageBitmap("file://"+result.get("avatar").toString());
-       Uri myUri = Uri.parse("file:///usr/local/share/avatar/2021/06/14/9eab4881-80d8-42d9-9042-47db296a118d_IMG_20210614_033500.jpg");
-//        Bitmap bitmap = null;
-//        try {
-//            bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), myUri);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
-//        Bitmap  mBitmap = null;
-//        try {
-//            mBitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), myUri);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        // image_profile.setImageResource(mBitmap);
-//        Glide.with(this).load(mBitmap).into(image_profile);
+        String url = result.get("avatar").toString();
+        url = url.replace("/home/uploads/", "");
+        Glide.with(this)
+                .load(OkhttpUtill.contentURL + url)
+                .into(image_profile);
 
         edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,8 +106,6 @@ public class ProfileFragment extends Fragment {
         });
 
 
-
-
         select_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -167,11 +121,11 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //네트워크가 정상적으로 연결되어 있으면
-                if(OkhttpUtill.isNetworkConnected(getActivity().getApplicationContext()) == true) {
-                    if(fileSize <= 30000000) { //파일 크기가 30메가 보다 작아야 업로드 할 수 있음
+                if (OkhttpUtill.isNetworkConnected(getActivity().getApplicationContext()) == true) {
+                    if (fileSize <= 30000000) { //파일 크기가 30메가 보다 작아야 업로드 할 수 있음
 
                         System.out.println("it is working?");
-                        new ListInsert(imageDbPath, imageRealPath,"user/avatar").execute();
+                        new ListInsert(imageDbPath, imageRealPath, "user/avatar").execute();
 
                     } else {
                         // 알림창 띄움
@@ -189,23 +143,23 @@ public class ProfileFragment extends Fragment {
                 } else {
                     Toast.makeText(getActivity().getApplicationContext(), "인터넷이 연결되어 있지 않습니다.", Toast.LENGTH_SHORT).show();
                 }
+                reload();
             }
+
         });
-
-
-
-
-
-
-
-
-
-
 
 
         return view;
     }
-   // Bitmap bmImg;
+
+    public void reload() {
+
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+        ft.detach(this).attach(this).commit();
+    }
+
+    // Bitmap bmImg;
 
 //    private Bitmap getImageBitmap(String url) {
 //        Bitmap bm = null;
@@ -250,17 +204,16 @@ public class ProfileFragment extends Fragment {
 
         }
 
-        if(requestCode == LOAD_IMAGE && resultCode == RESULT_OK) {
+        if (requestCode == LOAD_IMAGE && resultCode == RESULT_OK) {
             try {
                 String path = "";
 
                 //데이타에서 Uri 얻기
                 Uri selectImageUri = data.getData();
-                if(selectImageUri != null) {
+                if (selectImageUri != null) {
                     //Uri에서 경로 얻기
                     path = getPathFromURI(selectImageUri);
                 }
-
 
 
                 //이미지 경로 설정
@@ -276,8 +229,6 @@ public class ProfileFragment extends Fragment {
         }
 
 
-
-
     }
 
 
@@ -285,7 +236,6 @@ public class ProfileFragment extends Fragment {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.detach(this).attach(this).commit();
     }
-
 
 
     //URI에서 실제 경로 추출하는 메서드
