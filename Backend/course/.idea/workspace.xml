@@ -11,9 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f146c5bf-b39c-4fa2-a145-9f34711b112b" name="Default Changelist" comment="login register info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/course_jar/course.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +269,7 @@
       <workItem from="1623431799290" duration="7969000" />
       <workItem from="1623512598294" duration="24294000" />
       <workItem from="1623818262350" duration="17000" />
-      <workItem from="1624116793418" duration="28736000" />
+      <workItem from="1624116793418" duration="29606000" />
     </task>
     <servers />
   </component>
