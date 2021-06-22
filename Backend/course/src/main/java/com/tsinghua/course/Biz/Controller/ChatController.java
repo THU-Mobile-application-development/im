@@ -241,14 +241,12 @@ public class ChatController {
     @BizType(BizTypeEnum.CHAT_DELETE)
     @NeedLogin
     public CommonOutParams chatDelete(ChatDeleteInParams inParams) throws Exception {
-        System.out.println("fuckkkkkkkkk");
         String to_username = inParams.getToUsername();
         String my_username = inParams.getUsername();
         String chatId = inParams.getChatId();
 //        ChatRelation chat_relate = chatProcessor.getChatRelation(my_username,to_username);
 //        List<ChatProps> chat_list = chat_relate.getChatList();
 //        chat_list
-        System.out.println("is it working?");
         chatProcessor.deleteChat(my_username, to_username, chatId);
         return new CommonOutParams(true);
     }
