@@ -11,7 +11,7 @@ public class GlobalConstant {
     /** 日志分隔符 */
     public static final String LOG_SPLIT = "-";
 
-    public static final String DEFAULT_AVATAR = "default.png";
+    public static final String DEFAULT_AVATAR = "/default.png";
 
     public static final int TEXT = 0;
 
