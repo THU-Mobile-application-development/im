@@ -1,4 +1,4 @@
-#Tue Jun 22 04:09:11 KST 2021
+#Tue Jun 22 20:54:19 KST 2021
 base.0=/Users/wujun/Desktop/im/Frontend/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -75,9 +75,11 @@ public class MaptoJsonUtill<staic, statc> {
 
 
     public static List<String> jsonlisttolist(JSONArray arr, String keyname) {
-        System.out.println(arr);
-
         List<String> list = new ArrayList<String>();
+
+        if(arr == null){
+            return list;
+        }
         for (int i = 0; i < arr.length(); i++) {
             try {
                 list.add(arr.getJSONObject(i).getString(keyname));

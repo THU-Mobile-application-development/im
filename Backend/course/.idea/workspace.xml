@@ -10,7 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f146c5bf-b39c-4fa2-a145-9f34711b112b" name="Default Changelist" comment="login register info">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/course_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Processor/UserProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Processor/UserProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/javac/debug/classes/com/ceocho/kakaotalk/Utill/MaptoJsonUtill.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/javac/debug/classes/com/ceocho/kakaotalk/Utill/MaptoJsonUtill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/javac/debug/classes/com/ceocho/kakaotalk/Utill/OkhttpUtill.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/javac/debug/classes/com/ceocho/kakaotalk/Utill/OkhttpUtill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/transforms/dexBuilder/debug/0/com/ceocho/kakaotalk/Utill/MaptoJsonUtill.dex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/transforms/dexBuilder/debug/0/com/ceocho/kakaotalk/Utill/MaptoJsonUtill.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/transforms/dexBuilder/debug/0/com/ceocho/kakaotalk/Utill/OkhttpUtill.dex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/transforms/dexBuilder/debug/0/com/ceocho/kakaotalk/Utill/OkhttpUtill.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/src/main/java/com/ceocho/kakaotalk/Utill/MaptoJsonUtill.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/src/main/java/com/ceocho/kakaotalk/Utill/MaptoJsonUtill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/app/src/main/java/com/ceocho/kakaotalk/Utill/OkhttpUtill.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/src/main/java/com/ceocho/kakaotalk/Utill/OkhttpUtill.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +289,7 @@
       <workItem from="1623431799290" duration="7969000" />
       <workItem from="1623512598294" duration="24294000" />
       <workItem from="1623818262350" duration="17000" />
-      <workItem from="1624116793418" duration="30040000" />
+      <workItem from="1624116793418" duration="33340000" />
     </task>
     <servers />
   </component>

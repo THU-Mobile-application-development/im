@@ -144,10 +144,6 @@ public class UserController {
         return outParams;
 
 
-        //userProcessor.GetMyInfo(username,user.getNickname(),user.getPhonenumber(),user.getAvatar());
-        // userProcessor.GetMyInfo(username,user.getNickname(),user.getPhonenumber(),"");
-
-        //return new CommonOutParams(true);
     }
 
     /**
@@ -157,13 +153,11 @@ public class UserController {
     @BizType(BizTypeEnum.USER_EDIT_INFO)
     public CommonOutParams userEditInfo(EditInfoParams inParams) throws Exception {
 
-        /* 用户名 */
         String username = inParams.getUsername();
         if (username.equals(""))
             throw new CourseWarn(UserWarnEnum.NO_NEW_USERNAME);
 
 
-        /* 昵称 */
         String nickname = inParams.getNickname();
         if (nickname.equals(""))
             throw new CourseWarn(UserWarnEnum.NO_NEW_NICKNAME);
@@ -177,22 +171,12 @@ public class UserController {
         return new CommonOutParams(true);
     }
 
-    /**
-     * 上传头像
-     */
+
     @BizType(BizTypeEnum.USER_AVATAR)
     @NeedLogin
     public CommonOutParams userUploadAvatar(AvatarInParams inParams) throws Exception {
-        System.out.println("여기까지는 오는거니?");
-        // 根据Windows和Linux配置不同的头像保存路径
-        String uploadPath;
+        String uploadPath = "/home/uploads/avatar";
         String avatar;
-        String OSName = System.getProperty("os.name");
-        if (OSName.toLowerCase().startsWith("win"))
-            uploadPath = "";
-        else
-            uploadPath = "/usr/local/share/avatar";
-        System.out.println(uploadPath);
         File dir = new File(uploadPath);
         if (!dir.exists())
             dir.mkdirs();
@@ -205,16 +189,6 @@ public class UserController {
 
         return new CommonOutParams(true);
 
-        // 获取文件内容
-        //MultipartFile file = inParams.getAvatar();
-        //InputStream inputStream = file.getInputStream();
-        // 获取原始文件名
-//        String originalName = file.getOriginalFilename();
-//        UploadFileUtils upload = new UploadFileUtils();
-//        avatar = upload.uploadFile(uploadPath, originalName, file);
-//        // 生成uuid名称
-        //String username = inParams.getUsername();
-        //userProcessor.uploadAvatar(username, avatar);
 
     }
 
