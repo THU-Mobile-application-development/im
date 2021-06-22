@@ -129,18 +129,6 @@ public class MessageActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //뭔지 모르겠다밍
-
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                // crash
-//                startActivity(new Intent(getApplicationContext(), StartActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-//            }
-//        });
-
-        //apiService = Client.getClient("http://fcm.googleapis.com/").create(APIService.class);
         search_users = findViewById(R.id.search_users);
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -158,10 +146,13 @@ public class MessageActivity extends AppCompatActivity {
         avatar = intent.getStringExtra("Avatar");
 
         username.setText(userid);
-        //나중에 바꾸기
-        profile_image.setImageResource(R.mipmap.ic_launcher);
 
-        System.out.println("여기다다다다다다다다다다다다다다ㅏ");
+
+        Glide.with(this)
+                .load(avatar)
+                .into(profile_image);
+
+
         readMessages(userid, avatar);
 
 
@@ -228,7 +219,7 @@ public class MessageActivity extends AppCompatActivity {
         List<String> propsFromUsername = MaptoJsonUtill.jsonlisttolist((JSONArray) result_history.get("chat"), "fromUsername");
         List<String> propsSendTime = MaptoJsonUtill.jsonlisttolist((JSONArray) result_history.get("chat"), "sendTime");
 
-        //List<String> propsAvatar = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("contacts"),"propsAvatar");
+        //List<String> propsAvatar = MaptoJsonUtill.jsonlisttolist((JSONArray) result_history.get("chat"),"toAvatar");
         if (search_users.getText().toString().equals("")) {
             mchat.clear();
             for (int i = 0; i < propsContent.size(); i++) {
@@ -237,9 +228,8 @@ public class MessageActivity extends AppCompatActivity {
                 String type = propsType.get(i);
                 String content = propsContent.get(i);
                 String time = propsSendTime.get(i);
-                //String avatar = propsAvatar.get(i)
+                //String chat_avatar = propsAvatar.get(i);
                 Chat chat = new Chat();
-                //user.setAvatar(avatar);
                 chat.setMessage(content);
                 chat.setReceiver(to_username);
                 chat.setSender(from_username);

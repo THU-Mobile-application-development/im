@@ -93,13 +93,11 @@ public class ContactController {
             String contact_username = contact.getContactUsername();
             User target_user = userProcessor.getUserByUsername(contact_username);
 
-            //String target_avatar = target_user.getAvatar();
-//            int index = friend_avatar.indexOf(RELATIVE_PATH);
-//            String avatar_url = "http://" + SERVER_IP + ":" + FILE_PORT + friend_avatar.substring(index);
+            String target_avatar = target_user.getAvatar();
             String target_nickname = target_user.getNickname();
             ContactProps props = new ContactProps();
             props.setPropsUsername(contact_username);
-            // props.setPropsAvatar(target_avatar);
+            props.setPropsAvatar(target_avatar);
             props.setPropsNickname(target_nickname);
             contactPropsList.add(props);
         }

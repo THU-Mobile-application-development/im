@@ -62,8 +62,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         holder.username.setText(user.getUsername());
         holder.last_msg.setText(user.getLastchat());
         holder.last_time.setText(user.getLasttime());
-        //holder.profile_image.setImageResource(user.getAvatar());
-        System.out.println(user.getUnreadnum());
+        String url = user.getAvatar();
+        url = url.replace("/home/uploads/", "");
+        Glide.with(mContext)
+                .load(OkhttpUtill.contentURL + url)
+                .into(holder.profile_image);
+
+
+
+
         String unreadnum = user.getUnreadnum();
         String zero = "0";
         if (unreadnum == null) {
@@ -79,22 +86,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             holder.unread_num.setText(user.getUnreadnum());
 
         }
-        //아바타 지정
-//        if (user.getAvatar().equals("default")) {
-//            holder.profile_image.setImageResource(R.mipmap.ic_launcher);
-//        } else {
-//            Glide.with(mContext).load(user.getAvatar()).into(holder.profile_image);
-//        }
-
-//        if (ischat) {
-//            lastMessage(user.getId(), holder.last_msg);
-//        } else {
-//            holder.last_msg.setVisibility(View.GONE);
-//        }
-
-        //메시지 페이지로 가는 통호
-//
         if (user.getLasttime() != null) {
+            String finalUrl = url;
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -102,7 +95,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
                     Intent intent = new Intent(mContext, MessageActivity.class);
                     intent.putExtra("username", user.getUsername());
-                    intent.putExtra("Avatar", user.getAvatar());
+                    intent.putExtra("Avatar", OkhttpUtill.contentURL + finalUrl);
                     mContext.startActivity(intent);
 
                 }

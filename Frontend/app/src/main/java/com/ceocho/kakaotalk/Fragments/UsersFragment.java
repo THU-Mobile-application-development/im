@@ -138,15 +138,15 @@ public class UsersFragment extends Fragment {
         List<String> propsNickname = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("contacts"), "propsNickname");
 
 
-        //List<String> propsAvatar = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("contacts"),"propsAvatar");
+        List<String> propsAvatar = MaptoJsonUtill.jsonlisttolist((JSONArray) result.get("contacts"),"propsAvatar");
         if (search_users.getText().toString().equals("")) {
             mUsers.clear();
             for (int i = 0; i < propsUsername.size(); i++) {
                 String username = propsUsername.get(i);
                 String nickname = propsNickname.get(i);
-                //String avatar = propsAvatar.get(i)
+                String avatar = propsAvatar.get(i);
                 User user = new User();
-                //user.setAvatar(avatar);
+                user.setAvatar(avatar);
                 user.setNickname(nickname);
                 user.setUsername(username);
                 mUsers.add(user);

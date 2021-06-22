@@ -71,7 +71,7 @@ public class UserProcessor {
 
     public void EditUsername(String username, String nickname, String phonenumber) {
         Query query = new Query();
-        query.addCriteria(Criteria.where(KeyConstant.NICKNAME).is(username)
+        query.addCriteria(Criteria.where(KeyConstant.NICKNAME).is(nickname)
                 .and(KeyConstant.PHONENUMBER).is(phonenumber));
 
         Update update = new Update();

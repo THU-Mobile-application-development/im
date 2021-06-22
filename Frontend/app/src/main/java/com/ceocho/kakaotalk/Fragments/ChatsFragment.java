@@ -132,7 +132,7 @@ public class ChatsFragment extends Fragment {
                 String avatar = propsAvatar.get(i);
                 String unreadnum = propsUnreadNum.get(i);
                 User user = new User();
-                //user.setAvatar(avatar);
+                user.setAvatar(avatar);
                 user.setUsername(username);
                 user.setLastchat(lastchat);
                 user.setAvatar(avatar);

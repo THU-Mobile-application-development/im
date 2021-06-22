@@ -9,26 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f146c5bf-b39c-4fa2-a145-9f34711b112b" name="Default Changelist" comment="login register info">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/BizTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/BizTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/Params/UserParams/In/EditInfoParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/Params/UserParams/In/EditInfoParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Processor/UserProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tsinghua/course/Biz/Processor/UserProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/javac/debug/classes/com/ceocho/kakaotalk/Fragments/UsersFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/javac/debug/classes/com/ceocho/kakaotalk/Fragments/UsersFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/transforms/dexBuilder/debug/0/com/ceocho/kakaotalk/Fragments/UsersFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/intermediates/transforms/dexBuilder/debug/0/com/ceocho/kakaotalk/Fragments/UsersFragment.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Frontend/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-    </list>
+    <list default="true" id="f146c5bf-b39c-4fa2-a145-9f34711b112b" name="Default Changelist" comment="login register info" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,17 +83,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CourseApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CourseApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="course" />
       <extension name="coverage">
@@ -177,15 +147,6 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <option name="AUTO_RESTART" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="course33" type="Remote">
@@ -286,6 +247,7 @@
       <workItem from="1623512598294" duration="24294000" />
       <workItem from="1623818262350" duration="17000" />
       <workItem from="1624116793418" duration="36249000" />
+      <workItem from="1624379248339" duration="885000" />
     </task>
     <servers />
   </component>
