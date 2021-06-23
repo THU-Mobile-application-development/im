@@ -183,7 +183,7 @@ public class ChatController {
             chat.setChatContent(inParams.getChatContent());
         }
         else{
-            String uploadPath = "/home/uploads/avatar";
+            String uploadPath = "/home/uploads/chat";
             String file;
             File dir = new File(uploadPath);
             if (!dir.exists())
@@ -204,7 +204,7 @@ public class ChatController {
             chat_to.setChatContent(inParams.getChatContent());
         }
         else{
-            String uploadPath = "/home/uploads/avatar";
+            String uploadPath = "/home/uploads/chat";
             String file;
             File dir = new File(uploadPath);
             if (!dir.exists())
