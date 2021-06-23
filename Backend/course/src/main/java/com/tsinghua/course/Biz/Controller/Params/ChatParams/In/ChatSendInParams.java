@@ -4,6 +4,7 @@ import com.tsinghua.course.Base.Annotation.BizType;
 import com.tsinghua.course.Base.Annotation.Required;
 import com.tsinghua.course.Biz.BizTypeEnum;
 import com.tsinghua.course.Biz.Controller.Params.CommonInParams;
+import io.netty.handler.codec.http.multipart.FileUpload;
 
 import java.util.Date;
 
@@ -18,11 +19,13 @@ public class ChatSendInParams extends CommonInParams {
     // 创建时间
     Date send_time;
 
-    @Required
     String content;
+    private FileUpload file;
+
+
     //文字，图片，视频，音频，位置等等
     @Required
-    int type;
+    String type;
 
     public String getFromUsernmae() {
         return from_username;
@@ -57,13 +60,17 @@ public class ChatSendInParams extends CommonInParams {
         this.content = content;
     }
 
-    public int getChatType() {
+    public String getChatType() {
         return type;
     }
 
-    public void setChatContent(int type) {
+    public void setChatType(String type) {
         this.type = type;
     }
 
+    public FileUpload getFile() { return file; }
+    public void setFile(FileUpload file) {
+        // System.out.println(avatar);
+        this.file = file; }
 
 }

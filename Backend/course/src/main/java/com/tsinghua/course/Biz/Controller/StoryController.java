@@ -154,9 +154,9 @@ public class StoryController {
         }
         assert time1 != null;
         if (time1.after(time2))
-            return 1;
-        else
             return -1;
+        else
+            return 1;
         });
     }
 

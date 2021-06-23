@@ -39,7 +39,6 @@ tools:context=".Fragments.ProfileFragment"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
                 android:text="username"
-                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -51,7 +50,6 @@ tools:context=".Fragments.ProfileFragment"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="10dp"
                 android:text="nickname"
-                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -63,15 +61,17 @@ tools:context=".Fragments.ProfileFragment"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="10dp"
                 android:text="phonenumber"
-                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/edit_profile_btn"
-                android:layout_width="wrap_content"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:text="Edit Profile"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
+
                 android:layout_gravity="center"
            />
 
@@ -80,6 +80,9 @@ tools:context=".Fragments.ProfileFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
+
                 android:text="Edit Password" />
 
             <Button
@@ -87,6 +90,9 @@ tools:context=".Fragments.ProfileFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
+
                 android:text="Edit username" />
 
         </LinearLayout>
@@ -108,18 +114,24 @@ tools:context=".Fragments.ProfileFragment"
 
         <Button
             android:id="@+id/select_photo_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_image"
             android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff"
+
             android:layout_centerHorizontal="true"
 
             android:text="SELECT PHOTO" />
         <Button
             android:id="@+id/upload_avatar_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/select_photo_btn"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff"
+
             android:layout_marginTop="16dp"
             android:layout_centerHorizontal="true"
 

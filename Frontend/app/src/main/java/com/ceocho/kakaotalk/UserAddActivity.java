@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.bumptech.glide.Glide;
 import com.ceocho.kakaotalk.Model.User;
 import com.ceocho.kakaotalk.Utill.MaptoJsonUtill;
 import com.ceocho.kakaotalk.Utill.OkhttpUtill;
@@ -75,6 +76,13 @@ public class UserAddActivity extends AppCompatActivity {
                     if (result.get("success").toString() == "true") {
                         username.setText(result.get("contact_username").toString());
                         nickname.setText(result.get("contact_nickname").toString());
+
+                        String url = result.get("contact_avatar").toString();
+                        url = url.replace("/home/uploads/", "");
+                        Glide.with(UserAddActivity.this)
+                                .load(OkhttpUtill.contentURL + url)
+                                .into(image_profile);
+
                         search_block.setVisibility(LinearLayout.VISIBLE);
                         //친구로 추가 되어있지 않을
                         if (result.get("already_contact").toString() == "false") {

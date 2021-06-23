@@ -1191,6 +1191,7 @@ id btn_login
 id btn_register
 id btn_send
 id buttonPanel
+id cancel
 id cancel_action
 id cancel_btn
 id cancel_edit
@@ -1204,6 +1205,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id confirm
 id confirm_edit
 id confirm_password
 id container
@@ -1253,6 +1255,7 @@ id icon_group
 id id
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -1292,6 +1295,9 @@ id notification_main_column_container
 id off
 id old_password
 id on
+id open_audio
+id open_camera
+id open_video
 id outline
 id packed
 id parallax
@@ -1344,10 +1350,16 @@ id search_plate
 id search_src_text
 id search_users
 id search_voice_btn
-id select_content_btn
+id select_audio
 id select_dialog_listview
+id select_image_btn
+id select_photo
 id select_photo_btn
+id select_video
+id select_video_btn
 id selected
+id send_etc
+id send_geo
 id shortcut
 id showCustom
 id showHome
@@ -1414,6 +1426,7 @@ id up
 id upload_avatar_btn
 id useLogo
 id username
+id view
 id view_offset_helper
 id view_pager
 id visible
@@ -1481,6 +1494,7 @@ layout activity_message
 layout activity_register
 layout activity_reset_password
 layout activity_search_user
+layout activity_send_etc
 layout activity_start
 layout bar_layout
 layout chat_item_left
@@ -1529,6 +1543,7 @@ layout select_dialog_singlechoice_material
 layout story_item
 layout support_simple_spinner_dropdown_item
 layout user_item
+layout video
 menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round

@@ -17,7 +17,7 @@ public class ChatProps {
 
     String content;
     //文字，图片，视频，音频，位置等等
-    int type;
+    String type;
 
 
     public String getChatId() {
@@ -61,11 +61,11 @@ public class ChatProps {
         this.content = content;
     }
 
-    public int getChatType() {
+    public String getChatType() {
         return type;
     }
 
-    public void setChatType(int type) {
+    public void setChatType(String type) {
         this.type = type;
     }
 

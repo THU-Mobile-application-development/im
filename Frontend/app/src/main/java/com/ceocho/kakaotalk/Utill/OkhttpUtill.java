@@ -231,38 +231,66 @@ public class OkhttpUtill {
                                             }
                                         });
     }
+
+
+    public static void uploadchat(File file,String type,String to_username,String from_username,String biz_type) throws IOException {
+        // OkHttpClient client = new OkHttpClient();
+        final Map[] result = {new HashMap()};
+
+        final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/*");
+        final CountDownLatch latch = new CountDownLatch(1);
+
+        RequestBody formBody;
+
+            formBody = new MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("content", file.getName(),
+                            RequestBody.create(MEDIA_TYPE_PNG, file))
+                    .addFormDataPart("type", type)
+                    .addFormDataPart("to_username",to_username)
+                    .addFormDataPart("from_username",from_username)
+                    .addFormDataPart("bizType",biz_type)
+                    .build();
+
+
+
+
+        Request request = new Request.Builder()
+                .url(baseURL + "chat/chat_send")
+                .post(formBody)
+                .build();
+
+
+//        Request request = new Request.Builder().url(baseURL+"user/avatar").post(formBody).build();
+//        System.out.println("여기까지 fafdasfsafs?");
+
+        client.newCall(request).enqueue(new Callback() {
+
+
+            public void onFailure(Call call, IOException e) {
+                System.out.println("error + Connect Server Error is " + e.toString());
+                latch.countDown();
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                String responseBodyString = response.body().string();
+
+                System.out.println("Response Body is " + responseBodyString);
+
+                final Map res = MaptoJsonUtill.getMap(responseBodyString);
+
+
+                result[0] = res;
+                latch.countDown();
+
+
+            }
+        });
+    }
+
+
+
 }
-//        String res = response.body().string();
-//        Log.e("TAG", "Response : " + res);
-
-
-//
-//        MediaType mediaType = MediaType.parse("image/jpg");
-//        RequestBody requestBody = RequestBody.create(mediaType, file);
-//
-//        MultipartBody multipartBody = new MultipartBody.Builder("---DevApp")
-//                .addFormDataPart("AWSAccessKeyId", "AKIAJCBCKQITFUEAAITA")
-//                .addFormDataPart("acl", "public-read")
-//                .addFormDataPart("key", "formtasks/images/19463-selfie.jpg")
-//                .addFormDataPart("signature", "kos3NHJW+qUaQMpYZfaOs19hUMRw=")
-//                .addFormDataPart("policy", "eyJjb25kaXRpb25zIjogd3siYWNsIjogInB1YmxpYy1yZWFkIn0sIHsiQ29udGVudC1UeXBlIjogImltYWdlL2pwZyJ9LCB7ImJ1Y2tldCI6ICJzaG9wcGluZy1kZXZlbCJ9LCB7ImtleSI6ICJmb3JtdGFza3MvaW1hZ2VzLzE5NDYzLXNlbGZpZS5qcGcifV0sICJleHBpcmF0aW9uIjogIjIwMTgtMDQtMTdUMjE6NTU6NDhaIn0=")
-//                .addFormDataPart("Content-Type", "image/jpg")
-//                .addFormDataPart("file", null, requestBody).build();
-//
-//
-//        Request request = new Request.Builder()
-//                .url(baseURL+"user/avatar")
-//                .post(multipartBody)
-//                .addHeader("content-type", "multipart/form-data;")
-//                .addHeader("cache-control", "no-cache")
-//                .build();
-//
-//        Response execute = client.newCall(request).execute();
-//        System.out.println(execute.body().string());
-
-
-
-
-
-
-

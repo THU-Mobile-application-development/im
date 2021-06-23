@@ -4,6 +4,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.media.MediaMetadataRetriever;
+import android.net.Uri;
 import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +23,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 //import com.ceocho.kakaotalk.MessageActivity;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.ceocho.kakaotalk.Fragments.StoryFragment;
 import com.ceocho.kakaotalk.MessageActivity;
 import com.ceocho.kakaotalk.Model.Chat;
@@ -29,6 +34,7 @@ import com.ceocho.kakaotalk.Model.User;
 import com.ceocho.kakaotalk.R;
 import com.ceocho.kakaotalk.Utill.MaptoJsonUtill;
 import com.ceocho.kakaotalk.Utill.OkhttpUtill;
+import com.ceocho.kakaotalk.VideoViewActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -43,8 +49,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
     private List<Story> mStory;
     public LikeAdapter likeAdapter;
     public ReplyAdapter replyAdapter;
-    public RecyclerView reply_recycle,like_recycle;
-
+    public RecyclerView reply_recycle, like_recycle;
 
 
     public StoryAdapter(Context mContext, List<Story> mStory) {
@@ -67,23 +72,50 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
         holder.story_username.setText(story.getUsername());
         holder.publish_time.setText(story.getPublishTime());
         String url = story.getAvatar();
+
         url = url.replace("/home/uploads/", "");
         Glide.with(mContext)
                 .load(OkhttpUtill.contentURL + url)
                 .into(holder.avatar);
+        String url_content = story.getContent();
 
         //여기서 영상인지 사진인지 판단 필요 type으로
-        String url_content = story.getContent();
-        url_content = url_content.replace("/home/uploads/", "");
-        Glide.with(mContext)
-                .load(OkhttpUtill.contentURL + url_content)
-                .into(holder.story_content);
+        if (story.getType().equals("0")) {
+            url_content = url_content.replace("/home/uploads/", "");
+            Glide.with(mContext)
+                    .load(OkhttpUtill.contentURL + url_content)
+                    .into(holder.story_content);
+        } else {
+            url_content = url_content.replace("/home/uploads/", "");
+            Glide.with(mContext)
+                    .asBitmap()
+                    .load(OkhttpUtill.contentURL + url_content)
+                    .diskCacheStrategy(DiskCacheStrategy.DATA)
+                    .into(holder.story_content);
 
+        }
 
-        replyAdapter = new ReplyAdapter(mContext,story.getReply());;
+        replyAdapter = new ReplyAdapter(mContext, story.getReply());
+        ;
         reply_recycle.setAdapter(replyAdapter);
-        likeAdapter = new LikeAdapter(mContext,story.getLikeUsername());
+        likeAdapter = new LikeAdapter(mContext, story.getLikeUsername());
         like_recycle.setAdapter(likeAdapter);
+
+        String finalUrl_content = url_content;
+        holder.story_content.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (story.getType().equals("1")) {
+                    Intent intent = new Intent(mContext, VideoViewActivity.class);
+                    intent.putExtra("url", OkhttpUtill.contentURL + finalUrl_content);
+                    mContext.startActivity(intent);
+
+
+
+                }
+            }
+        });
+
 
         holder.like_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,7 +144,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Map map = new HashMap();
                         map.put("storyId", story.getStoryId());
-                        map.put("content",editText.getText().toString());
+                        map.put("content", editText.getText().toString());
                         String input = MaptoJsonUtill.getJson(map);
                         Map result = OkhttpUtill.post("story/reply", input);
                         Map my_result = OkhttpUtill.get("user/myinfo");
@@ -147,11 +179,9 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView story_username;
-        public ImageView story_content,avatar;
+        public ImageView story_content, avatar;
         public TextView publish_time;
-        public Button like_btn,reply_btn;
-
-
+        public Button like_btn, reply_btn;
 
 
         public ViewHolder(View itemView) {
@@ -168,8 +198,6 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
             reply_recycle.setLayoutManager(new LinearLayoutManager(mContext));
             like_recycle.setHasFixedSize(true);
             like_recycle.setLayoutManager(new LinearLayoutManager(mContext));
-
-
 
 
         }

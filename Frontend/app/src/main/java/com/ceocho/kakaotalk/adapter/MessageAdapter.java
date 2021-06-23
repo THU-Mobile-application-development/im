@@ -62,6 +62,15 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         Chat chat = mChat.get(position);
 
         holder.show_message.setText(chat.getMessage());
+
+
+        String url = imageurl;
+        url = url.replace("/home/uploads/", "");
+        Glide.with(mContext)
+                .load(OkhttpUtill.contentURL + url)
+                .into(holder.profile_image);
+
+
 //사진에 대해서 설정
 //        if (imageurl.equals("default")) {
 //            holder.profile_image.setmageResource(R.mipmap.ic_launcher);

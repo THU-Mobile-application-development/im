@@ -25,108 +25,122 @@
 15    <uses-permission android:name="android.permission.CAMERA" />
 15-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:10:5-64
 15-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:10:22-62
-16
-17    <application
-17-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:14:5-67:19
-18        android:allowBackup="true"
-18-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:15:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.1.0] /Users/wujun/.gradle/caches/transforms-2/files-2.1/478b79604eaaf934858ce3739dce1708/core-1.1.0/AndroidManifest.xml:24:18-86
-20        android:debuggable="true"
-21        android:icon="@mipmap/ic_launcher"
-21-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:16:9-43
-22        android:label="@string/app_name"
-22-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:17:9-41
-23        android:networkSecurityConfig="@xml/network_security_config"
-23-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:21:9-69
-24        android:roundIcon="@mipmap/ic_launcher_round"
-24-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:18:9-54
-25        android:supportsRtl="true"
-25-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:19:9-35
-26        android:testOnly="true"
-27        android:theme="@style/AppTheme" >
-27-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:20:9-40
-28        <activity android:name="com.ceocho.kakaotalk.StartActivity" >
-28-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:23:9-29:20
-28-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:23:19-48
-29            <intent-filter>
-29-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:24:13-28:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:25:17-69
-30-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:25:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:27:17-77
-32-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:27:27-74
-33            </intent-filter>
-34        </activity>
-35        <activity
-35-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:30:9-32:59
-36            android:name="com.ceocho.kakaotalk.RegisterActivity"
-36-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:31:13-45
-37            android:parentActivityName="com.ceocho.kakaotalk.StartActivity" />
-37-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:32:13-56
-38        <activity android:name="com.ceocho.kakaotalk.MainActivity" />
-38-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:33:9-50
-38-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:33:19-47
-39        <activity
-39-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:34:9-36:59
-40            android:name="com.ceocho.kakaotalk.LoginActivity"
-40-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:35:13-42
-41            android:parentActivityName="com.ceocho.kakaotalk.StartActivity" />
-41-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:36:13-56
-42        <activity
-42-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:37:9-38:57
-43            android:name="com.ceocho.kakaotalk.MessageActivity"
-43-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:37:19-50
-44            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" />
-44-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:38:13-55
-45        <activity
-45-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:39:9-40:67
-46            android:name="com.ceocho.kakaotalk.ResetPasswordActivity"
-46-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:39:19-56
-47            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" />
-47-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:40:13-55
-48        <activity
-48-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:41:9-44:20
-49            android:name="com.ceocho.kakaotalk.EditProfileActivity"
-49-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:41:19-54
-50            android:parentActivityName="com.ceocho.kakaotalk.MainActivity"
-50-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:42:13-55
-51            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" >
-51-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:43:13-76
-52        </activity>
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:11:5-68
+16-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:11:22-65
+17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+17-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:12:5-79
+17-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:12:22-76
+18
+19    <application
+19-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:16:5-73:19
+20        android:allowBackup="true"
+20-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:17:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.1.0] /Users/wujun/.gradle/caches/transforms-2/files-2.1/478b79604eaaf934858ce3739dce1708/core-1.1.0/AndroidManifest.xml:24:18-86
+22        android:debuggable="true"
+23        android:icon="@mipmap/ic_launcher"
+23-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:18:9-43
+24        android:label="@string/app_name"
+24-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:19:9-41
+25        android:networkSecurityConfig="@xml/network_security_config"
+25-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:24:9-69
+26        android:requestLegacyExternalStorage="true"
+26-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:22:9-52
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:20:9-54
+28        android:supportsRtl="true"
+28-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:21:9-35
+29        android:testOnly="true"
+30        android:theme="@style/AppTheme" >
+30-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:23:9-40
+31        <activity android:name="com.ceocho.kakaotalk.StartActivity" >
+31-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:26:9-32:20
+31-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:26:19-48
+32            <intent-filter>
+32-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:27:13-31:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:28:17-69
+33-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:28:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:30:17-77
+35-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:30:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity android:name="com.ceocho.kakaotalk.VideoViewActivity" />
+38-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:33:9-55
+38-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:33:19-52
+39        <activity android:name="com.ceocho.kakaotalk.SendEtcActivity" />
+39-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:34:9-53
+39-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:34:19-50
+40        <activity
+40-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:36:9-38:59
+41            android:name="com.ceocho.kakaotalk.RegisterActivity"
+41-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:37:13-45
+42            android:parentActivityName="com.ceocho.kakaotalk.StartActivity" />
+42-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:38:13-56
+43        <activity android:name="com.ceocho.kakaotalk.MainActivity" />
+43-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:39:9-50
+43-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:39:19-47
+44        <activity
+44-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:40:9-42:59
+45            android:name="com.ceocho.kakaotalk.LoginActivity"
+45-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:41:13-42
+46            android:parentActivityName="com.ceocho.kakaotalk.StartActivity" />
+46-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:42:13-56
+47        <activity
+47-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:43:9-44:57
+48            android:name="com.ceocho.kakaotalk.MessageActivity"
+48-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:43:19-50
+49            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" />
+49-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:44:13-55
+50        <activity
+50-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:45:9-46:67
+51            android:name="com.ceocho.kakaotalk.ResetPasswordActivity"
+51-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:45:19-56
+52            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" />
+52-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:46:13-55
 53        <activity
 53-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:47:9-50:20
-54            android:name="com.ceocho.kakaotalk.UserAddActivity"
-54-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:47:19-50
-55            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" >
+54            android:name="com.ceocho.kakaotalk.EditProfileActivity"
+54-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:47:19-54
+55            android:parentActivityName="com.ceocho.kakaotalk.MainActivity"
 55-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:48:13-55
-56        </activity>
-57
-58        <provider
-59            android:name="androidx.core.content.FileProvider"
-59-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:53:13-62
-60            android:authorities="com.ceocho.kakaotalk.fileprovider"
-60-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:54:13-64
-61            android:exported="false"
-61-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:55:13-37
-62            android:grantUriPermissions="true" >
-62-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:56:13-47
-63            <meta-data
-63-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:57:13-59:53
-64                android:name="android.support.FILE_PROVIDER_PATHS"
-64-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:58:17-67
-65                android:resource="@xml/filepaths" />
-65-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:59:17-50
-66        </provider>
-67
-68        <uses-library
-68-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:61:9-64:15
-69            android:name="org.apache.http.legacy"
-69-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:62:13-50
-70            android:required="false" />
-70-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:63:13-37
-71    </application>
+56            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" >
+56-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:49:13-76
+57        </activity>
+58        <activity
+58-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:53:9-56:20
+59            android:name="com.ceocho.kakaotalk.UserAddActivity"
+59-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:53:19-50
+60            android:parentActivityName="com.ceocho.kakaotalk.MainActivity" >
+60-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:54:13-55
+61        </activity>
+62
+63        <provider
+64            android:name="androidx.core.content.FileProvider"
+64-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:59:13-62
+65            android:authorities="com.ceocho.kakaotalk.fileprovider"
+65-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:60:13-64
+66            android:exported="false"
+66-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:61:13-37
+67            android:grantUriPermissions="true" >
+67-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:62:13-47
+68            <meta-data
+68-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:63:13-65:53
+69                android:name="android.support.FILE_PROVIDER_PATHS"
+69-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:64:17-67
+70                android:resource="@xml/filepaths" />
+70-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:65:17-50
+71        </provider>
 72
-73</manifest>
+73        <uses-library
+73-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:67:9-70:15
+74            android:name="org.apache.http.legacy"
+74-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:68:13-50
+75            android:required="false" />
+75-->/Users/wujun/Desktop/im/Frontend/app/src/main/AndroidManifest.xml:69:13-37
+76    </application>
+77
+78</manifest>

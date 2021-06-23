@@ -4,10 +4,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,6 +25,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +39,7 @@ import com.ceocho.kakaotalk.Notifications.MyResponse;
 import com.ceocho.kakaotalk.Notifications.Sender;
 import com.ceocho.kakaotalk.Notifications.Token;
 import com.ceocho.kakaotalk.R;
+import com.ceocho.kakaotalk.Utill.GpsTracker;
 import com.ceocho.kakaotalk.Utill.JWebSocketClient;
 import com.ceocho.kakaotalk.Utill.MaptoJsonUtill;
 import com.ceocho.kakaotalk.Utill.OkhttpUtill;
@@ -37,12 +49,15 @@ import com.ceocho.kakaotalk.adapter.UserAdapter;
 import org.java_websocket.handshake.ServerHandshake;
 import org.json.JSONArray;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.channels.DatagramChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -50,7 +65,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 
 
 public class MessageActivity extends AppCompatActivity {
@@ -68,6 +82,8 @@ public class MessageActivity extends AppCompatActivity {
 //    };
 
 
+
+
     URI uri = URI.create("ws://172.30.1.6:520/ws");
     JWebSocketClient client = new JWebSocketClient(uri) {
         @Override
@@ -80,12 +96,12 @@ public class MessageActivity extends AppCompatActivity {
     //public JWebSocketClient client;
 
 
-
     CircleImageView profile_image;
     TextView username;
 
 
     ImageButton btn_send;
+    ImageView send_etc;
     EditText text_send, search_users;
 
     MessageAdapter messageAdapter;
@@ -103,11 +119,9 @@ public class MessageActivity extends AppCompatActivity {
     boolean notfiy = false;
 
 
-
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
 
         super.onCreate(savedInstanceState);
@@ -117,9 +131,8 @@ public class MessageActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-       // initSocketClient();
-      //  mHandler.postDelayed(heartBeatRunnable, HEART_BEAT_RATE);//开启心跳检测
-
+        // initSocketClient();
+        //  mHandler.postDelayed(heartBeatRunnable, HEART_BEAT_RATE);//开启心跳检测
 
 
         setContentView(R.layout.activity_message);
@@ -140,7 +153,7 @@ public class MessageActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         btn_send = findViewById(R.id.btn_send);
         text_send = findViewById(R.id.text_send);
-
+        send_etc = findViewById(R.id.send_etc);
         intent = getIntent();
         userid = intent.getStringExtra("username");
         avatar = intent.getStringExtra("Avatar");
@@ -156,7 +169,17 @@ public class MessageActivity extends AppCompatActivity {
         readMessages(userid, avatar);
 
 
+        send_etc.setOnClickListener(new View.OnClickListener() {
 
+            public void onClick(View view) {
+
+
+                startActivityForResult(new Intent(MessageActivity.this, SendEtcActivity.class), 0);
+
+
+
+                    }
+                });
 
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,13 +188,16 @@ public class MessageActivity extends AppCompatActivity {
 
                 notfiy = true;
                 String msg = text_send.getText().toString();
+                Map my_result = OkhttpUtill.get("user/myinfo");
+                String username = my_result.get("username").toString();
+
                 if (!msg.equals("")) {
                     Map map = new HashMap();
                     map.put("content", msg);
                     map.put("type", 0);
                     map.put("to_username", userid);
-                    map.put("from_username", "a");
-                    map.put("bizType","CHAT_SEND");
+                    map.put("from_username", username);
+                    map.put("bizType", "CHAT_SEND");
                     String input = MaptoJsonUtill.getJson(map);
                     Map result = OkhttpUtill.post("chat/chat_send", input);
                     if (result.get("success").toString() == "true") {
@@ -196,6 +222,22 @@ public class MessageActivity extends AppCompatActivity {
     }
 
 
+//
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        switch (requestCode) {
+//            case GPS_ENABLE_REQUEST_CODE: //사용자가 GPS 활성 시켰는지 검사
+//                if (checkLocationServicesStatus()) {
+//                    if (checkLocationServicesStatus()) {
+//                        Log.d("@@@", "onActivityResult : GPS 활성화 되있음");
+//                        checkRunTimePermission();
+//                        return;
+//                    }
+//                }
+//                break;
+//        }
+//    }
 
 
     private void readMessages(String userid, String avatar) {
@@ -211,7 +253,6 @@ public class MessageActivity extends AppCompatActivity {
 
 
 //        String propsContent = (String) result_history.get("chat");
-        System.out.println("이거라고고고고고고고고곡고");
 //        System.out.println(propsContent);
         List<String> propsContent = MaptoJsonUtill.jsonlisttolist((JSONArray) result_history.get("chat"), "chatContent");
         List<String> propsType = MaptoJsonUtill.jsonlisttolist((JSONArray) result_history.get("chat"), "chatType");
@@ -237,15 +278,12 @@ public class MessageActivity extends AppCompatActivity {
                 chat.setType(type);
                 mchat.add(chat);
             }
-            messageAdapter = new MessageAdapter(MessageActivity.this, mchat, avatar,userid);
+            messageAdapter = new MessageAdapter(MessageActivity.this, mchat, avatar, userid);
             recyclerView.setAdapter(messageAdapter);
         }
 
 
-
-
-        }
-
+    }
 
 
     @Override
@@ -265,6 +303,58 @@ public class MessageActivity extends AppCompatActivity {
             client = null;
         }
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == 0) {
+            //Geo
+            Map my_result = OkhttpUtill.get("user/myinfo");
+            String username = my_result.get("username").toString();
+
+            String msg = data.getStringExtra("data");
+            if (!msg.equals("")) {
+                Map map = new HashMap();
+                map.put("content", msg);
+                map.put("type", "4");
+                map.put("to_username", userid);
+                map.put("from_username", username);
+                map.put("bizType", "CHAT_SEND");
+                String input = MaptoJsonUtill.getJson(map);
+                Map result = OkhttpUtill.post("chat/chat_send", input);
+                if (result.get("success").toString() == "true") {
+                    Toast.makeText(MessageActivity.this, "result ok!", Toast.LENGTH_SHORT).show();
+
+                }
+
+            }
+
+
+        }
+
+        if (resultCode == 1) {
+            Map my_result = OkhttpUtill.get("user/myinfo");
+            String username = my_result.get("username").toString();
+
+            String imagerealpath = data.getStringExtra("data");
+            if (!imagerealpath.equals("")) {
+                File file = new File(imagerealpath);
+                try {
+                    OkhttpUtill.uploadchat(file,"1",userid,username,"CHAT_SEND");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
+
+
+    }
+
+
+
 
 //
 //    private void initSocketClient() {
@@ -351,4 +441,4 @@ public class MessageActivity extends AppCompatActivity {
 //    }
 
 
-    }
+}

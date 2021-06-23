@@ -39,7 +39,9 @@ import com.ceocho.kakaotalk.adapter.UserAdapter;
 
 import org.json.JSONArray;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,7 +57,7 @@ public class StoryFragment extends Fragment {
 
     private List<Story> mStorys;
 
-    Button publish_story,select_content;
+    Button publish_story,select_photo,select_video;
 
 
     final int LOAD_IMAGE = 1001;
@@ -73,7 +75,8 @@ public class StoryFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_story, container, false);
         publish_story = view.findViewById(R.id.publish_story_btn);
-        select_content = view.findViewById(R.id.select_content_btn);
+        select_photo = view.findViewById(R.id.select_image_btn);
+        select_video = view.findViewById(R.id.select_video_btn);
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -89,8 +92,7 @@ public class StoryFragment extends Fragment {
             public void onClick(View v) {
                 if(OkhttpUtill.isNetworkConnected(getActivity().getApplicationContext()) == true) {
                     if(fileSize <= 30000000) { //파일 크기가 30메가 보다 작아야 업로드 할 수 있음
-
-                        System.out.println("it is working?");
+                        System.out.println(imageRealPath);
                         new ListInsert(imageDbPath, imageRealPath,"story/publish").execute();
 
                     } else {
@@ -109,11 +111,36 @@ public class StoryFragment extends Fragment {
                 } else {
                     Toast.makeText(getActivity().getApplicationContext(), "인터넷이 연결되어 있지 않습니다.", Toast.LENGTH_SHORT).show();
                 }
+
+                //이건 조금 더 생각해보자.
+//                Story story = new Story();
+//                List<Reply> reply = new ArrayList<>();
+//                List<String> likeuser = new ArrayList<>();
+//                Map my_result = OkhttpUtill.get("user/myinfo");
+//                String username = my_result.get("username").toString();
+//                String avatar = my_result.get("avatar").toString();
+//
+//                SimpleDateFormat sDate2 = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+//
+//                story.setReply(reply);
+//                story.setLikeUsername(likeuser);
+//                story.setLikesNum(0);
+//                story.setUsername(username);
+//                story.setPublishTime(sDate2.format(new Date()));
+//                story.setAvatar(avatar);
+////                story.setType();
+//////동영상이면 어쩔껀지 생각해 봐야함
+////                //그리고 사진링크를 어케 받아서 셑할껀지도 생각
+////                story.setContent();
+//                mStorys.add(story);
+//                storyAdapter.notifyDataSetChanged();
+
+
             }
         });
 
 
-        select_content.setOnClickListener(new View.OnClickListener() {
+        select_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -124,7 +151,15 @@ public class StoryFragment extends Fragment {
         });
 
 
-
+        select_video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("video/*");
+                intent.setAction(Intent.ACTION_PICK);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), LOAD_IMAGE);
+            }
+        });
 
 
 

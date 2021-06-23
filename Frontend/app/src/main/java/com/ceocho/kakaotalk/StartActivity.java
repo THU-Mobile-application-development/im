@@ -63,7 +63,8 @@ public class StartActivity extends AppCompatActivity {
                 Manifest.permission.ACCESS_WIFI_STATE,
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.CAMERA
+                Manifest.permission.CAMERA,
+                Manifest.permission.ACCESS_FINE_LOCATION
         };
 
         int permissionCheck = PackageManager.PERMISSION_GRANTED;
@@ -75,12 +76,12 @@ public class StartActivity extends AppCompatActivity {
         }
 
         if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(StartActivity.this, "권한 있음", Toast.LENGTH_LONG).show();
+            //Toast.makeText(StartActivity.this, "권한 있음", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(StartActivity.this, "권한 없음", Toast.LENGTH_LONG).show();
+            //Toast.makeText(StartActivity.this, "권한 없음", Toast.LENGTH_LONG).show();
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(StartActivity.this, permissions[0])) {
-                Toast.makeText(StartActivity.this, "권한 설명 필요함.", Toast.LENGTH_LONG).show();
+                //Toast.makeText(StartActivity.this, "권한 설명 필요함.", Toast.LENGTH_LONG).show();
             } else {
                 ActivityCompat.requestPermissions(StartActivity.this, permissions, 1);
             }
@@ -91,10 +92,10 @@ public class StartActivity extends AppCompatActivity {
         if (requestCode == 1) {
             for (int i = 0; i < permissions.length; i++) {
                 if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(StartActivity.this, permissions[i] + " 권한이 승인됨.", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(StartActivity.this, permissions[i] + " 권한이 승인됨.", Toast.LENGTH_LONG).show();
                 } else {
 
-                    Toast.makeText(StartActivity.this, permissions[i] + " 권한이 승인되지 않음.", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(StartActivity.this, permissions[i] + " 권한이 승인되지 않음.", Toast.LENGTH_LONG).show();
                 }
             }
         }

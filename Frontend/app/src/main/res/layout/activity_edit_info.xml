@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#eeeeee"
     android:orientation="vertical"
     android:layout_width="300dp"
     android:layout_height="wrap_content">
@@ -15,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="53dp"
-            android:background="#ff7a00"
+            android:background="@color/colorPrimaryDark"
             android:gravity="center"
             android:text="修改信息"
             android:textColor="#fff"
@@ -72,6 +71,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:gravity="center"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -85,12 +85,12 @@
                 android:layout_width="0dp"
                 android:layout_height="53dp"
                 android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
 
-                android:background="#00000000"
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="confirm"
-                android:textColor="#ff7a00"
                 android:textSize="15sp" />
 
             <Button
@@ -98,12 +98,13 @@
                 android:layout_width="0dp"
                 android:layout_height="53dp"
                 android:layout_weight="1"
-                android:background="#00000000"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
+
                 android:gravity="center"
                 android:onClick="mOnClose"
                 android:padding="16dp"
                 android:text="cancle"
-                android:textColor="#ff7a00"
                 android:textSize="15sp"  />
         </LinearLayout>
     </LinearLayout>
